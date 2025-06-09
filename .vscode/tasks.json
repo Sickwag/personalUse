@@ -1,0 +1,63 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+			{
+			"label": "Compile C++ File",
+			"type": "shell",
+			"command": "g++",
+			"args": [
+				"-std=c++23",
+				"${file}",
+				"-o",
+				"D:\\Code Files\\vscode\\Drafts\\CCppOutput\\${fileBasenameNoExtension}.exe"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": ["$gcc"]
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe 生成活动文件",
+			"command": "D:\\Program\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				// "${fileDirname}\\${fileBasenameNoExtension}.exe"直接编译在当前目录下
+				"D:\\Code Files\\vscode\\Drafts\\CCppOutput\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "D:\\Program\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: D:\\Program\\mingw64\\bin\\gcc.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "D:\\Program\\mingw64\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g", // 确保生成调试信息
+				"-std=c++23", // 添加 C++ 标准
+				"${file}",
+				"-o",
+				"D:\\Code Files\\vscode\\Drafts\\CCppOutput\\${fileBasenameNoExtension}.exe" // 确保输出路径与 launch.json 一致
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "编译器: D:\\Program\\mingw64\\bin\\g++.exe"
+		}
+	]
+}

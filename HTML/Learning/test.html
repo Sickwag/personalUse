@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js basic knowledge</title>
+</head>
+<body>
+    
+    <script>
+        
+    </script>
+</body>
+</html>
+<!-- html 定位和布局 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17 mins from scratch</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./src/css/temp.css">
+    <div class="grid">
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+        <div>grid project</div>
+    </div>
+    <div id="outside" class="relative">
+        <div id="inside" class="absolute">绝对定位内容</div>
+        <div class="fixed">固定定位内容</div>
+    </div>
+    <div class="static">静态定位</div>
+</body>
+</html> -->
+
+<!-- html svg绘制2d图形 -->
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+    </svg>
+    <script>
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+        function drag(ev){
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html> -->
+<!-- html canvas绘制图形 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+</head>
+<body>
+    <canvas id="red_rectangle_canvas" width="150" height="75"></canvas>
+    <script id="red_rectangle">
+        // 红色长方形
+        var content = document.getElementById('red_rectangle_canvas')
+        var ctx = content.getContext("2d");
+        ctx.fillStyle="#FF0000"
+        ctx.fillRect(0,0,150,75);
+    </script><br>
+    <canvas id="a_routine_canvas" width="200" height="100"></canvas>
+    <script id="a_routine">
+        // a line
+        var content=document.getElementById('a_routine_canvas');
+        var ctx = content.getContext("2d");
+        ctx.moveTo(0,0);
+        ctx.lineTo(200,100)
+        ctx.stroke()
+        </script><br>
+    <canvas id="a_circle" width="200" height="150"></canvas>
+    <script id="draw_a_circle">
+        // drew a circle
+        var content = document.getElementById('a_circle');
+        var ctx = content.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(100,75,50,0,2*Math.PI);
+        ctx.fill()
+        ctx.stroke();
+        </script><br>
+    <canvas id="text_canvas" width="200" height="100"></canvas>
+    <script id="draw_text">
+        // a text
+        var content = document.getElementById('text_canvas');
+        var ctx = content.getContext("2d");
+        ctx.font="30px Arial";
+        ctx.fillText("hello world",10,50)
+    </script><br>
+    <canvas id="gradient_rect" width="200" height="150"></canvas>
+    <script id="draw_gradient_rect">
+        // drew a gradient rectangle
+        var c=document.getElementById("gradient_rect");
+        var ctx=c.getContext("2d");
+        var grd=ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+        grd.addColorStop(1,"white");
+        ctx.fillStyle=grd;
+        ctx.fillRect(10,10,150,80);
+    </script><br>
+    <img src="./src/imgs/img_the_scream.jpg" alt="a picture of van gogh" id="scream"><br>
+    <canvas id="put_a_image" width="300" height="300"></canvas>
+    <script>
+        // put a image
+        var content = document.getElementById('put_a_image');
+        var ctx = content.getContext("2d");
+        var img = document.getElementById("scream");
+        function draw_pic(){
+            ctx.drawImage(img,10,10);
+        }
+    </script>
+</body>
+</html> -->
+<!-- html中各种单一功能组件 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <p>我们在每天早上 <time>9:00</time> 开始营业。</p>
+    <p>我在 <time datetime="2016-02-14">情人节</time> 有个约会。</p>
+    <p><tt>Teletype text</tt></p>
+    <p><var>Teletype text</var></p>
+    <p>学习 AJAX ,您必须熟悉 <wbr>Http<wbr>Request 对象。</p>
+    <p>visit our website <a href="www.<wbr>baidu.<wbr>com">www.baidu.com</a></p>
+</body>
+</html> -->
+<!-- html javascript脚本实现复用组件 -->
+<!-- <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Template 示例</title>
+    <style>
+        .item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <template id="itemTemplate">
+        <div class="item">
+            <h3 class="item-title"></h3>
+            <p class="item-description"></p>
+        </div>
+    </template>
+
+    <div id="container"></div>
+
+    <script>
+        // 获取模板内容
+        const template = document.getElementById('itemTemplate').content;
+
+        // 定义数据数组
+        const items = [
+            { title: '项目1', description: '这是项目1的描述。' },
+            { title: '项目2', description: '这是项目2的描述。' },
+            { title: '项目3', description: '这是项目3的描述。' }
+        ];
+
+        // 遍历数据数组，克隆模板并插入内容
+        items.forEach(item => {
+            const clone = template.cloneNode(true);
+            clone.querySelector('.item-title').textContent = item.title;
+            clone.querySelector('.item-description').textContent = item.description;
+            document.getElementById('container').appendChild(clone);
+        });
+    </script>
+</body>
+</html> -->
+<!-- html section用法 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>common webpage</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer{
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;;
+        }
+        section{
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Webpage Title</h1>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#server">server</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#contact">contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+        <section id="home">
+            <h1>Main page</h1>
+            <p>welcome to our page</p>
+        </section>
+        <section id="server">
+            <h1>Our server</h1>
+            <strong>Server1</strong>
+            <p>this is introduction</p>
+            <strong>Server2</strong>
+            <p>this is introduction</p>
+        </section>
+        <section id="contact">
+            <h1>contact us</h1>
+            <p>click <a href="www.baidu.com">here</a> to contact us</p>
+        </section>
+    </main>
+    <footer>
+        @copyright sickwag
+    </footer>
+</body>
+</html> -->
+
+<!-- html5 JavaScript脚本，colgroup，datalist等组件 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> -->
+    <!-- section为文档内容分块 -->
+    <!-- <main>
+        <h1>主内容标题</h1>
+        <p>这是主内容。</p>
+    </main>
+
+    <aside>
+        <section>
+            <h2>相关链接</h2>
+            <ul>
+                <li><a href="#">链接1</a></li>
+                <li><a href="#">链接2</a></li>
+            </ul>
+        </section>
+        <section>
+            <h2>广告</h2>
+            <p>这里是广告内容。</p>
+        </section>
+    </aside> -->
+    
+    <!-- 各种文本 -->
+    <!-- <small>this is small text</small><br>
+    <p style="margin-top: 0;margin-bottom: 0;">
+        this is normal text <br>
+        <s>wrong information</s>
+        <br>
+        <del>words should be delete</del><br>
+        <strong>this is strong text</strong><br>
+        you can see subtext <sub>here</sub><br>
+        you can see suptext <sup>here</sup><br>
+    </p> -->
+    
+
+    <!-- 下拉列表 -->
+    <!-- <select size="3" name="selection" id="selection-test" multiple required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="opel">Opel</option>
+        <option value="audi">Audi</option>
+    </select><br> -->
+    <!-- 定义不正确的文本 -->
+    <!-- 显示东亚文字的拼音，作为注音显示 -->
+    <!-- <ruby>
+        漢 <rp>(</rp><rt>han</rt><rp>)</rp>
+        字 <rp>(</rp><rt>zi</rt><rp>)</rp>
+    </ruby><br> -->
+    <!-- progress显示下载进度   -->
+    <!-- <progress value="50" max="100" ></progress><br>
+    <progress id='progress1' value="0" max="100">
+    </progress>
+    <button onclick="start_run(100)">下载</button>
+    <script>
+    function start_run(n)
+    {
+        if(n==0){alert("下载完成")}
+        var progress1=document.getElementById("progress1")
+        n=n-1
+        cur_task=100-n
+        progress1.value=cur_task
+        setTimeout("start_run("+n+")",100)
+        
+    }
+    </script>
+    <picture>
+        <source srcset="HTML\src\imgs\blue_green_sea.jpg"  media="(min-width: 600px)" sizes="100vw">
+        <img src="./src/imgs/blue_green_sea.jpg" alt="blue_green_sea">
+    </picture><br>
+    <canvas id="myCanvas"></canvas>
+    <script type="text/javascript">
+        var canvas=document.getElementById('myCanvas');
+        var ctx=canvas.getContext('2d');
+        ctx.fillStyle='#FF0000';
+        ctx.fillRect(0,0,80,100);
+    </script>
+    <table border="1">
+        <colgroup>
+          <col span="2" style="background-color:red">
+          <col style="background-color:yellow">
+        </colgroup>
+        <tr>
+          <th>ISBN</th>
+          <th>Title</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>3476896</td>
+          <td>My first HTML</td>
+          <td>$53</td>
+        </tr>
+    </table>
+    <table>
+        <colgroup>
+            <col style="background-color: #4ba0d4;">
+            <col span="2" style="background-color: #6adad6;">
+        </colgroup>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>职业</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <td>25</td>
+            <td>工程师</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>30</td>
+            <td>设计师</td>
+        </tr>
+    </table>
+    <input list="browsers">
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+    <p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+
+    <dialog id="my_dialog">
+        <h2>this is dialog title</h2>
+        <p>this is dialog title</p>
+        <button id="close_dialog">close</button>
+    </dialog>
+    <button id="open_dialog">click to dialog</button>
+    <script>
+        const dialog = document.getElementById('my_dialog')
+        const openButton = document.getElementById('open_dialog')
+        const closeButton = document.getElementById('close_dialog')
+
+        openButton.addEventListener('click', () => {
+            dialog.showModal();
+        });
+
+        closeButton.addEventListener('click', () => {
+            dialog.close();
+        });
+    </script><br>
+    <figure> -->
+        <!-- 展示大块引用内容 -->
+        <!-- <blockquote>
+            <p>“成功的秘诀在于坚持自己的目标和信念。”</p>
+        </blockquote>
+        <figcaption>— 未知</figcaption>
+    </figure>
+    <br>
+    <figure role="cow-char-img" aria-label="char-img">
+        <pre>
+            ___________________________
+            < I'm an expert in my field. >
+              ---------------------------
+                     \   ^__^ 
+                      \  (oo)\_______
+                         (__)\       )\/\
+                             ||----w |
+                             ||     ||
+        </pre>
+        <caption id="cow-char-img-caption">
+            A cow saying, "I'm an expert in my field." The cow is illustrated using preformatted text characters.
+        </caption>
+    </figure>
+</body>
+</html> -->
+<!-- html脚本 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("hello world")
+    </script>
+</body>
+</html> -->
+
+<!-- html框架 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html form</title>
+</head>
+<body>
+    <iframe src="./LearnHTMLRunoob.html" frameborder="10"></iframe>
+    <p><a href="https://www.runoob.com" target="iframe_a" rel="noopener">RUNOOB.COM</a></p>
+</body>
+</html> -->
+<!-- html各种表单控件 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html表单</title>
+</head>
+<body>
+        <form action="/">
+        <label for="name">User name</label>
+        <input type="text" id="name" name="name" autofocus required> <br>
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password"> <br>
+
+        <label">gender:</label>
+        <input type="radio" name="gender" value="male" checked>
+        <label for="male">male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="female">female</label> <br>
+
+        <label for="country">country</label>
+        <select name="country" id="country">
+            <option value="cn">CN</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select><br>
+        <input type="submit" value="submit"> <br>
+        <label for="tac">
+            <input id="tac" type="checkbox" name="terms-and-conditions">
+            I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a>
+        </label>
+    </form>
+    <form>
+        <fieldset>
+            <legend>个人信息</legend>
+            <label for="name">姓名：</label>
+            <input id="name" type="text" name="name"><br><br>
+            
+            <label for="email">电子邮件：</label>
+            <input id="email" type="email" name="email">
+        </fieldset>
+    </form>
+    
+    <label for="browsers">Select your browser</label>
+    <input list="browsers" id="browser" name="browser">
+    <datalist id="browsers">
+        <option value="Edge"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+    </datalist><br>
+    <button type="button" onclick="alert('Hello!')">点击我</button><br>
+    <label for="date">date</label>
+    <input type="date" name="date" id="date">
+    <label for="time">time</label>
+    <input type="time" name="time" id="time">
+    <label for="quantity">quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="10">
+    <label for="volume">volume</label>
+    <input type="range" name="volume" min="0" max="100">
+    <label for="disk-space">disk-space</label>
+    <meter value="0.6" id="disk-space">60%</meter>
+    <label for="file-progress">upload-progress</label>
+    <progress id="file-progress" value="70" max="100">70%</progress>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+        <input type="number" id="a" name="a" value="0">
+        +
+        <input type="number" id="b" name="b" value="0">
+        =
+        <output name="result" for="a b"></output>
+    </form>
+    <details>
+        <p>this is detail content</p>
+        <summary>click here to show details</summary>
+        <summary>click here to show details</summary>
+    </details>
+</body>
+</html> -->
+    
+<!-- html表单 -->
+
+<!-- html布局 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table width="500" id="table1";>
+        <caption>use table method</caption>
+        <tr>
+            <td colspan="2" style="background-color: #FFA500;">
+                <h1 style="margin-bottom: 0;margin-top: 0;">Main webpage title</h1>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: #FFD700; width: 100px;text-align: left;vertical-align: top;" id="data1">
+                <b>menu</b><br>
+                HTML<br>
+                CSS<br>
+                javascript
+            </td>
+            <td style="background-color: #eeeeee;height: 200px; width: 400px;vertical-align: text-top;">this is content</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: #FFA500; text-align: center;">copyright @sickwag</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <div id="container" style="background-color: #FFA500;width: 500px;">
+        <h1 style="margin-bottom: 0;">Main webpage title</h1>
+        <span style="width: 500px;">
+            <div id="menu" style="background-color: #FFD700; float: left;width: 100px;height:200px ;">
+                <b>menu</b><br>
+                HTML<br>
+                CSS<br>
+                javascript
+            </div>
+            <div id="content" style="background-color: #eeeeee; float: left;height: 200px; width: 400px;">
+                this is content
+            </div>
+        </span>
+        <div id="footer" style="background-color: #FFA500; text-align: center;">
+            copyright @sickwag
+        </div>
+    </div>
+</body>
+</html> -->
+
+<!-- html列表 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML list</title>
+</head>
+<body>
+    <ol type="I"> -->
+        <!-- type="a"/type="A"/type="1"/type="i" -->
+        <!-- <li>Alpha</li>
+        <li>Beta</li>
+        <li>Charlie</li>
+    </ol>
+    <ul style="list-style-type: circle;">
+        <li>Alpha</li>
+        <li>Beta</li>
+        <li>Charlie</li>
+    </ul>
+</body>
+</html> -->
+<!-- html表格 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tablet</title>
+    <style>
+        .table-container{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+        table{
+            /* border-collapse CSS 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。 */
+            width: 45%;
+            border-collapse: collapse;
+        }
+        table,th,td{
+            border: 1px solid #000;
+        }
+        th,td{
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table border="10" align="left">
+            <caption>this is caption of table</caption>
+            <tr>
+                <td>row 1,cell1</td>
+                <td>row 1,cell2</td>
+            </tr>
+            <tr>
+                <td>row 2,cell1</td>
+                <td>row 2,cell2</td>
+            </tr>
+        </table>
+        <table border="0" align="center">
+            <caption>table with thread</caption>
+            <thead>
+                <tr>
+                    <td>head 1</td>
+                    <td>head 2</td>
+                </tr>
+            </thead>
+            <tr>
+                <td>row 2,cell1</td>
+                <td>row 2,cell2</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html> -->
+<!-- html表格 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>caption</caption>
+        <thead>
+            <th>head 1</th>
+            <th>head 2</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cell 1 row 1</td>
+                <td>cell 2 row 2</td>
+            </tr>
+            <tr>
+                <td>cell 2 row 1</td>
+                <td>cell 2 row 2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html> -->
+<!-- html图片 -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title> This is the page title </title>
+    </head>
+    <body>
+        <p>you can click the sun or other plant watch the changes</p>
+        <img src="./src/imgs/planets.gif" alt="a picture of 3 planets" width="145" height="126" usemap="#plants_map">
+        <map name="plants_map">
+            <area shape="rect" coords="0,0,82,126" href="src/html/sun.html"/>
+            <area shape="circle" coords="90,58,3" alt="a picture of mercur" href="./src/imgs/merglobe.gif"/>
+            <area shape="circle" coords="124,59,8" alt="a picture of venus" href="./src/imgs/venglobe.gif"/>
+        </map>
+        <p> you can click anyone of them</p>
+    </body>
+</html> -->

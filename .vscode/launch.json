@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python 调试程序: 当前文件",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "java",
+      "name": "Sum",
+      "request": "launch",
+      "mainClass": "Sum",
+      "projectName": "vscode_1251f2bc",
+      "encoding": "UTF-8"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "vscode_1251f2bc"
+    },
+    {
+      "name": "gdb Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "D:\\Code Files\\vscode\\Drafts\\CCppOutput\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "D:\\Program\\mingw64\\bin\\gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++.exe build active file" // 确保任务名称与 tasks.json 一致
+    },
+  ]
+}

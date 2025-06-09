@@ -1,0 +1,41 @@
+2025-05-04 14:14:08: Assistant - hello
+2025-05-04 14:14:08: Assistant - 你好！有什么可以帮助你的吗？
+
+2025-05-04 14:14:15: Assistant - 你是谁？
+2025-05-04 14:14:15: Assistant - 我是 Moonshot AI 开发的人工智能助手，擅长中英文对话，可以帮你解答问题或者进行一些有趣的交流。有什么我可以帮你的吗？
+
+2025-05-04 14:14:44: Assistant - 请你写一段C++20才能支持的代码
+2025-05-04 14:14:44: Assistant - 当然可以。C++20 引入了许多新特性，其中之一是概念（Concepts），它允许在模板编程中更清晰地表达类型要求。下面是一个使用 C++20 概念的简单示例代码：
+
+```cpp
+#include <iostream>
+#include <concepts>
+#include <type_traits>
+
+// 定义一个概念，要求类型 T 必须支持加法操作
+template <typename T>
+concept Addable = requires(T a, T b) {
+    { a + b } -> std::same_as<T>;
+};
+
+// 一个泛型函数，只有当 T 满足 Addable 概念时才能使用
+template <Addable T>
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    int i = 5;
+    double d = 3.14;
+    std::cout << "The sum of " << i << " and " << i << " is " << add(i, i) << std::endl;
+    std::cout << "The sum of " << d << " and " << d << " is " << add(d, d) << std::endl;
+
+    // 下面的代码将无法编译，因为 std::string 不满足 Addable 概念
+    // std::cout << "The sum of " << std::string("hello") << " and " << std::string("world") << " is " << add(std::string("hello"), std::string("world")) << std::endl;
+
+    return 0;
+}
+```
+
+这段代码定义了一个 `Addable` 概念，它要求类型 `T` 必须支持加法操作，并且结果类型也必须是 `T`。然后定义了一个 `add` 函数模板，它只接受满足 `Addable` 概念的类型。在 `main` 函数中，我们尝试对整数和浮点数使用 `add` 函数，它们都满足 `Addable` 概念，而对于字符串，由于不满足 `Addable` 概念，尝试使用 `add` 函数将导致编译错误。
+

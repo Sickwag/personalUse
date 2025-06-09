@@ -1,0 +1,2 @@
+login_button=login
+sava_file=sava file

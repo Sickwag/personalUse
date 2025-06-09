@@ -1,0 +1,349 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>this line will not show!</title>
+    <style type="text/css">
+        body {/*这叫CSS   body选择器，会选择html中所有body标签按照选择器内容显示样式*/
+            background-color:yellow;
+            /* style设置整个html文档的背景颜色，整个页面背景将显示为蓝色 */
+        }
+        p {/*  {同理 */
+            color:blue
+            /* 所有<p>段落中的文字讲义蓝色字体显示 */
+        }
+        </style>
+</head>
+<body>
+    <h1 style="background-color:yellowgreen;font-family: Verdana, Geneva, Tahoma, sans-serif;font-style: italic;text-align: center;">this is head 1</h1>
+</body> -->
+
+<!-- <body>
+    <h1>this is head 1</h1>
+    <br>
+    <br>
+    <p>this is the first paragraph</p>
+    <h1>这是1号标题</h1>
+    <font size="6">这是6号字体文本</font>
+
+    <h2>这是2号标题</h2>
+    <font size="5">这是5号字体文本</font>
+
+    <h3>这是3号标题</h3>
+    <font size="4">这是4号字体文本</font>
+    <br>
+    <p>
+        <a href="/index.html">本文本</a> 是一个指向本网站中的一个页面的链接
+    </p>
+
+    <p>
+        <a href="https://www.microsoft.com/">本文本</a> 是一个指向万维网上的页面的链接。
+    </p>
+    <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">安全链接</a>
+    <p>
+        <a href="https://www.bing.com" target="_blank" rel="noopener no referrer">this is link appears with text towards bing.com</a>                  it will not show 1+backspace
+    </p>
+
+    <p>
+        <a href="#">back to the page head</a> 
+        <br>
+        <a href="javascript:void(0)"> stop default action and not refresh the page</a>
+        <br>
+        <a href="">refresh the page</a>
+        <br>
+        <a href="about:blank">open a blank page</a>
+        <br>
+        <a role="button"></a>
+        <br>
+        <a href="mailto:sickwag@Outlook.com?
+        subject=this is a subject of this mail&
+        body=this is a body of this mail" 
+        rel="nofollow">
+            send the mail
+        </a>
+
+        <a href="mailto:sickwag@outlook.com?subject=this is a subject of this mail&body=this is a body of this mail" rel="nofollow">send the mail</a>
+
+    </p> -->
+<!-- </html> -->
+
+<!-- 插入图片 -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>this is the page title</title>
+        <style type="text/css">
+            /* i ve set some rules in global configuration */
+            body{background-color: yellow;}
+            p{color: blue; align-items: center;}
+        </style>
+    </head>
+    <body>
+        <h1 style="background-color: yellowgreen;
+                    text-align: center;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            i will show some pics and text
+        </h1>
+        <p>
+            <br>
+            <img src="./src/imgs/blue_green_sea.jpg" alt="a blue green sea" width="304">
+        </p>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- use css define global style -->
+    <meta charset="utf-8">
+    <title>this is the page title</title>
+    <style type="text/css" id="global">
+        body {
+            font-size: small;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: yellow;
+            color: brown;
+        }
+
+        p {
+            font-size: smaller;
+            font-family: sans-serif;
+            background-color: yellowgreen;
+            color: black;
+        }
+
+        caption {
+            font-size: larger;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: blue;
+            color: cyan;
+        }
+    </style>
+    <style id="table_cellspaceing">
+        table{
+            /* border-collapse控制单元格之间边框是否合并; */
+            border-collapse: collapse;
+            border-spacing: 10px;/*单元格边框和单元格之间的内容用10px空白填充 */
+        }
+        td {
+            padding: 20px;
+            border: 2px solid black;/*实心黑线条只作为td的边框*/
+        }
+    </style>
+
+    <style id="text_float_left_imgs">
+        .float_left {
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1" class="table_cellspaceing">
+        <caption>table with cell border-spacing</caption>
+        <tr>
+            <th>column 1</th>
+            <th>column 2</th>
+            <th>column 3</th>
+        </tr>
+        <tr>
+            <td>(0,0)</td>
+            <td>(0,1)</td>
+            <td>(0,2)</td>
+        </tr>
+        <tr>
+            <td>(1,0)</td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+        </tr>
+        <tr>
+            <td>(2,0)</td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+        </tr>
+    </table>
+    <!-- use image and floating text -->
+    <h1>Next paragraph will show the usage of imgs</h1>
+    <h2>this is text and img on its right side</h2>
+    <p>
+        Basic profile
+        <img src="./src/imgs/Eminem_black&white.gif" alt="Eminem" width="320px" height="auto" class="float_left">
+    </p>
+    <p>
+        Eminem (born October 17, 1972, St. Joseph, Missouri, U.S.) is an American rapper, record producer, and actor who
+        is known as one of the most-controversial and best-selling artists of the early 21st century. He was the first
+        recording artist to have 10 consecutive albums debut at number one on the Billboard album chart.
+    </p>
+    <br>
+    <br>
+    <br>
+    <p>
+        <h2>Next img will be able to click</h2>
+    <p>image with border</p>
+    <img src="https://cdn.britannica.com/63/136263-050-0F71EF3D/Eminem.jpg" alt="recent picture" width="320px"
+        height="auto" class="text_float_left_imgs" style="border: 1;">
+    <!-- border="1"现已废弃，现代浏览器推荐使用CSS控制样式              -->
+    </p>
+    <p>image with link</p>
+    <map name="planet_map">
+        <area shape="rect" coords="0,0,82,126" alt="the sum" href="./sun.html">
+        <area shape="circle" coords="90,58,3" alt="the planets1" href="./planet1.html">
+        <area shape="circle" coords="124,58,8" alt="the planet2" href="./planet2.html">
+    </map>
+    <p>
+        <img src="https://www.runoob.com/try/demo_source/planets.gif" usemap="#planet_map">
+    </p>
+    
+    <!-- create an img with border and link -->
+     <p>
+        this is an img with hyperlink
+        <br>
+        <a href="http://www.runoob.com/html/html-tutorial.html">
+            <img src="https://www.runoob.com/wp-content/uploads/2013/06/image-icon.png" alt="the icon of html" style="border: 1;">
+        </a>
+     </p>
+
+
+
+
+    <!-- usage of table and table style -->
+    <!-- table with 1 pound border  -->
+    <h2>next paragraph will show usage of tablet</h2>
+    <table border="1">
+        <caption>table with 1 pound border</caption>
+        <tr>
+            <th>column 1</th>
+            <th>column 2</th>
+            <th>column 3</th>
+        </tr>
+        <tr>
+            <td>(0,0)</td>
+            <td>(0,1)</td>
+            <td>(0,2)</td>
+        </tr>
+        <tr>
+            <td>(1,0)</td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+        </tr>
+        <tr>
+            <td>(2,0)</td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <!-- table with no pound border  -->
+    <table border="0">
+        <caption>table with no pound border</caption>
+    <!-- or you can write no properties -->
+        <tr>
+            <th>column 1</th>
+            <th>column 2</th>
+            <th>column 3</th>
+        </tr>
+        <tr>
+            <td>(0,0)</td>
+            <td>(0,1)</td>
+            <td>(0,2)</td>
+        </tr>
+        <tr>
+            <td>(1,0)</td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+        </tr>
+        <tr>
+            <td>(2,0)</td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <!-- create spanning cells with table_heading-->
+    <table border="1">
+        <caption>create spanning cells with table_heading</caption>
+        <caption style="height: fit-content;width: auto;font: 500;color: blueviolet;">a colspan table</caption>
+        <tr>
+            <th colspan="3">column</th>
+        </tr>
+        <tr>
+            <td>(0,0)</td>
+            <td>(0,1)</td>
+            <td>(0,2)</td>
+        </tr>
+        <tr>
+            <td>(1,0)</td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+        </tr>
+        <tr>
+            <td>(2,0)</td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+
+    <!-- this is table inside outside table -->
+    <table border="1">
+        <caption>this is table inside outside table</caption>
+        <tr>
+            <th>column 1</th>
+            <th>column 2</th>
+            <th>column 3</th>
+        </tr>
+        <tr>
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>column 1</th>
+                        <th>column 2</th>
+                        <th>column 3</th>
+                    </tr>
+                    <tr>
+                        <td>(0,0)</td>
+                        <td>(0,1)</td>
+                        <td>(0,2)</td>
+                    </tr>
+                    <tr>
+                        <td>(1,0)</td>
+                        <td>(1,1)</td>
+                        <td>(1,2)</td>
+                    </tr>
+                    <tr>
+                        <td>(2,0)</td>
+                        <td>(2,1)</td>
+                        <td>(2,2)</td>
+                    </tr>
+                </table>
+            </td>
+            <td>(0,1)</td>
+            <td>(0,2)</td>
+        </tr>
+        <tr>
+            <td>(1,0)</td>
+            <td>(1,1)</td>
+            <td>(1,2)</td>
+        </tr>
+        <tr>
+            <td>(2,0)</td>
+            <td>(2,1)</td>
+            <td>(2,2)</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+</body>
+
+</html>

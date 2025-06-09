@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website With Login & Registration</title>
+    <link rel="stylesheet" href="LoginRegPage.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <!-- wrapper表示包裹住数据表和各种注册提示信息的最外层容器 -->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <!-- 手机账号密码等信息的表单，每个input_box有一个存放图标+输入框+选矿标签三个合成的一个span（横向排列） -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember-forget">
+                    <!-- 没有换行br所以连个该在同一行显示，只有窗口缩小到一定程度才会换行 -->
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forget Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <!-- div是块级元素所以会换行，其中元素p也是块级元素所以换行 -->
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <!-- 手机账号密码等信息的表单，每个input_box有一个存放图标+输入框+选矿标签三个合成的一个span（横向排列） -->
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember-forget">
+                    <!-- 没有换行br所以连个该在同一行显示，只有窗口缩小到一定程度才会换行 -->
+                    <label><input type="checkbox"> I agree with items & conditions</label>
+                    
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <!-- div是块级元素所以会换行，其中元素p也是块级元素所以换行 -->
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="LoginRegPage.js"></script>
+</body>
+
+</html>

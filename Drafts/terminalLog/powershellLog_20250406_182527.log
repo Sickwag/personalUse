@@ -1,0 +1,18 @@
+﻿[2025-04-06 18:25:27.242][PID:21932][desktop-4h2qjbs\sickwag] Input: curDialog.ps1
+Output:
+[EXCEPTION] 在此对象上找不到属性“OutputEncoding”。请确认该属性存在并且可设置。
+在 <ScriptBlock>、D:\Code Files\vscode\Drafts\powershellScripts\curDialog.ps1 中: 第 3 行
+在 <ScriptBlock>、<无文件> 中: 第 1 行
+在 global:prompt、D:\Code Files\vscode\Drafts\powershellScripts\curDialog.ps1 中: 第 42 行
+在 <ScriptBlock>、<无文件> 中: 第 1 行
+
+Command         Arguments                                           
+-------         ---------                                           
+Log-InputOutput {InputCommand=curDialog.ps1, Output=[EXCEPTION] 在...
+prompt          {}                                                  
+<ScriptBlock>   {}                                                  
+
+
+
+------------------------
+

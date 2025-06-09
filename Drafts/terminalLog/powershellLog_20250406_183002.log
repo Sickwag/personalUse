@@ -1,0 +1,74 @@
+﻿[2025-04-06 18:30:02.174][PID:21932][desktop-4h2qjbs\sickwag] Input: curDialog.ps1
+Output:
+[EXCEPTION] 在此对象上找不到属性“OutputEncoding”。请确认该属性存在并且可设置。
+在 <ScriptBlock>、D:\Code Files\vscode\Drafts\powershellScripts\curDialog.ps1 中: 第 3 行
+在 <ScriptBlock>、<无文件> 中: 第 1 行
+在 global:prompt、D:\Code Files\vscode\Drafts\powershellScripts\curDialog.ps1 中: 第 42 行
+在 <ScriptBlock>、<无文件> 中: 第 1 行
+
+Command         Arguments                      
+-------         ---------                      
+Log-InputOutput {InputCommand=curDialog.ps1,...
+prompt          {}                             
+<ScriptBlock>   {}                             
+
+
+
+------------------------
+
+[2025-04-06 18:30:10.399][PID:21932][desktop-4h2qjbs\sickwag] Input: dir
+Output:
+
+
+    目录: D:\Code Files\vscode\CCpp\chore
+
+
+Mode                 LastWriteTime       Length
+----                 -------------       ------
+-a----         2025/3/20     17:03         6749
+-a----          2025/4/6     16:55        13991
+-a----         2025/2/20     11:18            0
+-a----         2025/2/20     11:19        61019
+-a----          2025/4/4     13:16          958
+
+
+
+
+Command         Arguments                      
+-------         ---------                      
+Log-InputOutput {InputCommand=dir, Output=...  
+prompt          {}                             
+<ScriptBlock>   {}                             
+
+
+
+------------------------
+
+[2025-04-06 18:30:58.974][PID:21932][desktop-4h2qjbs\sickwag] Input: cd "d:\Code Files\vscode\CCpp\chore\" ; if ($?) { g++ -std=c++23 functions.cpp -o "D:\Code Files\vscode\Drafts\CCppOutput\functions" } ; if ($?) { cd "D:\Code Files\vscode\Drafts\CCppOutput" } ; if ($?) { ./functions }
+Output:
+
+
+Command         Arguments                      
+-------         ---------                      
+Log-InputOutput {InputCommand=cd "d:\Code Fi...
+prompt          {}                             
+<ScriptBlock>   {}                             
+
+
+
+------------------------
+
+[2025-04-06 18:31:28.690][PID:21932][desktop-4h2qjbs\sickwag] Input: cd "d:\Code Files\vscode\CCpp\chore\" ; if ($?) { g++ -std=c++23 functions.cpp -o "D:\Code Files\vscode\Drafts\CCppOutput\functions" } ; if ($?) { cd "D:\Code Files\vscode\Drafts\CCppOutput" } ; if ($?) { ./functions }
+Output:
+
+
+Command         Arguments                      
+-------         ---------                      
+Log-InputOutput {InputCommand=cd "d:\Code Fi...
+prompt          {}                             
+<ScriptBlock>   {}                             
+
+
+
+------------------------
+

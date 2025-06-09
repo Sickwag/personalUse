@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务管理器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 60px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .task-list {
+            margin-top: 20px;
+        }
+
+        .task-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .task-card.completed {
+            background-color: #e0ffe0;
+            border-color: #b3ffb3;
+        }
+
+        .task-card h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .task-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .task-card .actions {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .task-card .actions button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+        .task-card .actions button.complete {
+            color: #28a745;
+        }
+
+        .task-card .actions button.delete {
+            color: #dc3545;
+        }
+
+        .filter-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .filter-group button {
+            background-color: #6c757d;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+
+        .filter-group button.active {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>任务管理器</h1>
+        <div class="form-group">
+            <label for="task-name">任务名称</label>
+            <input type="text" id="task-name" placeholder="输入任务名称">
+        </div>
+        <div class="form-group">
+            <label for="task-description">任务描述</label>
+            <textarea id="task-description" placeholder="输入任务描述"></textarea>
+        </div>
+        <button class="btn" id="add-task">添加任务</button>
+        <div class="filter-group">
+            <button id="filter-all" class="active">全部</button>
+            <button id="filter-completed">已完成</button>
+            <button id="filter-incomplete">未完成</button>
+        </div>
+        <div class="task-list" id="task-list"></div>
+    </div>
+
+    <script>
+        // 任务数据
+        let tasks = [];
+
+        // DOM 元素
+        const taskNameInput = document.getElementById('task-name');
+        const taskDescriptionInput = document.getElementById('task-description');
+        const addTaskButton = document.getElementById('add-task');
+        const taskList = document.getElementById('task-list');
+        const filterAllButton = document.getElementById('filter-all');
+        const filterCompletedButton = document.getElementById('filter-completed');
+        const filterIncompleteButton = document.getElementById('filter-incomplete');
+
+        // 添加任务
+        addTaskButton.addEventListener('click', () => {
+            const name = taskNameInput.value.trim();
+            const description = taskDescriptionInput.value.trim();
+
+            if (name === '' || description === '') {
+                alert('请输入任务名称和描述！');
+                return;
+            }
+
+            const newTask = {
+                id: Date.now(),
+                name,
+                description,
+                completed: false,
+            };
+
+            tasks.push(newTask);
+            renderTasks();
+            taskNameInput.value = '';
+            taskDescriptionInput.value = '';
+        });
+
+        // 渲染任务
+        function renderTasks(filter = 'all') {
+            taskList.innerHTML = '';
+
+            let filteredTasks = tasks;
+            if (filter === 'completed') {
+                filteredTasks = tasks.filter(task => task.completed);
+            } else if (filter === 'incomplete') {
+                filteredTasks = tasks.filter(task => !task.completed);
+            }
+
+            filteredTasks.forEach(task => {
+                const taskCard = document.createElement('div');
+                taskCard.classList.add('task-card');
+                if (task.completed) {
+                    taskCard.classList.add('completed');
+                }
+
+                taskCard.innerHTML = `
+          <h3>${task.name}</h3>
+          <p>${task.description}</p>
+          <div class="actions">
+            <button class="complete" onclick="toggleComplete(${task.id})">${task.completed ? '取消完成' : '标记完成'}</button>
+            <button class="delete" onclick="deleteTask(${task.id})">删除</button>
+          </div>
+        `;
+
+                taskList.appendChild(taskCard);
+            });
+        }
+
+        // 标记任务完成/取消完成
+        function toggleComplete(id) {
+            const task = tasks.find(task => task.id === id);
+            task.completed = !task.completed;
+            renderTasks();
+        }
+
+        // 删除任务
+        function deleteTask(id) {
+            tasks = tasks.filter(task => task.id !== id);
+            renderTasks();
+        }
+
+        // 过滤任务
+        filterAllButton.addEventListener('click', () => {
+            setActiveFilter('all');
+            renderTasks('all');
+        });
+
+        filterCompletedButton.addEventListener('click', () => {
+            setActiveFilter('completed');
+            renderTasks('completed');
+        });
+
+        filterIncompleteButton.addEventListener('click', () => {
+            setActiveFilter('incomplete');
+            renderTasks('incomplete');
+        });
+
+        // 设置活动过滤器
+        function setActiveFilter(filter) {
+            filterAllButton.classList.remove('active');
+            filterCompletedButton.classList.remove('active');
+            filterIncompleteButton.classList.remove('active');
+
+            if (filter === 'all') {
+                filterAllButton.classList.add('active');
+            } else if (filter === 'completed') {
+                filterCompletedButton.classList.add('active');
+            } else if (filter === 'incomplete') {
+                filterIncompleteButton.classList.add('active');
+            }
+        }
+
+        // 初始化
+        renderTasks();
+    </script>
+</body>
+
+</html>
