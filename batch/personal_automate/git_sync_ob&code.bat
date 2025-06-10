@@ -17,7 +17,7 @@ if errorlevel 1 (
 )
 
 git add . 2>&1 >> "%LOG_FILE%"
-git commit -m "自动同步: %date% %time%" 2>&1 >> "%LOG_FILE%"
+git commit -m "daily sync %date% %time%" 2>&1 >> "%LOG_FILE%"
 if errorlevel 1 (
   echo [%date% %time%] 警告: Obsidian仓库提交失败 >> "%LOG_FILE%"
 )
@@ -39,7 +39,7 @@ if errorlevel 1 (
 )
 
 git add . 2>&1 >> "%LOG_FILE%"
-git commit -m "自动同步: %date% %time%" 2>&1 >> "%LOG_FILE%"
+git commit -m "daily sync: %date% %time%" 2>&1 >> "%LOG_FILE%"
 if errorlevel 1 (
   echo [%date% %time%] 警告: Code仓库提交失败 >> "%LOG_FILE%"
 )
