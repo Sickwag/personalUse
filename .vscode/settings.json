@@ -111,5 +111,12 @@
         "zixuliedehe"
     ],
     "C_Cpp.errorSquiggles": "enabled",
-    "cmake.sourceDirectory": "/media/sickwag/D:/Code Files/vscode/Cmake"
+    "cmake.sourceDirectory": "/media/sickwag/D:/Code Files/vscode/Cmake",
+    "terminal.integrated.shellArgs.windows": [
+        ".venv\\Scripts\\Activate.ps1"
+    ],
+    "terminal.integrated.env.windows": {
+        "UV_INDEX_URL": "https://pypi.tuna.tsinghua.edu.cn/simple"
+    },
+    "cmake.ignoreCMakeListsMissing": true
 }

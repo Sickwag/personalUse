@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set LOG_FILE=sync.log
+set LOG_FILE=D:\Code Files\vscode\batch\personal_automate\sync.log
 set obsidian_repo_path=E:\file_storage\Obsidian vault\vault
 set code_repo_path=D:\Code Files\vscode
 
