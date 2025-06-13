@@ -1,3 +1,0 @@
-D:/Code Files/vscode/Cmake/CMakeFiles/output.dir
-D:/Code Files/vscode/Cmake/CMakeFiles/ALL_BUILD.dir
-D:/Code Files/vscode/Cmake/CMakeFiles/ZERO_CHECK.dir
