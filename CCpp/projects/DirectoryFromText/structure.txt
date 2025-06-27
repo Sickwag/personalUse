@@ -1,0 +1,23 @@
+csv_parser/
+├── include/
+│   ├── csv_parser/
+│   │   ├── CSVParser.h          // CSV 解析器核心类
+│   │   ├── CSVEditor.h          // CSV 编辑器类
+│   │   ├── CSVValidator.h       // CSV 数据验证器
+│   │   ├── CSVConverter.h       // CSV 转换器（CSV ↔ 其他格式）
+│   │   └── CSVConstants.h       // 常量定义（如分隔符、编码）
+│   └── utils/
+│       ├── FileIO.h             // 文件读写工具类
+│       └── ThreadSafeQueue.h    // 线程安全队列（用于流式解析）
+├── src/
+│   ├── CSVParser.cpp
+│   ├── CSVEditor.cpp
+│   ├── CSVValidator.cpp
+│   ├── CSVConverter.cpp
+│   └── utils/
+│       ├── FileIO.cpp
+│       └── ThreadSafeQueue.cpp
+├── test/
+│   ├── CSVParserTest.cpp        // 单元测试
+│   └── CSVEditorTest.cpp
+└── CMakeLists.txt               // 构建配置 

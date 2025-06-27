@@ -1,0 +1,1 @@
+ "D:/Code Files/PackageManagers/vcpkg/installed/x64-windows/debug/lib/boost_filesystem-vc143-mt-gd-x64-1_88.lib" "D:/Code Files/PackageManagers/vcpkg/installed/x64-windows/debug/lib/boost_system-vc143-mt-gd-x64-1_88.lib" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
