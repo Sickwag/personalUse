@@ -18,13 +18,14 @@
 using json = nlohmann::json;
 namespace asio = boost::asio;
 
-static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* output) {
-    size_t total = size * nmemb;
-    output->append(static_cast<char*>(contents), total);
-    return total;
-}
+static size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* output);
+asio::awaitable<void> start_service(asio::io_context& ioc);
 
+void is_already_done(bool flag, const std::string& description);
+void is_already_done(bool flag, const std::string& description, std::exception& err);
 void get_weather();
+void start_service_sync(asio::io_context& ioc);
+
 class Time {
    public:
     static std::pair<tm, std::string> get_current_time() {
@@ -72,11 +73,11 @@ class InputValidator {
     InputValidator& numeric(const std::string& error_msg = "Input must be a valid number.");
     InputValidator& date(const std::string& error_msg = "Invalid date format. Use YYYY-MM-DD.");
     InputValidator& password_strength(const std::string& error_msg = "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.", bool upper = true, bool lower = true, bool digit = true, bool special = true);
-    InputValidator& ignore_case(const std::string& error_msg = "you have input nothing.") const;
-    T render() const;
+    InputValidator& ignore_case(const std::string& error_msg = "you have input nothing.");
+    T render();
 
     InputValidator& custom_async(ValidatorFuncAsync condition_async, const std::string& error_msg);
-    asio::awaitable<T> render_async() const;
+    asio::awaitable<T> render_async();
 
    private:
     std::string prompt_;
@@ -247,14 +248,9 @@ InputValidator<T>& InputValidator<T>::password_strength(const std::string& error
 }
 
 template <typename T>
-inline InputValidator<T>& InputValidator<T>::ignore_case(const std::string& error_msg) const {
-    validators_.emplace(validators_.begin(), [](std::string& s) -> bool {
-        if (s.empty())
-            return false;
-        for (auto& c : s) {
-            c = std::tolower(c);
-        }
-        return true;
+inline InputValidator<T>& InputValidator<T>::ignore_case(const std::string& error_msg) {
+    validators_.emplace(validators_.begin(), [](const std::string& s) -> bool {
+        return !s.empty(); // 只检查是否为空，不修改字符串
     });
     return *this;
 }
@@ -270,7 +266,7 @@ bool InputValidator<T>::validate(const T& input) const {
 }
 
 template <typename T>
-T InputValidator<T>::render() const {
+T InputValidator<T>::render() {
     if (!async_validators_.empty()) {
         throw std::runtime_error("you have coroutine validators, you should use `render_async()` instead of `render()`");
     }
@@ -284,7 +280,7 @@ T InputValidator<T>::render() const {
         }
         bool valid = true;
         for (const auto& [cond, msg] : validators_) {
-            if (!cond(value)) {  // Changed from cond(value) to cond(value)
+            if (!cond(value)) {
                 std::cout << msg << '\n';
                 handleInputError(msg);
                 valid = false;
@@ -294,6 +290,8 @@ T InputValidator<T>::render() const {
         if (valid)
             break;
     }
+    if(!validators_.empty())
+        validators_.clear();
     return value;
 }
 
@@ -304,7 +302,7 @@ inline InputValidator<T>& InputValidator<T>::custom_async(ValidatorFuncAsync con
 }
 
 template <typename T>
-inline asio::awaitable<T> InputValidator<T>::render_async() const {
+inline asio::awaitable<T> InputValidator<T>::render_async() {
     T value;
     while (true) {
         std::cout << prompt_;
@@ -329,12 +327,17 @@ inline asio::awaitable<T> InputValidator<T>::render_async() const {
         for (const auto& [cond, msg] : validators_) {
             if (!cond(value)) {
                 std::cout << msg << '\n';
-                async_valid = false;
+                sync_valid = false;
                 break;
             }
         }
-        if (sync_valid && async_valid)
+        if(!validators_.empty()) validators_.clear();
+        if(!async_validators_.empty())
+            async_validators_.clear();
+
+        if (sync_valid && async_valid){
             co_return value;
+        }
     }
 }
 
@@ -342,6 +345,5 @@ template <typename T>
 void InputValidator<T>::handleInputError(const std::string& error_msg) const {
     std::cin.clear();
     std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
-    // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cout << error_msg << std::endl;
 }

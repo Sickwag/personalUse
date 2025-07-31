@@ -14,37 +14,43 @@ void Menu::start_menu() const {
 }
 
 asio::awaitable<void> Menu::choose_menu_options() const {
-    std::cout << "welcomes to book manage plus:\n\n\t1) Login with password \n\t2) Login with email captcha \n\t3) Register \n\t 4) Exit" << std::endl;
+    std::cout << "welcomes to book manage plus:\n\n\t1) Login with password \n\t2) Login with email captcha \n\t3) Register \n\t4) Exit" << std::endl;
     int choice = iv_int.prompt("input the choice number:")
                      .range(1, 4)
                      .render();
-    while (true) {
-        Role r;
-        switch (choice) {
-            case 1: {
-                auto is_login_psw = co_await r.login_with_pwd();
-                if (!is_login_psw) {
-                    break;
-                }
-                break;
-            }
-            case 2: {
-                auto is_login_cap = co_await r.login_with_captcha();
-                if (!is_login_cap) {
-                    break;
-                }
-            }
-            case 3: {
-                UserInfo reader_info = co_await r.register_account();
-                r.self_checking(reader_info);
-            }
-            case 4: {
-                co_return;
-            }
-            default:
-                break;
+    Role r;
+    bool repeat = false;
+    switch (choice) {
+        case 1: {
+            auto is_login_psw = co_await r.login_with_pwd();
+            is_already_done(is_login_psw, "login with password");
+            break;
         }
+        case 2: {
+            auto is_login_cap = co_await r.login_with_captcha();
+            is_already_done(is_login_cap, "login with captcha");
+            break;
+        }
+        case 3: {
+            // UserInfo reader_info = co_await r.register_account();
+            UserInfo reader_info = co_await r.register_account();
+            co_await r.self_checking(reader_info);
+            repeat = true;
+            r.get_user_info() = reader_info;
+            break;
+        }
+        case 4: {
+            co_return;
+        }
+        default:
+            break;
     }
+    if(repeat)
+        choose_menu_options();
+    else{
+        co_await after_login(r);
+    }
+    co_return;
 }
 
 asio::awaitable<void> Menu::after_login(Role& r) const {
@@ -96,11 +102,11 @@ asio::awaitable<void> Menu::after_login(Role& r) const {
 }
 
 void Menu::display_announcement() const {
-    std::ifstream f("./configs/all_text.json");
-    nlohmann::json j = nlohmann::json::parse(f);
-    auto time = Time::get_current_time().second;
-    std::string formatted = std::vformat(j.value("announcement", ""), std::make_format_args(time));
+    // std::ifstream f("./configs/all_text.json");
+    // nlohmann::json j = nlohmann::json::parse(f);
+    // auto time = Time::get_current_time().second;
+    // std::string formatted = std::vformat(j.value("announcement", ""), std::make_format_args(time));
     get_weather();
-    std::cout << formatted << std::endl;
-    choose_menu_options();
+    // std::cout << formatted << std::endl;
+    // choose_menu_options();
 }

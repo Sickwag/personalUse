@@ -25,7 +25,7 @@ struct DBConfig {
     std::string user;
     std::string password;
     std::string database;
-    mysql::ssl_mode ssl = mysql::ssl_mode::disable;
+    mysql::ssl_mode ssl = mysql::ssl_mode::enable;
 };
 
 // SQL错误异常类

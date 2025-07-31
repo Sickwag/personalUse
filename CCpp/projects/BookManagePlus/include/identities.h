@@ -41,6 +41,7 @@ class Role {
     awaitable<void> self_checking(const UserInfo& u);
     awaitable<bool> change_password();
     UserInfo& get_user_info();
+    // void set_user_info(const UserInfo& u) const;
 
     // Librarian
     awaitable<void> check_book();
@@ -51,9 +52,7 @@ class Role {
     awaitable<bool> adjust_permission();
     awaitable<bool> set_announcement();
 
-   protected:
-   void is_already_done(bool flag, const std::string& description) const ;
-   void is_already_done(bool flag, const std::string& description, std::exception& err) const ;
+    protected:
     MySQLDB& db_;
     InputValidator<std::string>& iv_str;
     InputValidator<int>& iv_int;

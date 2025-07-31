@@ -1,6 +1,7 @@
 #pragma once
 #include "utils.h"
 #include "MySQLDB.h"
+#include "identities.h"
 
 class Menu {
    public:

@@ -23,6 +23,7 @@ add_executable(BookManagePlus
     src/identities.cpp
     src/utils.cpp
     src/email_sender.cpp
+    src/menu.cpp
 )
 target_compile_definitions(BookManagePlus PRIVATE _WIN32_WINNT=0x0601)
 target_include_directories(BookManagePlus PRIVATE 

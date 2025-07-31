@@ -19,6 +19,9 @@
     <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\email_sender.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\CMakeLists.txt" />

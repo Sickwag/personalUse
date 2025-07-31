@@ -46,32 +46,38 @@ awaitable<bool> Role::login_with_captcha() {
 awaitable<UserInfo> Role::register_account() {
     UserInfo u;
     try{
+        // 数据库连接已经在ServiceLocator中建立，直接使用即可
+        // 如果连接断开，Boost.MySQL会自动处理重连
+
         u.name_ = co_await iv_str.prompt("your name: ")
                       .length_range(6, 15)
                       .custom_async([&](const std::string& s) -> asio::awaitable<bool> {
                           std::string sql = "select * from users u where u.name = ?";
                           auto users = co_await db_.query(sql, s);
-                          co_return users.rows().size() != 0;
+                          co_return users.rows().size() == 0;
                       },
                                     "your name has been taken by other.")
                       .render_async();
-        u.password_ = iv_str.prompt("your password:").length_range(8, 20).render();
+        u.password_ = co_await iv_str.prompt("your password:").length_range(8, 20).render_async();
         u.email_ = co_await iv_str.prompt("your email: ")
                        .email()
                        .length_range(4, 40)
                        .custom_async([&](const std::string& s) -> asio::awaitable<bool> {
                            auto users = co_await db_.query("select * from users u where u.email = ?", s);
-                           co_return users.rows().size() <= 3;
+                           co_return users.rows().size() < 3;  // 一个邮箱最多3个账户
                             },"one email address only allows 3 accounts.")
                        .render_async();
         u.created_at_ = Time::get_current_time().second;
         u.is_online = false;
         u.last_login_in_ = u.created_at_;
-        u.permission_ = iv_str.prompt(R"("the identity you wanna be("reader", "librarian" or "system admin")")
-                            .enum_str({"reader", "librarian","system admin"})
-                            .render();
-    }catch (mysql::error_code& err){
-        std::cerr << err.what() << std::endl;
+        u.permission_ = co_await iv_str.prompt(R"(the identity you wanna be("reader", "librarian" or "system admin"): )")
+                            .enum_str({"reader", "librarian", "system admin"})
+                            .render_async();
+        std::string sql = std::format("insert into users (name, password, permission, email, is_online, created_at, last_login_in) values ('{}', '{}', '{}', '{}', {}, '{}', '{}')", u.name_.value(), u.password_.value(),u.permission_.value(),u.email_.value(),u.is_online, u.created_at_.value(), u.last_login_in_.value());
+        auto affected = co_await db_.execute(sql);
+        is_already_done(affected > 0, "register account");
+    }catch (const std::exception& err){
+        std::cerr << "Error in register_account: " << err.what() << std::endl;
     }
     co_return u;
 }
@@ -100,8 +106,9 @@ awaitable<bool> Role::return_book() {
 }
 
 awaitable<void> Role::self_checking(const UserInfo& u) {
-    std::cout << std::setw(10) << std::left << u.name_.value() << std::setw(10) << std::left << u.email_.value() << '\n'
-    << std::setw(10) << std::left << u.permission_.value() << '\n'
+    std::string line("====================== self-checking ======================\n");
+    std::cout << line << std::setw(25) << std::left << u.name_.value() << std::setw(25) << std::left << u.email_.value() << '\n'
+    << std::setw(25) << std::left << u.permission_.value() << '\n'
     << u.last_login_in_.value();
     co_return;
 }
@@ -118,6 +125,7 @@ awaitable<bool> Role::change_password() {
 }
 
 UserInfo& Role::get_user_info() { return this->u; }
+
 
 void UserInfo::check_online() const {
     if (!this->is_online) {
@@ -232,21 +240,7 @@ awaitable<bool> Role::set_announcement() {
     co_return true;
 }
 
-void Role::is_already_done(bool flag, const std::string& description, std::exception& err) const {
-    if(flag){
-        std::cout << description << " successfully.\n";
-    }else{
-        std::cerr << description << " failed for unknow reason.\n" << err.what();
-    }
-}
 
-void Role::is_already_done(bool flag, const std::string& description) const {
-    if(flag){
-        std::cout << description << " successfully.\n";
-    }else{
-        std::cerr << description << " failed for unknow reason.\n";
-    }
-}
 
 void Book::show_book_info(std::string_view permission) const {
     std::cout << std::setw(15) << std::left << this->title.value() << std::setw(10) << std::left << this->author.value() << std::setw(10) << std::left << "remaining" << std::setw(10) << std::left<< this->remain;

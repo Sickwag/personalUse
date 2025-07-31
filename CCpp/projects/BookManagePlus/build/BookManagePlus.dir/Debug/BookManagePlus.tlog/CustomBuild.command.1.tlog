@@ -1,0 +1,10 @@
+^D:\CODE FILES\VSCODE\CCPP\PROJECTS\BOOKMANAGEPLUS\CMAKELISTS.TXT
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/vscode/CCpp/projects/BookManagePlus" "-BD:/Code Files/vscode/CCpp/projects/BookManagePlus/build" --check-stamp-file "D:/Code Files/vscode/CCpp/projects/BookManagePlus/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
