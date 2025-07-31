@@ -1,0 +1,3 @@
+D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build/CMakeFiles/CodeLinesCounter.dir
+D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build/CMakeFiles/edit_cache.dir
+D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build/CMakeFiles/rebuild_cache.dir

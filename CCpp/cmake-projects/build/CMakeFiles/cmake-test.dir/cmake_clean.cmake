@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj"
+  "CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj.d"
   "CMakeFiles/cmake-test.dir/src/main.cpp.obj"
   "CMakeFiles/cmake-test.dir/src/main.cpp.obj.d"
+  "CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj"
+  "CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj.d"
   "cmake-test.exe"
   "cmake-test.exe.manifest"
   "cmake-test.pdb"

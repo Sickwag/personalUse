@@ -1,0 +1,3 @@
+D:/Code Files/vscode/CCpp/projects/BookManagePlus/build/CMakeFiles/BookManagePlus.dir
+D:/Code Files/vscode/CCpp/projects/BookManagePlus/build/CMakeFiles/ALL_BUILD.dir
+D:/Code Files/vscode/CCpp/projects/BookManagePlus/build/CMakeFiles/ZERO_CHECK.dir

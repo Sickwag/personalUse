@@ -86,21 +86,55 @@ CMakeFiles/cmake-test.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cmake-test.dir/src/main.cpp.s"
 	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Code Files\vscode\CCpp\cmake-projects\src\main.cpp" -o CMakeFiles\cmake-test.dir\src\main.cpp.s
 
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj: CMakeFiles/cmake-test.dir/flags.make
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj: CMakeFiles/cmake-test.dir/includes_CXX.rsp
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj: D:/Code\ Files/vscode/CCpp/cmake-projects/src/InputValidator.cpp
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj: CMakeFiles/cmake-test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj -MF CMakeFiles\cmake-test.dir\src\InputValidator.cpp.obj.d -o CMakeFiles\cmake-test.dir\src\InputValidator.cpp.obj -c "D:\Code Files\vscode\CCpp\cmake-projects\src\InputValidator.cpp"
+
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cmake-test.dir/src/InputValidator.cpp.i"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Code Files\vscode\CCpp\cmake-projects\src\InputValidator.cpp" > CMakeFiles\cmake-test.dir\src\InputValidator.cpp.i
+
+CMakeFiles/cmake-test.dir/src/InputValidator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cmake-test.dir/src/InputValidator.cpp.s"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Code Files\vscode\CCpp\cmake-projects\src\InputValidator.cpp" -o CMakeFiles\cmake-test.dir\src\InputValidator.cpp.s
+
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj: CMakeFiles/cmake-test.dir/flags.make
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj: CMakeFiles/cmake-test.dir/includes_CXX.rsp
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj: D:/Code\ Files/vscode/CCpp/cmake-projects/src/mysql_db.cpp
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj: CMakeFiles/cmake-test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj -MF CMakeFiles\cmake-test.dir\src\mysql_db.cpp.obj.d -o CMakeFiles\cmake-test.dir\src\mysql_db.cpp.obj -c "D:\Code Files\vscode\CCpp\cmake-projects\src\mysql_db.cpp"
+
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/cmake-test.dir/src/mysql_db.cpp.i"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Code Files\vscode\CCpp\cmake-projects\src\mysql_db.cpp" > CMakeFiles\cmake-test.dir\src\mysql_db.cpp.i
+
+CMakeFiles/cmake-test.dir/src/mysql_db.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/cmake-test.dir/src/mysql_db.cpp.s"
+	D:\Program\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\Code Files\vscode\CCpp\cmake-projects\src\mysql_db.cpp" -o CMakeFiles\cmake-test.dir\src\mysql_db.cpp.s
+
 # Object files for target cmake-test
 cmake__test_OBJECTS = \
-"CMakeFiles/cmake-test.dir/src/main.cpp.obj"
+"CMakeFiles/cmake-test.dir/src/main.cpp.obj" \
+"CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj" \
+"CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj"
 
 # External object files for target cmake-test
 cmake__test_EXTERNAL_OBJECTS =
 
 cmake-test.exe: CMakeFiles/cmake-test.dir/src/main.cpp.obj
+cmake-test.exe: CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj
+cmake-test.exe: CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj
 cmake-test.exe: CMakeFiles/cmake-test.dir/build.make
 cmake-test.exe: D:/Code\ Files/PackageManagers/vcpkg/installed/x64-windows/debug/lib/boost_filesystem-vc143-mt-gd-x64-1_88.lib
 cmake-test.exe: D:/Code\ Files/PackageManagers/vcpkg/installed/x64-windows/debug/lib/boost_system-vc143-mt-gd-x64-1_88.lib
 cmake-test.exe: CMakeFiles/cmake-test.dir/linkLibs.rsp
 cmake-test.exe: CMakeFiles/cmake-test.dir/objects1.rsp
 cmake-test.exe: CMakeFiles/cmake-test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cmake-test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="D:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cmake-test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cmake-test.dir\link.txt --verbose=$(VERBOSE)
 	C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file "D:/Code Files/PackageManagers/vcpkg/scripts/buildsystems/msbuild/applocal.ps1" -targetBinary "D:/Code Files/vscode/CCpp/cmake-projects/build/cmake-test.exe" -installedDir "D:/Code Files/PackageManagers/vcpkg/installed/x64-windows/debug/bin" -OutVariable out
 

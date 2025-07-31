@@ -1,50 +1,200 @@
 #include <bits/stdc++.h>
 #include "dataStruct.cpp"
 using namespace std;
+// 45. 跳跃游戏 II
+class Solution {
+   public:
+    int jump(vector<int>& nums) {
+    }
+};
+// 75. 颜色分类 简单题
+// 单循环复写法：
+// class Solution {
+//    public:
+//     void sortColors(vector<int>& nums) {
+//         int p0 = 0, p1 = 0;
+//         for (int i = 0; i < nums.size(); i++) {
+//             int x = nums[i];
+//             nums[i] = 2;
+//             if (x <= 1)
+//                 nums[p1++] = 1;
+//             if (x == 0)
+//                 nums[p0++] = 0;
+//         }
+//     }
+// };
+// 计数写法：
+// class Solution {
+//    public:
+//     void sortColors(vector<int>& nums) {
+//         int zero = 0, one = 0, two = 0;
+//         for (const auto& item : nums) {
+//             if (item == 0)
+//                 zero++;
+//             else if (item == 1)
+//                 one++;
+//             else
+//                 two++;
+//         }
+//         for (int i = 0; i < zero; i++) {
+//             nums[i] = 0;
+//         }
+//         for (int i = zero; i < zero + one; i++) {
+//             nums[i] = 1;
+//         }
+//         for (int i = zero + one; i < zero + one + two; i++) {
+//             nums[i] = 2;
+//         }
+//     }
+// };
+
+// // 872. 叶子相似的树
+// 11 min
+// class Solution {
+//     void backtrace(TreeNode* node, vector<int>& path) {
+//         if (!node->left && !node->right) {
+//             path.push_back(node->val);
+//             return;
+//         }
+//         if (node->left) backtrace(node->left, path);
+//         if (node->right) backtrace(node->right, path);
+//     }
+// public:
+//     bool leafSimilar(TreeNode* root1, TreeNode* root2) {
+//         vector<int> v1, v2;
+//         backtrace(root1, v1);
+//         backtrace(root2, v2);
+//         return v1 == v2;
+//     }
+// };
+
+// int main() {
+//     GenerateDataType gdt;
+//     string root1 = "[3,5,1,6,2,9,8,null,null,7,4]";
+//     string root2 = "[3,5,1,6,7,4,2,null,null,null,null,null,null,9,8]";
+//     gdt.tree.build(root1);
+//     auto r1 = gdt.tree.builtTreeRoot();
+//     gdt.tree.build(root2);
+//     auto r2 = gdt.tree.builtTreeRoot();
+//     Solution sol;
+//     cout << sol.leafSimilar(r1, r2);
+// }
+
+// 前中后序遍历只需要调整traversal函数中三个语句顺序即可
+// class Solution {
+//     void traversal(TreeNode* node, vector<int>& path) {
+//         if (node->left) traversal(node->left, path);
+//         if (node->right) traversal(node->right, path);
+//         path.push_back(node->val);
+//     }
+// public:
+//     vector<int> preorderTraversal(TreeNode* root) {
+//         vector<int> path;
+//         if (!root) return path;
+//         traversal(root, path);
+//         return path;
+//     }
+// };
+
+// int main() {
+//     GenerateDataType gdt;
+//     string raw = "[1,2,3,4,5,null,8,null,null,6,7,9]";
+//     gdt.tree.build(raw);
+//     auto root = gdt.tree.builtTreeRoot();
+//     Solution sol;
+//     for (const auto& it : sol.preorderTraversal(root)) {
+//         cout << it << endl;
+//     }
+// }
+
+// 1436. 旅行终点站
+// class Solution {
+// public:
+//     string destCity(vector<vector<string>>& paths) {
+//         unordered_map<string, int> map;
+//         for (auto& item : paths) {
+//             map[item[0]] += 1;
+//             map[item[1]] -= 1;
+//         }
+//         for (auto& it : map) {
+//             if (it.second == -1) return it.first;
+//         }
+//         return string();
+//     }
+// };
+// 55. 跳跃游戏;
+// class Solution {
+// public:
+//     bool canJump(vector<int>& nums) {
+//         int point = 0;
+//         int maxone = nums[point];
+//         while (point < nums.size() - 1 && point < maxone) {
+//             maxone = max(point + 1 + nums[point + 1], maxone);
+//             point += 1;
+//         }
+//         return maxone < nums.size() - 1 ? false : true;
+//     }
+// };
+// // for循环优化
+// class Solution {
+// public:
+//     bool canJump(vector<int>& nums) {
+//         int maxone = nums[0];
+//         for (int i = 0;i < nums.size() - 1 && i < maxone; i++) {
+//             maxone = max(i + 1 + nums[i + 1], maxone);
+//         }
+//         return maxone < nums.size() - 1 ? false : true;
+//     }
+// };
+// int main() {
+//     vector<int> test = { 3,2,1,0,4 };
+//     Solution sol;
+//     cout << sol.canJump(test);
+// }
 ////////////////////hot 100 ///////////////////////////
 // 560. 和为 K 的子数组
-class Solution {
-public:
-    int subarraySum(vector<int>& nums, int k) {
-        vector<int> presum(nums.size() + 1, 0);
-        unordered_set<int> record;
-        int count = 0;
-        partial_sum(nums.begin(), nums.end(), presum.begin() + 1);
-        for (int i = 0;i < presum.size();i++) {
-            if (record.contains(presum[i])) count++;
-            else record.insert(presum[i] + k);
-        }
-        return count;
-    }
-};
-class Solution {
-public:
-    int subarraySum(vector<int>& nums, int k) {
-        unordered_map<int, int> prefix_count;
-        prefix_count[0] = 1;  // 初始前缀和为 0 出现 1 次
-        int prefix_sum = 0;
-        int count = 0;
+// class Solution {
+// public:
+//     int subarraySum(vector<int>& nums, int k) {
+//         vector<int> presum(nums.size() + 1, 0);
+//         unordered_set<int> record;
+//         int count = 0;
+//         partial_sum(nums.begin(), nums.end(), presum.begin() + 1);
+//         for (int i = 0;i < presum.size();i++) {
+//             if (record.contains(presum[i])) count++;
+//             else record.insert(presum[i] + k);
+//         }
+//         return count;
+//     }
+// };
+// class Solution {
+// public:
+//     int subarraySum(vector<int>& nums, int k) {
+//         unordered_map<int, int> prefix_count;
+//         prefix_count[0] = 1;  // 初始前缀和为 0 出现 1 次
+//         int prefix_sum = 0;
+//         int count = 0;
 
-        for (int num : nums) {
-            prefix_sum += num;
-            // 检查是否存在 prefix_sum - k
-            if (prefix_count.find(prefix_sum - k) != prefix_count.end()) {
-                count += prefix_count[prefix_sum - k];
-            }
-            // 更新当前前缀和的出现次数
-            prefix_count[prefix_sum]++;
-        }
+//         for (int num : nums) {
+//             prefix_sum += num;
+//             // 检查是否存在 prefix_sum - k
+//             if (prefix_count.find(prefix_sum - k) != prefix_count.end()) {
+//                 count += prefix_count[prefix_sum - k];
+//             }
+//             // 更新当前前缀和的出现次数
+//             prefix_count[prefix_sum]++;
+//         }
 
-        return count;
-    }
-};
+//         return count;
+//     }
+// };
 
-int main() {
-    vector<int> vec = { 1,2,3 };
-    int k = 3;
-    Solution sol;
-    cout << sol.subarraySum(vec, k);
-}
+// int main() {
+//     vector<int> vec = { 1,2,3 };
+//     int k = 3;
+//     Solution sol;
+//     cout << sol.subarraySum(vec, k);
+// }
 // 3. 无重复字符的最长子串
 // 写不出来
 // class Solution {
@@ -281,7 +431,7 @@ int main() {
 // class Solution {
 // public:
 //     bool isBadVersion(int n) {
-        
+
 //     }
 //     int firstBadVersion(int n) {
 //         vector<int> versions(n);
@@ -329,7 +479,7 @@ int main() {
 //         if (followeeId == followerId) return;
 //         users[followerId].followee.insert(followeeId);
 //     }
-    
+
 //     void unfollow(int followerId, int followeeId) {
 //         if (followeeId == followerId) return;
 //         users[followerId].followee.erase(followeeId);
@@ -449,7 +599,7 @@ int main() {
 //     }
 // };
 // 2810. 故障键盘
-// 简化版本 
+// 简化版本
 // class Solution {
 // public:
 //     string finalString(string s) {
@@ -867,7 +1017,7 @@ int main() {
 //             if (isValid(row, col, chessboard, n)) {
 //                 chessboard[row][col] = 'Q';
 //                 backtracking(n, row + 1, chessboard);
-//                 chessboard[row][col] = '.'; 
+//                 chessboard[row][col] = '.';
 //             }
 //         }
 //     }
@@ -1306,7 +1456,7 @@ int main() {
 //         return ans;
 //     }
 // };
-//17. 电话号码的字母组合
+// 17. 电话号码的字母组合
 // class Solution {
 //     map<char, string> mapping = {
 //         {'2', "abc"}, {'3', "def"}, {'4', "ghi"},
@@ -2890,7 +3040,7 @@ int main() {
 //         using tlii = tuple<long long, int, int>;
 //         int n = workerTimes.size();
 //         priority_queue<tlii, vector<tlii>, greater<tlii>> pq;
-//         // initialize 
+//         // initialize
 //         for (int i = 0;i < n;i++) {
 //             long long time = (long long)workerTimes[i];
 //             int index = i;
@@ -3860,7 +4010,6 @@ int main() {
 //     }
 // };
 
-
 // 455.分发饼⼲
 // class Solution {
 // public:
@@ -4037,7 +4186,7 @@ int main() {
 //         return dp[n];
 //     }
 // };
-// 17mins 
+// 17mins
 // dp容易出错的就是特殊情况处理，初始化处理上，这一提就很清楚体现了
 // class Solution {
 // public:
@@ -4263,7 +4412,6 @@ int main() {
 //     }
 //     return -1;
 // }
-
 
 // 844. 比较含退格的字符串
 // 2025-02-24 14:17:46
@@ -4786,7 +4934,6 @@ int main() {
 //     return ans;
 // }
 
-
 // vector<vector<int>> levelOrder(TreeNode* root) {
 //     vector<vector<int>> result; // 存储最终结果
 //     if (!root) return result;   // 如果树为空，直接返回
@@ -4950,7 +5097,7 @@ int main() {
 //         for(int i=firstLen+secondLen;i<=n;i++){
 //             maxA = max(maxA, s[i - secondLen] - s[i - firstLen - secondLen]);
 //             maxB = max(maxB, s[i - firstLen] - s[i - firstLen -  secondLen]);
-//             ans = max(ans, max(maxA + s[i] - s[i - secondLen], 
+//             ans = max(ans, max(maxA + s[i] - s[i - secondLen],
 //                                maxB + s[i] - s[i - firstLen]));
 //         }
 //         return ans;
@@ -5122,7 +5269,6 @@ int main() {
 //         return ans;
 //     }
 // };
-
 
 // 1031. 两个非重叠子数组的最大和
 // 2025-01-26 17:13:24
@@ -5355,7 +5501,7 @@ int main() {
 // };
 // 2815. 数组中的最大数对和
 // 2025-01-25 17:04:44
-// 00 : 23 : 00 n 1 标记此处法和，思路和2815. 数组中的最大数对和一样 
+// 00 : 23 : 00 n 1 标记此处法和，思路和2815. 数组中的最大数对和一样
 // class Solution {
 // public:
 //     int maxone(int i){
@@ -5649,7 +5795,7 @@ int main() {
 //         partial_sum(nums.begin(), nums.end(), pre_sum.begin() + 1);
 //         int min_length = INT_MAX;
 //         for (int i = 1; i <= n; i++) {
-//             int to_find = pre_sum[i] - target; 
+//             int to_find = pre_sum[i] - target;
 //             auto it = upper_bound(pre_sum.begin(), pre_sum.end(), to_find);
 //             if (it != pre_sum.begin()) {
 //                 int j = it - pre_sum.begin() - 1;
@@ -5997,7 +6143,7 @@ int main() {
 //     }
 // };
 // 523. 连续的子数组和
-// 2025-02-10 14:48:45 
+// 2025-02-10 14:48:45
 // 00 : 11 : 35 n n 延迟进入哈希表方法：
 // class Solution {
 // public:
@@ -6427,2455 +6573,2455 @@ int main() {
  *     q = ranges::upper_bound(nums, q);
  * }
  */
- // 2025-02-05 21:36:05
- // 25mins nlogn 1原地修改,关键是看懂这jb题目翻译
- // class Solution{
- // public:
- //     vector<int> answerQueries(vector<int> &nums, vector<int> &queries){
- //         sort(nums.begin(), nums.end());
- //         partial_sum(nums.begin(), nums.end(), nums.begin());
- //         int n = nums.size(), m = queries.size();
- //         for (int i = 0; i < m; i++){
- //             auto it = lower_bound(nums.begin(), nums.end(), queries[i]);
- //             if (it == nums.end()){
- //                 queries[i] = n;
- //             }
- //             else if (*it > queries[i]){
- //                 queries[i] = it - nums.begin();
- //             }
- //             else{
- //                 queries[i] = it - nums.begin() + 1;
- //             }
- //         }
- //         return queries;
- //     }
- // };
+// 2025-02-05 21:36:05
+// 25mins nlogn 1原地修改,关键是看懂这jb题目翻译
+// class Solution{
+// public:
+//     vector<int> answerQueries(vector<int> &nums, vector<int> &queries){
+//         sort(nums.begin(), nums.end());
+//         partial_sum(nums.begin(), nums.end(), nums.begin());
+//         int n = nums.size(), m = queries.size();
+//         for (int i = 0; i < m; i++){
+//             auto it = lower_bound(nums.begin(), nums.end(), queries[i]);
+//             if (it == nums.end()){
+//                 queries[i] = n;
+//             }
+//             else if (*it > queries[i]){
+//                 queries[i] = it - nums.begin();
+//             }
+//             else{
+//                 queries[i] = it - nums.begin() + 1;
+//             }
+//         }
+//         return queries;
+//     }
+// };
 
- // 930. 和相同的二元子数组
- // 2025-02-05 15:34:48
- // 双指针做法，由于测试集导致的前缀和单调递增，可以使用滑动窗口
- // class Solution {
- // public:
- //     int numSubarraysWithSum(vector<int>& nums, int goal) {
- //         int n = nums.size();
- //         int ans = 0;
- //         for (int r = 0, l1 = 0, l2 = 0, s1 = 0, s2 = 0; r < n; r++) {
- //             s1 += nums[r];
- //             s2 += nums[r];
- //             while (l1 <= r && s1 > goal) s1 -= nums[l1++];
- //             while (l2 <= r && s2 >= goal) s2 -= nums[l2++];
- //             ans += l2 - l1;
- //         }
- //         return ans;
- //     }
- // };
- // n n 和560一致，没什么好说的做法
- // class Solution {
- // public:
- //     int numSubarraysWithSum(vector<int>& nums, int goal) {
- //         int n = nums.size(), count = 0, pre_sum = 0;
- //         unordered_map<int, int> mapping = {{0, 1}};
- //         for(int elem : nums){
- //             pre_sum += elem;
- //             if(mapping.contains(pre_sum - goal)){
- //                 count += mapping[pre_sum - goal];
- //             }
- //             mapping[pre_sum]++;
- //         }
- //         return count;
- //     }
- // };
+// 930. 和相同的二元子数组
+// 2025-02-05 15:34:48
+// 双指针做法，由于测试集导致的前缀和单调递增，可以使用滑动窗口
+// class Solution {
+// public:
+//     int numSubarraysWithSum(vector<int>& nums, int goal) {
+//         int n = nums.size();
+//         int ans = 0;
+//         for (int r = 0, l1 = 0, l2 = 0, s1 = 0, s2 = 0; r < n; r++) {
+//             s1 += nums[r];
+//             s2 += nums[r];
+//             while (l1 <= r && s1 > goal) s1 -= nums[l1++];
+//             while (l2 <= r && s2 >= goal) s2 -= nums[l2++];
+//             ans += l2 - l1;
+//         }
+//         return ans;
+//     }
+// };
+// n n 和560一致，没什么好说的做法
+// class Solution {
+// public:
+//     int numSubarraysWithSum(vector<int>& nums, int goal) {
+//         int n = nums.size(), count = 0, pre_sum = 0;
+//         unordered_map<int, int> mapping = {{0, 1}};
+//         for(int elem : nums){
+//             pre_sum += elem;
+//             if(mapping.contains(pre_sum - goal)){
+//                 count += mapping[pre_sum - goal];
+//             }
+//             mapping[pre_sum]++;
+//         }
+//         return count;
+//     }
+// };
 
- // 560. 和为 K 的子数组
- // n n 45mins数组中只有新旧替换中两个数字被用到，所以只用两个数
- // class Solution{
- // public:
- // 	int subarraySum(vector<int>& nums, int k) {
- //         int n = nums.size(), count = 0, sum = 0;
- //         unordered_map<int, int> mapping;
- // 		mapping[0] = 1;
- // 		for(int elem : nums){
- //             sum += elem;
- //             if (mapping.count(sum - k)){
- //                 count += mapping[sum - k];
- //             }
- //             mapping[sum]++;
- //         }
- // 		return count;
- // 	}
- // };
- // 传统前缀和方法，用数组存储前缀和
- // class Solution {
- // public:
- //     int subarraySum(vector<int>& nums, int k) {
- //         int n = nums.size(),count =0;
- //         vector<int> pre_sum(n+1,0);
- //         unordered_map<int, int> mapping;
- //         mapping[0] = 1;
- //         for (int i = 0; i < n;i++){
- //             pre_sum[i + 1] = pre_sum[i] + nums[i];
- //             if(mapping.find(pre_sum[i + 1] - k)!=mapping.end()){
- //                 count += mapping[pre_sum[i + 1] - k]++;
- //             }
- //             mapping[pre_sum[i + 1]]++;
- //         }
- //         return count;
- //     }
- // };
- // 724. 寻找数组的中心下标
- // 2025-02-05 10:47:38
- // 15mins 方法很多：1维护两个数组--前缀和和后缀和（再遍历一遍数组直接查询两个数组对应下标即可） 2维护一个前缀和数组，后缀和通过计算得到，真正思考的是如何在一遍遍历情况下减少空间
- // class Solution {
- // public:
- //     int pivotIndex(vector<int>& nums) {
- //         int all_sum = reduce(nums.begin(), nums.end(), 0);
- //         int n = nums.size(), pre_sum = 0;
- //         for (int i = 0; i < n;i++){
- //             if(all_sum-nums[i]-pre_sum == pre_sum){
- //                 return i;
- //             }
- //             pre_sum += nums[i];
- //         }
- //     }
- // };
- // 974. 和可被 K 整除的子数组
- // 看题解发现的同余定理
- // class Solution {
- // public:
- //     int subarraysDivByK(vector<int>& nums, int k) {
- //         int count = 0,sum =0;
- //         unordered_map<int ,int> mapping = {{0,1}};
- //         for(int elem : nums){
- //             sum += elem;
- //             int modulus = (sum % k + k) % k;
- //             if(mapping.count(modulus)){
- //                 count += mapping[modulus];
- //             }
- //             ++mapping[modulus];
- //         }
- //         return count;
- //     }
- // };
- // 超时写法
- // class Solution {
- // public:
- //     int subarraysDivByK(vector<int>& nums, int k) {
- //         int n = nums.size(), count = 0;
- //         vector<int> s(n + 1, 0);
- //         s[0] = 0;
- //         partial_sum(nums.begin(), nums.end(), s.begin()+1);
- //         for (int i = 0; i < n + 1;i++){
- //             for (int j = i + 1; j < n + 1;j++){
- //                 if((s[j]-s[i])%k==0){
- //                     count++;
- //                 }
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 2025-01-26 18:02:33
- // 1512. 好数对的数目的翻版
- // 00 : 12 : 16  n n
- // class Solution {
- // public:
- //     vector<vector<int>> pairSums(vector<int>& nums, int target) {
- //         vector<vector<int>> ans;
- //         unordered_map<int, int> mapping;
- //         for(int x : nums){
- //             if(mapping.find(x)!=mapping.end()&&mapping[x]!=0){
- //                 mapping[x]--;
- //                 ans.emplace_back(vector<int>{x, target - x});
- //             }else{
- //                 mapping[target - x]++;
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 2441. 与对应负数同时存在的最大正整数
- // 2025-01-26 20:13:12
- // 00 : 04 : 49  n 1 双指针法
- // class Solution {
- // public:
- //     int findMaxK(vector<int>& nums) {
- //         sort(nums.begin(), nums.end());
- //         int left = 0,right = nums.size()-1;
- //         while(left<right){
- //             if(nums[left]>0||nums[right]<0)
- //                 return -1;
- //             if(nums[left]+nums[right]>0){
- //                 right--;
- //             }else if(nums[left]+nums[right]<0){
- //                 left++;
- //             }else{
- //                 return nums[right];
- //             }
- //         }
- //         return -1;
- //     }
- // };
- // 2025-01-26 17:59:54
- // 00 : 10 : 29  n n 两数之和翻版
- // class Solution {
- // public:
- //     int findMaxK(vector<int>& nums) {
- //         unordered_set<int> mapping;
- //         int temp = INT_MIN;
- //         for(int k : nums){
- //             if(mapping.find(k)!=mapping.end()){
- //                 temp = max(temp, k > 0 ? k : -k);
- //             }else{
- //                 mapping.insert(-k);
- //             }
- //         }
- //         return temp == INT_MIN ? -1 : temp;
- //     }
- // };
+// 560. 和为 K 的子数组
+// n n 45mins数组中只有新旧替换中两个数字被用到，所以只用两个数
+// class Solution{
+// public:
+// 	int subarraySum(vector<int>& nums, int k) {
+//         int n = nums.size(), count = 0, sum = 0;
+//         unordered_map<int, int> mapping;
+// 		mapping[0] = 1;
+// 		for(int elem : nums){
+//             sum += elem;
+//             if (mapping.count(sum - k)){
+//                 count += mapping[sum - k];
+//             }
+//             mapping[sum]++;
+//         }
+// 		return count;
+// 	}
+// };
+// 传统前缀和方法，用数组存储前缀和
+// class Solution {
+// public:
+//     int subarraySum(vector<int>& nums, int k) {
+//         int n = nums.size(),count =0;
+//         vector<int> pre_sum(n+1,0);
+//         unordered_map<int, int> mapping;
+//         mapping[0] = 1;
+//         for (int i = 0; i < n;i++){
+//             pre_sum[i + 1] = pre_sum[i] + nums[i];
+//             if(mapping.find(pre_sum[i + 1] - k)!=mapping.end()){
+//                 count += mapping[pre_sum[i + 1] - k]++;
+//             }
+//             mapping[pre_sum[i + 1]]++;
+//         }
+//         return count;
+//     }
+// };
+// 724. 寻找数组的中心下标
+// 2025-02-05 10:47:38
+// 15mins 方法很多：1维护两个数组--前缀和和后缀和（再遍历一遍数组直接查询两个数组对应下标即可） 2维护一个前缀和数组，后缀和通过计算得到，真正思考的是如何在一遍遍历情况下减少空间
+// class Solution {
+// public:
+//     int pivotIndex(vector<int>& nums) {
+//         int all_sum = reduce(nums.begin(), nums.end(), 0);
+//         int n = nums.size(), pre_sum = 0;
+//         for (int i = 0; i < n;i++){
+//             if(all_sum-nums[i]-pre_sum == pre_sum){
+//                 return i;
+//             }
+//             pre_sum += nums[i];
+//         }
+//     }
+// };
+// 974. 和可被 K 整除的子数组
+// 看题解发现的同余定理
+// class Solution {
+// public:
+//     int subarraysDivByK(vector<int>& nums, int k) {
+//         int count = 0,sum =0;
+//         unordered_map<int ,int> mapping = {{0,1}};
+//         for(int elem : nums){
+//             sum += elem;
+//             int modulus = (sum % k + k) % k;
+//             if(mapping.count(modulus)){
+//                 count += mapping[modulus];
+//             }
+//             ++mapping[modulus];
+//         }
+//         return count;
+//     }
+// };
+// 超时写法
+// class Solution {
+// public:
+//     int subarraysDivByK(vector<int>& nums, int k) {
+//         int n = nums.size(), count = 0;
+//         vector<int> s(n + 1, 0);
+//         s[0] = 0;
+//         partial_sum(nums.begin(), nums.end(), s.begin()+1);
+//         for (int i = 0; i < n + 1;i++){
+//             for (int j = i + 1; j < n + 1;j++){
+//                 if((s[j]-s[i])%k==0){
+//                     count++;
+//                 }
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 2025-01-26 18:02:33
+// 1512. 好数对的数目的翻版
+// 00 : 12 : 16  n n
+// class Solution {
+// public:
+//     vector<vector<int>> pairSums(vector<int>& nums, int target) {
+//         vector<vector<int>> ans;
+//         unordered_map<int, int> mapping;
+//         for(int x : nums){
+//             if(mapping.find(x)!=mapping.end()&&mapping[x]!=0){
+//                 mapping[x]--;
+//                 ans.emplace_back(vector<int>{x, target - x});
+//             }else{
+//                 mapping[target - x]++;
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 2441. 与对应负数同时存在的最大正整数
+// 2025-01-26 20:13:12
+// 00 : 04 : 49  n 1 双指针法
+// class Solution {
+// public:
+//     int findMaxK(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
+//         int left = 0,right = nums.size()-1;
+//         while(left<right){
+//             if(nums[left]>0||nums[right]<0)
+//                 return -1;
+//             if(nums[left]+nums[right]>0){
+//                 right--;
+//             }else if(nums[left]+nums[right]<0){
+//                 left++;
+//             }else{
+//                 return nums[right];
+//             }
+//         }
+//         return -1;
+//     }
+// };
+// 2025-01-26 17:59:54
+// 00 : 10 : 29  n n 两数之和翻版
+// class Solution {
+// public:
+//     int findMaxK(vector<int>& nums) {
+//         unordered_set<int> mapping;
+//         int temp = INT_MIN;
+//         for(int k : nums){
+//             if(mapping.find(k)!=mapping.end()){
+//                 temp = max(temp, k > 0 ? k : -k);
+//             }else{
+//                 mapping.insert(-k);
+//             }
+//         }
+//         return temp == INT_MIN ? -1 : temp;
+//     }
+// };
 
- // 3371. 识别数组中的最大异常值
- // 2025-01-26 22:09:51
- // 2025-01-26 23:26:09
- // 没做出来，看提示因为stl数据结构特性导致算法有漏洞，看题解和多种做法
- // class Solution {
- // public:
- //     int getLargestOutlier(vector<int>& nums) {
- //         int sum = reduce(nums.begin(), nums.end(), 0);
- //         int result = INT_MIN;
- //         for (int i = 0;i<nums.size();i++){
- //             if((sum-nums[i])%2==1){
- //                 continue;
- //             }
- //             nums.erase(nums.begin() + i);
- //             auto it = find(nums.begin(), nums.end(), (sum - nums[i])/2);
- //             if(it!=nums.end()){
- //                 result = max(result, nums[i]);
- //             }
- //             nums.emplace_back(nums[i]);
- //         }
- //         return result;
- //     }
- // };
- // 454. 四数相加 II
- // 2025-01-26 20:45:22
- // 00 : 18 : 06  2n n 两数之和模拟法本质上是两数之和翻版
- // class Solution {
- // public:
- //     int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {
- //         unordered_map<int, int> mapping1;
- //         unordered_map<int, int> mapping2;
- //         int ans = 0;
- //         for(int x : nums1){
- //             for(int y : nums2){
- //                 mapping1[x + y]++;
- //             }
- //         }
- //         for(int x : nums3){
- //             for(int y : nums4){
- //                 mapping2[x + y]++;
- //             }
- //         }
- //         for (auto it1 = mapping1.begin();it1!=mapping1.end();it1++){
- //             auto it2 = mapping2.find(-it1->first);
- //             if(it2!=mapping2.end()){
- //                 ans += (it1->second) * (it2->second);
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 面试题 16.24. 数对和
- // 2025-01-26 20:18:50
- // class Solution {
- // public:
- //     vector<vector<int>> pairSums(vector<int>& nums, int target) {
- //         sort(nums.begin(), nums.end());
- //         vector<vector<int>> ans;
- //         int left = 0,right = nums.size()-1;
- //         while(left < right){
- //             if(nums[left]+nums[right]>target){
- //                 right--;
- //             }else if(nums[left]+nums[right]<target){
- //                 left++;
- //             }else{
- //                 ans.emplace_back(vector<int>{nums[left++], nums[right--]});
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 枚举j做法
- // class Solution {
- // public:
- //     bool find132pattern(vector<int>& nums) {
- //         int n = nums.size();
- //         multiset<int> rightall;
- //         int leftmin = nums[0];
- //         for (int i = 2;i<n;i++){
- //             rightall.insert(nums[i]);
- //         }
- //         for (int j = 1;j<n-1;j++){
- //             if(leftmin<nums[j]){
- //                 auto it = rightall.upper_bound(leftmin);
- //                 if(it!=rightall.end()&&*it<nums[j]){
- //                     return true;
- //                 }
- //             }
- //             leftmin = min(leftmin, nums[j]);
- //             rightall.erase(rightall.find(nums[j+1]));
- //         }
- //         return false;
- //     }
- // };
- // 447. 回旋镖的数量
- // 数学方法，作图看交点,太过复杂，涉及浮点数运算非常吃性能而且精度有限，思路见ob朱提路线对应题目
- // 经典做法 n3 n 20mins
- // class Solution {
- // public:
- //     int numberOfBoomerangs(vector<vector<int>>& points) {
- //         int ans = 0;
- //         for(auto& a : points){
- //             unordered_map<int,int> dist;
- //             for(auto& b : points){
- //                 int result = (a[1] - b[1]) * (a[1] - b[1]) + (a[0] - b[0]) * (a[0] - b[0]);
- //                 dist[result]++;
- //             }
- //             for(auto temp : dist){
- //                 ans += temp.second * (temp.second - 1);
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 3128. 直角三角形
- // class Solution {
- // public:
- //     long long numberOfRightTriangles(vector<vector<int>>& grid) {
- //         int column = grid.size();
- //         int row = grid[0].size();
- //         vector<int> column_sum(column);
- //         vector<int> row_sum(row);
- //         int ans = 0;
- //         for (int i = 0; i < column;i++){
- //             for (int j = 0; j < row; j++){
- //                 if(grid[i][j] == 1){
- //                     row_sum[i] += 1;
- //                     column_sum[j] += 1;
- //                 }
- //             }
- //         }
- //         for (int i = 0; i < column;i++){
- //             for (int j = 0; j < row; j++){
- //                 if(grid[i][j] == 1){
- //                     ans += (row_sum[i] - 1) * (column_sum[j] - 1);
- //                 }
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 极致优化版本，只存储行或者列的一个，另一个在计算中更新迭代，看灵神题解 n n 30min
- // class Solution {
- // public:
- //     long long numberOfRightTriangles(vector<vector<int>>& grid) {
- //         int n = grid[0].size();
- //         long long ans = 0;
- //         vector<int> col_sum(n);
- //         for(auto& row : grid){
- //             for (int i = 0; i < n;i++){
- //                 col_sum[i] += row[i];
- //             }
- //         }
- //         for(auto& row : grid){
- //             int row_sum = reduce(row.begin(), row.end());
- //             for (int i = 0; i < n;i++){
- //                 if(row[i]==1){
- //                     ans += (row_sum - 1) * (col_sum[i] - 1);
- //                 }
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 三角形三个数是相邻的版本解法，第一遍看错了以为是相邻的  n 1 6mins
- // class Solution {
- // public:
- //     long long numberOfRightTriangles(vector<vector<int>>& grid) {
- //         int column = grid.size();
- //         int row = grid[0].size();
- //         int temp = 0,count=0;
- //         for (int i = 0; i < column - 1;i++){
- //             for (int j = 0; j < row - 1;j++){
- //                 temp = grid[i][j] + grid[i][j + 1] + grid[i + 1][j] + grid[i + 1][j + 1];
- //                 if(temp == 4){
- //                     count += 4;
- //                 }
- //                 if(temp == 3){
- //                     count++;
- //                 }
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 自己写超时，看官方思路
- // class Solution {
- // public:
- //     int countPalindromicSubsequence(string s) {
- //         vector<int> last(26,-1);
- //         vector<int> first(26,-1);
- //         int ans = 0;
- //         for (int i = 0; i < s.size();i++){
- //             int pos = s[i] - 'a';
- //             last[pos] = i;
- //             if(first[pos]==-1){
- //                 first[pos] = i;
- //             }
- //         }
- //         for (char ch = 'a'; ch <= 'z';ch++){
- //             int left = first[ch - 'a'];
- //             int right = last[ch - 'a'];
- //             if(right - left>=2){
- //                 unordered_set<int> only;
- //                 for (int j = left + 1; j <= right - 1;j++){
- //                     only.insert(s[j]);
- //                 }
- //                 ans += only.size();
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 1930. 长度为 3 的不同回文子序列
- // 逻辑没问题，但是超时了 n n 60mins
- // class Solution {
- // public:
- //     int countPalindromicSubsequence(string s) {
- //         int n = s.length(),count =0;
- //         set<char> temp1 = {} ,temp2 = {};
- //         vector<set<char>> pre(n) , after(n);
- //         vector<char> common;
- //         unordered_set<string> only;
- //         string temp3;
- //         for (int i = 0,j = n - 1; i < n,j >= 0;i++,j--){
- //             temp1.insert(s[i]);
- //             pre[i] = temp1;
- //             temp2.insert(s[j]);
- //             after[j] = temp2;
- //         }
- //         for (int k = 1; k < n - 1; k++){
- //             set_intersection(pre[k - 1].begin(), pre[k - 1].end(), after[k + 1].begin(), after[k + 1].end(), back_inserter(common));
- //             if(common.size()!=0){
- //                 for(auto c : common){
- //                     string str = {c, s[k], c};
- //                     if(only.insert(str).second == true){
- //                         count++;
- //                     }
- //                 }
- //                 common.clear();
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 2909. 元素和最小的山形三元组 II
- // 00 : 40 : 12
- // 需要使用2874中的**普通解法**之一，同样是枚举维护问题，关键字在于边界问题的处理和初始值设定 n n
- // class Solution {
- // public:
- //     int minimumSum(vector<int>& nums) {
- //         int n = nums.size();
- //         vector<int> pre(n + 1,INT_MAX);
- //         vector<int> after(n + 1,INT_MAX);
- //         int result = INT_MAX;
- //         for (int i = 0,j=n; i < n,j>0;i++,j--){
- //             pre[i + 1] = min(pre[i], nums[i]);
- //             after[j - 1] = min(after[j], nums[j-1]);
- //         }
- //         // pre[i]返回nums[i]前面元素中最小的一个
- //         // after[i]返回nums[i]后面元素中最小的一个
- //         for (int j = 1; j < nums.size();j++){
- //             if(pre[j]<nums[j]&&after[j]<nums[j]){
- //                 result = min(result, nums[j] + pre[j] + after[j]);
- //             }
- //         }
- //         return result == INT_MAX ? -1 : result;
- //     }
- // };
- // 上面开始枚举中间章节
- // 2555. 两个线段获得的最多奖品
- // 做不出来，太难了，2000难度分有点高
- // 2905. 找出满足差值条件的下标 II
- // 2025年1月22日12:00:08 写不出来，题解看不懂
- // 1031. 两个非重叠子数组的最大和
- // 2025年1月22日10:26:48
- // 一般人能想到的，两遍循环，分别计算firstLen + secondLen和secondLen + firstLen两种情况
- // class Solution {
- // public:
- //     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
- //         int n = nums.size();
- //         int s[n + 1], ans =0;
- //         s[0] = 0;
- //         partial_sum(nums.begin(), nums.end(), s + 1);
- //         auto f = [&](int firstLen, int secondLen) {
- //             int maxSumA = 0;
- //             for (int i = firstLen + secondLen; i <= n; i++) {
- //                 maxSumA = max(maxSumA, s[i - secondLen] - s[i - secondLen - firstLen]);
- //                 ans = max(ans, maxSumA + s[i] - s[i - secondLen]);
- //             }
- //         };
- //         f(firstLen, secondLen);
- //         f(secondLen,firstLen);
- //         return ans;
- //     }
- // };
- // 2025年1月22日09:22:08
- // 01 : 03 : 57
- // 看题解，自己写一遍，前缀和思路 n n
- // class Solution {
- // public:
- //     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
- //         int ans = 0, n = nums.size(), s[n + 1], maxA = 0,maxB =0;
- //         s[0] = 0;
- //         partial_sum(nums.begin(), nums.end(),s+1);
- //         for (int i = firstLen + secondLen; i <= n;i++){
- //             maxA = max(maxA, s[i - secondLen] - s[i - secondLen - firstLen]);
- //             maxB = max(maxB, s[i- firstLen] - s[i - firstLen - secondLen]);
- //             ans = max(ans, max(maxA+s[i]-s[i-secondLen],
- //                                maxB+s[i]-s[i-firstLen]));
- //         }
- //         return ans;
- //     }
- // };
- // 超时写法
- // class Solution {
- // public:
- //     vector<long long> minOperations(vector<int>& nums, vector<int>& queries) {
- //         long long count = 0;
- //         vector<long long> ans(queries.size());
- //         for (int i = 0; i < queries.size();i++){
- //             for(int n : nums){
- //                 if(n-queries[i]>0){
- //                     count += (n - queries[i]);
- //                 }else{
- //                     count += (queries[i] - n);
- //                 }
- //             }
- //             ans[i] = count;
- //             count =0;
- //         }
- //         return ans;
- //     }
- // };
- // int main(){
- //     vector<int> nums = {3, 1, 6, 8};
- //     vector<int> queries = {1,5};
- //     Solution s;
- //     for(long long x : s.minOperations(nums,queries))
- //         cout << x << " ";
- // }
- // 303. 区域和检索 - 数组不可变
- // 最简单的前缀和 n n 6mins
- // class NumArray {
- //     vector<int> sum;
- // public:
- //     NumArray(vector<int>& nums) {
- //         sum.resize(nums.size()+1);
- //         for(int i =0;i<nums.size();i++){
- //             sum[i+1] = sum[i] + nums[i];
- //         }
- //     }
+// 3371. 识别数组中的最大异常值
+// 2025-01-26 22:09:51
+// 2025-01-26 23:26:09
+// 没做出来，看提示因为stl数据结构特性导致算法有漏洞，看题解和多种做法
+// class Solution {
+// public:
+//     int getLargestOutlier(vector<int>& nums) {
+//         int sum = reduce(nums.begin(), nums.end(), 0);
+//         int result = INT_MIN;
+//         for (int i = 0;i<nums.size();i++){
+//             if((sum-nums[i])%2==1){
+//                 continue;
+//             }
+//             nums.erase(nums.begin() + i);
+//             auto it = find(nums.begin(), nums.end(), (sum - nums[i])/2);
+//             if(it!=nums.end()){
+//                 result = max(result, nums[i]);
+//             }
+//             nums.emplace_back(nums[i]);
+//         }
+//         return result;
+//     }
+// };
+// 454. 四数相加 II
+// 2025-01-26 20:45:22
+// 00 : 18 : 06  2n n 两数之和模拟法本质上是两数之和翻版
+// class Solution {
+// public:
+//     int fourSumCount(vector<int>& nums1, vector<int>& nums2, vector<int>& nums3, vector<int>& nums4) {
+//         unordered_map<int, int> mapping1;
+//         unordered_map<int, int> mapping2;
+//         int ans = 0;
+//         for(int x : nums1){
+//             for(int y : nums2){
+//                 mapping1[x + y]++;
+//             }
+//         }
+//         for(int x : nums3){
+//             for(int y : nums4){
+//                 mapping2[x + y]++;
+//             }
+//         }
+//         for (auto it1 = mapping1.begin();it1!=mapping1.end();it1++){
+//             auto it2 = mapping2.find(-it1->first);
+//             if(it2!=mapping2.end()){
+//                 ans += (it1->second) * (it2->second);
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 面试题 16.24. 数对和
+// 2025-01-26 20:18:50
+// class Solution {
+// public:
+//     vector<vector<int>> pairSums(vector<int>& nums, int target) {
+//         sort(nums.begin(), nums.end());
+//         vector<vector<int>> ans;
+//         int left = 0,right = nums.size()-1;
+//         while(left < right){
+//             if(nums[left]+nums[right]>target){
+//                 right--;
+//             }else if(nums[left]+nums[right]<target){
+//                 left++;
+//             }else{
+//                 ans.emplace_back(vector<int>{nums[left++], nums[right--]});
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 枚举j做法
+// class Solution {
+// public:
+//     bool find132pattern(vector<int>& nums) {
+//         int n = nums.size();
+//         multiset<int> rightall;
+//         int leftmin = nums[0];
+//         for (int i = 2;i<n;i++){
+//             rightall.insert(nums[i]);
+//         }
+//         for (int j = 1;j<n-1;j++){
+//             if(leftmin<nums[j]){
+//                 auto it = rightall.upper_bound(leftmin);
+//                 if(it!=rightall.end()&&*it<nums[j]){
+//                     return true;
+//                 }
+//             }
+//             leftmin = min(leftmin, nums[j]);
+//             rightall.erase(rightall.find(nums[j+1]));
+//         }
+//         return false;
+//     }
+// };
+// 447. 回旋镖的数量
+// 数学方法，作图看交点,太过复杂，涉及浮点数运算非常吃性能而且精度有限，思路见ob朱提路线对应题目
+// 经典做法 n3 n 20mins
+// class Solution {
+// public:
+//     int numberOfBoomerangs(vector<vector<int>>& points) {
+//         int ans = 0;
+//         for(auto& a : points){
+//             unordered_map<int,int> dist;
+//             for(auto& b : points){
+//                 int result = (a[1] - b[1]) * (a[1] - b[1]) + (a[0] - b[0]) * (a[0] - b[0]);
+//                 dist[result]++;
+//             }
+//             for(auto temp : dist){
+//                 ans += temp.second * (temp.second - 1);
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 3128. 直角三角形
+// class Solution {
+// public:
+//     long long numberOfRightTriangles(vector<vector<int>>& grid) {
+//         int column = grid.size();
+//         int row = grid[0].size();
+//         vector<int> column_sum(column);
+//         vector<int> row_sum(row);
+//         int ans = 0;
+//         for (int i = 0; i < column;i++){
+//             for (int j = 0; j < row; j++){
+//                 if(grid[i][j] == 1){
+//                     row_sum[i] += 1;
+//                     column_sum[j] += 1;
+//                 }
+//             }
+//         }
+//         for (int i = 0; i < column;i++){
+//             for (int j = 0; j < row; j++){
+//                 if(grid[i][j] == 1){
+//                     ans += (row_sum[i] - 1) * (column_sum[j] - 1);
+//                 }
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 极致优化版本，只存储行或者列的一个，另一个在计算中更新迭代，看灵神题解 n n 30min
+// class Solution {
+// public:
+//     long long numberOfRightTriangles(vector<vector<int>>& grid) {
+//         int n = grid[0].size();
+//         long long ans = 0;
+//         vector<int> col_sum(n);
+//         for(auto& row : grid){
+//             for (int i = 0; i < n;i++){
+//                 col_sum[i] += row[i];
+//             }
+//         }
+//         for(auto& row : grid){
+//             int row_sum = reduce(row.begin(), row.end());
+//             for (int i = 0; i < n;i++){
+//                 if(row[i]==1){
+//                     ans += (row_sum - 1) * (col_sum[i] - 1);
+//                 }
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 三角形三个数是相邻的版本解法，第一遍看错了以为是相邻的  n 1 6mins
+// class Solution {
+// public:
+//     long long numberOfRightTriangles(vector<vector<int>>& grid) {
+//         int column = grid.size();
+//         int row = grid[0].size();
+//         int temp = 0,count=0;
+//         for (int i = 0; i < column - 1;i++){
+//             for (int j = 0; j < row - 1;j++){
+//                 temp = grid[i][j] + grid[i][j + 1] + grid[i + 1][j] + grid[i + 1][j + 1];
+//                 if(temp == 4){
+//                     count += 4;
+//                 }
+//                 if(temp == 3){
+//                     count++;
+//                 }
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 自己写超时，看官方思路
+// class Solution {
+// public:
+//     int countPalindromicSubsequence(string s) {
+//         vector<int> last(26,-1);
+//         vector<int> first(26,-1);
+//         int ans = 0;
+//         for (int i = 0; i < s.size();i++){
+//             int pos = s[i] - 'a';
+//             last[pos] = i;
+//             if(first[pos]==-1){
+//                 first[pos] = i;
+//             }
+//         }
+//         for (char ch = 'a'; ch <= 'z';ch++){
+//             int left = first[ch - 'a'];
+//             int right = last[ch - 'a'];
+//             if(right - left>=2){
+//                 unordered_set<int> only;
+//                 for (int j = left + 1; j <= right - 1;j++){
+//                     only.insert(s[j]);
+//                 }
+//                 ans += only.size();
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 1930. 长度为 3 的不同回文子序列
+// 逻辑没问题，但是超时了 n n 60mins
+// class Solution {
+// public:
+//     int countPalindromicSubsequence(string s) {
+//         int n = s.length(),count =0;
+//         set<char> temp1 = {} ,temp2 = {};
+//         vector<set<char>> pre(n) , after(n);
+//         vector<char> common;
+//         unordered_set<string> only;
+//         string temp3;
+//         for (int i = 0,j = n - 1; i < n,j >= 0;i++,j--){
+//             temp1.insert(s[i]);
+//             pre[i] = temp1;
+//             temp2.insert(s[j]);
+//             after[j] = temp2;
+//         }
+//         for (int k = 1; k < n - 1; k++){
+//             set_intersection(pre[k - 1].begin(), pre[k - 1].end(), after[k + 1].begin(), after[k + 1].end(), back_inserter(common));
+//             if(common.size()!=0){
+//                 for(auto c : common){
+//                     string str = {c, s[k], c};
+//                     if(only.insert(str).second == true){
+//                         count++;
+//                     }
+//                 }
+//                 common.clear();
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 2909. 元素和最小的山形三元组 II
+// 00 : 40 : 12
+// 需要使用2874中的**普通解法**之一，同样是枚举维护问题，关键字在于边界问题的处理和初始值设定 n n
+// class Solution {
+// public:
+//     int minimumSum(vector<int>& nums) {
+//         int n = nums.size();
+//         vector<int> pre(n + 1,INT_MAX);
+//         vector<int> after(n + 1,INT_MAX);
+//         int result = INT_MAX;
+//         for (int i = 0,j=n; i < n,j>0;i++,j--){
+//             pre[i + 1] = min(pre[i], nums[i]);
+//             after[j - 1] = min(after[j], nums[j-1]);
+//         }
+//         // pre[i]返回nums[i]前面元素中最小的一个
+//         // after[i]返回nums[i]后面元素中最小的一个
+//         for (int j = 1; j < nums.size();j++){
+//             if(pre[j]<nums[j]&&after[j]<nums[j]){
+//                 result = min(result, nums[j] + pre[j] + after[j]);
+//             }
+//         }
+//         return result == INT_MAX ? -1 : result;
+//     }
+// };
+// 上面开始枚举中间章节
+// 2555. 两个线段获得的最多奖品
+// 做不出来，太难了，2000难度分有点高
+// 2905. 找出满足差值条件的下标 II
+// 2025年1月22日12:00:08 写不出来，题解看不懂
+// 1031. 两个非重叠子数组的最大和
+// 2025年1月22日10:26:48
+// 一般人能想到的，两遍循环，分别计算firstLen + secondLen和secondLen + firstLen两种情况
+// class Solution {
+// public:
+//     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
+//         int n = nums.size();
+//         int s[n + 1], ans =0;
+//         s[0] = 0;
+//         partial_sum(nums.begin(), nums.end(), s + 1);
+//         auto f = [&](int firstLen, int secondLen) {
+//             int maxSumA = 0;
+//             for (int i = firstLen + secondLen; i <= n; i++) {
+//                 maxSumA = max(maxSumA, s[i - secondLen] - s[i - secondLen - firstLen]);
+//                 ans = max(ans, maxSumA + s[i] - s[i - secondLen]);
+//             }
+//         };
+//         f(firstLen, secondLen);
+//         f(secondLen,firstLen);
+//         return ans;
+//     }
+// };
+// 2025年1月22日09:22:08
+// 01 : 03 : 57
+// 看题解，自己写一遍，前缀和思路 n n
+// class Solution {
+// public:
+//     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
+//         int ans = 0, n = nums.size(), s[n + 1], maxA = 0,maxB =0;
+//         s[0] = 0;
+//         partial_sum(nums.begin(), nums.end(),s+1);
+//         for (int i = firstLen + secondLen; i <= n;i++){
+//             maxA = max(maxA, s[i - secondLen] - s[i - secondLen - firstLen]);
+//             maxB = max(maxB, s[i- firstLen] - s[i - firstLen - secondLen]);
+//             ans = max(ans, max(maxA+s[i]-s[i-secondLen],
+//                                maxB+s[i]-s[i-firstLen]));
+//         }
+//         return ans;
+//     }
+// };
+// 超时写法
+// class Solution {
+// public:
+//     vector<long long> minOperations(vector<int>& nums, vector<int>& queries) {
+//         long long count = 0;
+//         vector<long long> ans(queries.size());
+//         for (int i = 0; i < queries.size();i++){
+//             for(int n : nums){
+//                 if(n-queries[i]>0){
+//                     count += (n - queries[i]);
+//                 }else{
+//                     count += (queries[i] - n);
+//                 }
+//             }
+//             ans[i] = count;
+//             count =0;
+//         }
+//         return ans;
+//     }
+// };
+// int main(){
+//     vector<int> nums = {3, 1, 6, 8};
+//     vector<int> queries = {1,5};
+//     Solution s;
+//     for(long long x : s.minOperations(nums,queries))
+//         cout << x << " ";
+// }
+// 303. 区域和检索 - 数组不可变
+// 最简单的前缀和 n n 6mins
+// class NumArray {
+//     vector<int> sum;
+// public:
+//     NumArray(vector<int>& nums) {
+//         sum.resize(nums.size()+1);
+//         for(int i =0;i<nums.size();i++){
+//             sum[i+1] = sum[i] + nums[i];
+//         }
+//     }
 
- //     int sumRange(int left, int right) {
- //         return sum[right+1]-sum[left];
- //     }
- // };
- // 2559. 统计范围内的元音字符串数
- // 在数据量比较大时尽量减少函数调用能够提高速度
- // class Solution {
- // public:
- //     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
- //         unordered_set<char> vowels = {'a', 'e', 'i', 'u', 'o'};
- //         int n = words.size();
- //         vector<int> sum(n + 1);
- //         for(int i = 0; i < n; i ++ ) {
- //             if(vowels.count(words[i][0]) && vowels.count(words[i].back()))
- //                 sum[i + 1] = 1 + sum[i];
- //             else
- //                 sum[i + 1] = sum[i];
- //         }
- //         vector<int> result(queries.size());
- //         for (int i = 0; i < queries.size();i++){
- //             result[i] = sum[queries[i][1]+1] - sum[queries[i][0]];
- //         }
- //         return result;
- //     }
- // };
- // 简化一些代码
- // class Solution {
- // public:
- //     vector<char> vowel = {'a', 'e', 'i', 'o', 'u'};
- //     bool is_correct (string x){
- //         if(find(vowel.begin(),vowel.end(),x[0])!=vowel.end()&&find(vowel.begin(),vowel.end(),x[x.length()-1])!=vowel.end()){
- //             return true;
- //         }
- //         return false;
- //     }
- //     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
- //         vector<int> sum(words.size());
- //         vector<int> result(0);
- //         int left = 0, right = 0, temp = 0,count = 0;
- //         for(auto q : queries){
- //             int left = q[0], right = q[1];
- //             for (int i = temp; i <= right;++i){
- //                 if(is_correct(words[i]))
- //                     count++;
- //                 sum[i] = count;
- //             }
- //             temp = right + 1;
- //             result.emplace_back(sum[right] - sum[left] + is_correct(words[left]));
- //         }
- //         return result;
- //     }
- // };
- // 2025年1月21日17:02:45
- // 最简单的模拟算法，先计算每一个word是否符合条件，再计算前缀和，通过前缀和计算结果时间有点慢（不熟练），n n 45mins
- // class Solution {
- // public:
- //     vector<char> vowel = {'a', 'e', 'i', 'o', 'u'};
- //     bool is_correct (string x){
- //         if(find(vowel.begin(),vowel.end(),x[0])!=vowel.end()&&find(vowel.begin(),vowel.end(),x[x.length()-1])!=vowel.end()){
- //             return true;
- //         }
- //         return false;
- //     }
- //     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
- //         vector<int> result;
- //         vector<int> sum(words.size());
- //         int count = 0;
- //         for (int i = 0; i < words.size();i++){
- //             if(is_correct(words[i])){
- //                 ++count;
- //             }
- //             sum[i] = count;
- //         }
- //         for (int j = 0; j < queries.size();j++){
- //             result.emplace_back(sum[queries[j][1]] - sum[queries[j][0]] + is_correct(words[queries[j][0]]));
- //         }
- //         return result;
- //     }
- // };
- // 1031. 两个非重叠子数组的最大和
- // 超时，用了错误的思路，下面的解答是错的
- // class Solution {
- // public:
- //     int find_sub_sum(vector<int>& nums,int length,int flag){
- //         int content = 0, temp = 0, result = 0,start_index =0;
- //         for (int i = 0; i < length;i++){
- //             content += nums[i];
- //         }
- //         for (int i = length; i < nums.size();i++){
- //             temp = content + nums[i] - nums[i - length];
- //             if(temp > result){
- //                 result = temp;
- //                 start_index = i - length + 1;
- //             }
- //             content = temp;
- //         }
- //         if(flag){
- //             nums.erase(nums.begin() + start_index, nums.begin() + start_index + length);
- //         }
- //         return result;
- //     }
- //     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
- //         bool flag = true;
- //         int result1 =  find_sub_sum(nums, firstLen, flag);
- //         int result2 =  find_sub_sum(nums, secondLen, !flag);
- //         return result1+result2;
- //     }
- // };
- // 2905. 找出满足差值条件的下标 II
- // 2025年1月20日12:02:08 中途有事跳过
- // 1814. 统计一个数组中好对子的数目
- // 2025年1月20日12:01:57
- // 简单哈希表，次数统计法，对于c(n,2)的累加计算有点不熟悉，应该先result+=访问次数，再访问次数++的，浪费有点多的时间，n n 30mins
- // 由于数据量很大，不能使用下标法用动态数组完成，会爆内存
- // class Solution {
- // public:
- //     int rev(int input){
- //         int result = 0;
- //         while(input>0){
- //             result = result * 10 + input % 10;
- //             input /= 10;
- //         }
- //         return result;
- //     }
- //     int countNicePairs(vector<int>& nums) {
- //         unordered_map<int, int> mp;
- //         int result = 0;
- //         for(int num :nums){
- //             result = (result + mp[num - rev(num)]) % 1000000007;
- //             ++mp[num - rev(num)];
- //         }
- //         return result;
- //     }
- // };
- // 1410. HTML 实体解析器
- // 20分钟包括查询正则表达式用法和源输入格式写法
- // class Solution {
- // public:
- //     string entityParser(string text) {
- //         vector<pair<__cxx11::regex, string>> replacements = {
- //             {regex("&quot;"), "\""},
- //             {regex("&apos;"), "\'"},
- //             {regex("&gt;"), ">"},
- //             {regex("&lt;"), "<"},
- //             {regex("&frasl;"), "/"},
- //             {regex("&amp;"), "&"}
- //         };
- //         for(const auto& pair : replacements){
- //             text = regex_replace(text, pair.first, pair.second);
- //         }
+//     int sumRange(int left, int right) {
+//         return sum[right+1]-sum[left];
+//     }
+// };
+// 2559. 统计范围内的元音字符串数
+// 在数据量比较大时尽量减少函数调用能够提高速度
+// class Solution {
+// public:
+//     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
+//         unordered_set<char> vowels = {'a', 'e', 'i', 'u', 'o'};
+//         int n = words.size();
+//         vector<int> sum(n + 1);
+//         for(int i = 0; i < n; i ++ ) {
+//             if(vowels.count(words[i][0]) && vowels.count(words[i].back()))
+//                 sum[i + 1] = 1 + sum[i];
+//             else
+//                 sum[i + 1] = sum[i];
+//         }
+//         vector<int> result(queries.size());
+//         for (int i = 0; i < queries.size();i++){
+//             result[i] = sum[queries[i][1]+1] - sum[queries[i][0]];
+//         }
+//         return result;
+//     }
+// };
+// 简化一些代码
+// class Solution {
+// public:
+//     vector<char> vowel = {'a', 'e', 'i', 'o', 'u'};
+//     bool is_correct (string x){
+//         if(find(vowel.begin(),vowel.end(),x[0])!=vowel.end()&&find(vowel.begin(),vowel.end(),x[x.length()-1])!=vowel.end()){
+//             return true;
+//         }
+//         return false;
+//     }
+//     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
+//         vector<int> sum(words.size());
+//         vector<int> result(0);
+//         int left = 0, right = 0, temp = 0,count = 0;
+//         for(auto q : queries){
+//             int left = q[0], right = q[1];
+//             for (int i = temp; i <= right;++i){
+//                 if(is_correct(words[i]))
+//                     count++;
+//                 sum[i] = count;
+//             }
+//             temp = right + 1;
+//             result.emplace_back(sum[right] - sum[left] + is_correct(words[left]));
+//         }
+//         return result;
+//     }
+// };
+// 2025年1月21日17:02:45
+// 最简单的模拟算法，先计算每一个word是否符合条件，再计算前缀和，通过前缀和计算结果时间有点慢（不熟练），n n 45mins
+// class Solution {
+// public:
+//     vector<char> vowel = {'a', 'e', 'i', 'o', 'u'};
+//     bool is_correct (string x){
+//         if(find(vowel.begin(),vowel.end(),x[0])!=vowel.end()&&find(vowel.begin(),vowel.end(),x[x.length()-1])!=vowel.end()){
+//             return true;
+//         }
+//         return false;
+//     }
+//     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
+//         vector<int> result;
+//         vector<int> sum(words.size());
+//         int count = 0;
+//         for (int i = 0; i < words.size();i++){
+//             if(is_correct(words[i])){
+//                 ++count;
+//             }
+//             sum[i] = count;
+//         }
+//         for (int j = 0; j < queries.size();j++){
+//             result.emplace_back(sum[queries[j][1]] - sum[queries[j][0]] + is_correct(words[queries[j][0]]));
+//         }
+//         return result;
+//     }
+// };
+// 1031. 两个非重叠子数组的最大和
+// 超时，用了错误的思路，下面的解答是错的
+// class Solution {
+// public:
+//     int find_sub_sum(vector<int>& nums,int length,int flag){
+//         int content = 0, temp = 0, result = 0,start_index =0;
+//         for (int i = 0; i < length;i++){
+//             content += nums[i];
+//         }
+//         for (int i = length; i < nums.size();i++){
+//             temp = content + nums[i] - nums[i - length];
+//             if(temp > result){
+//                 result = temp;
+//                 start_index = i - length + 1;
+//             }
+//             content = temp;
+//         }
+//         if(flag){
+//             nums.erase(nums.begin() + start_index, nums.begin() + start_index + length);
+//         }
+//         return result;
+//     }
+//     int maxSumTwoNoOverlap(vector<int>& nums, int firstLen, int secondLen) {
+//         bool flag = true;
+//         int result1 =  find_sub_sum(nums, firstLen, flag);
+//         int result2 =  find_sub_sum(nums, secondLen, !flag);
+//         return result1+result2;
+//     }
+// };
+// 2905. 找出满足差值条件的下标 II
+// 2025年1月20日12:02:08 中途有事跳过
+// 1814. 统计一个数组中好对子的数目
+// 2025年1月20日12:01:57
+// 简单哈希表，次数统计法，对于c(n,2)的累加计算有点不熟悉，应该先result+=访问次数，再访问次数++的，浪费有点多的时间，n n 30mins
+// 由于数据量很大，不能使用下标法用动态数组完成，会爆内存
+// class Solution {
+// public:
+//     int rev(int input){
+//         int result = 0;
+//         while(input>0){
+//             result = result * 10 + input % 10;
+//             input /= 10;
+//         }
+//         return result;
+//     }
+//     int countNicePairs(vector<int>& nums) {
+//         unordered_map<int, int> mp;
+//         int result = 0;
+//         for(int num :nums){
+//             result = (result + mp[num - rev(num)]) % 1000000007;
+//             ++mp[num - rev(num)];
+//         }
+//         return result;
+//     }
+// };
+// 1410. HTML 实体解析器
+// 20分钟包括查询正则表达式用法和源输入格式写法
+// class Solution {
+// public:
+//     string entityParser(string text) {
+//         vector<pair<__cxx11::regex, string>> replacements = {
+//             {regex("&quot;"), "\""},
+//             {regex("&apos;"), "\'"},
+//             {regex("&gt;"), ">"},
+//             {regex("&lt;"), "<"},
+//             {regex("&frasl;"), "/"},
+//             {regex("&amp;"), "&"}
+//         };
+//         for(const auto& pair : replacements){
+//             text = regex_replace(text, pair.first, pair.second);
+//         }
 
- //         return text;
- //     }
- // };
- // int main(){
- //     string test = "&amp; is an HTML entity but &ambassador; is not.";
- //     Solution s;
- //     cout << s.entityParser(test);
- // }
- // 217. 存在重复元素
- // 简单哈希表，出现次数统计法n n 3mins
- // class Solution {
- // public:
- //     bool containsDuplicate(vector<int>& nums) {
- //         unordered_map<int, int> mapping;
- //         for(int x : nums){
- //             if(++mapping[x] > 1){
- //                 return true;
- //             }
- //         }
- //         return false;
- //     }
- // };
+//         return text;
+//     }
+// };
+// int main(){
+//     string test = "&amp; is an HTML entity but &ambassador; is not.";
+//     Solution s;
+//     cout << s.entityParser(test);
+// }
+// 217. 存在重复元素
+// 简单哈希表，出现次数统计法n n 3mins
+// class Solution {
+// public:
+//     bool containsDuplicate(vector<int>& nums) {
+//         unordered_map<int, int> mapping;
+//         for(int x : nums){
+//             if(++mapping[x] > 1){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+// };
 
- // 1014. 最佳观光组合
- // 十三分钟
- // 简单模拟算法  n 1
- // class Solution {
- // public:
- //     int maxScoreSightseeingPair(vector<int>& values) {
- //         int ans = 0, max_i = values[0];
- //         for (int i = 1; i < values.size();i++){
- //             ans = max(ans, max_i + values[i] - i);
- //             max_i = max(max_i, values[i] + i);
- //         }
- //         return ans;
- //     }
- // };
+// 1014. 最佳观光组合
+// 十三分钟
+// 简单模拟算法  n 1
+// class Solution {
+// public:
+//     int maxScoreSightseeingPair(vector<int>& values) {
+//         int ans = 0, max_i = values[0];
+//         for (int i = 1; i < values.size();i++){
+//             ans = max(ans, max_i + values[i] - i);
+//             max_i = max(max_i, values[i] + i);
+//         }
+//         return ans;
+//     }
+// };
 
- // 2874. 有序三元组中的最大值 II
- // 重写一遍
- // 2025年1月19日09:44:212
- // 枚举k  最关键在于新旧值更替的顺序，被用掉之后的值可以被更新，有先计算答案，后插入内容（更新内容）的，return值在循环语句中的更新语句前写 n 1 30mins
- // class Solution {
- // public:
- //     long long maximumTripletValue(vector<int>& nums) {
- //         int sub = 0, pre_max =0;
- //         long long ans = 0;
- //         for(int num : nums){
- //             ans = max(ans, (long long)num * sub);
- //             sub = max(sub, pre_max - num);
- //             pre_max = max(pre_max, num);
- //         }
- //         return ans;
- //     }
- // };
- // 枚举j
- // class Solution {
- // public:
- //     long long maximumTripletValue(vector<int>& nums) {
- //         vector<int> pre(nums.size() + 1);
- //         vector<int> after(nums.size() + 1);
- //         pre[0] = 0;
- //         after[nums.size()] = 0;
- //         long long ans = 0;
- //         for (int i = 0,j = nums.size(); i < nums.size(), j > 0;i++,j--){
- //             pre[i + 1] = max(pre[i], nums[i]);
- //             after[j - 1] = max(after[j], nums[j-1]);
- //         }
- //         for (int k = 0; k < nums.size();k++){
- //             ans = max(ans, (long long)(pre[k] - nums[k]) * after[k + 1]);
- //         }
- //         return ans;
- //     }
- // };
- // 没做出来看题解
- // class Solution {
- // public:
- //     long long maximumTripletValue(vector<int>& nums) {
- //         long long ans = 0;
- //         int max_diff = 0, minone = 0;
- //         for(int x : nums){
- //             ans = max(ans, (long long)max_diff * x);
- //             max_diff = max(max_diff, x- minone);
- //             minone = max(minone, x);
- //         }
- //         return ans;
- //     }
- // };
- // 2748. 美丽下标对的数目
- // 2025年1月17日18:26:18
- // 简单模拟算法，枚举——维护思想
- // class Solution {
- // public:
- //     int countBeautifulPairs(vector<int>& nums) {
- //         int ans = 0, cnt[10]{};
- //         for (int x : nums) {
- //             for (int y = 1; y < 10; y++) {
- //                 if (cnt[y] && gcd(y, x % 10) == 1) {
- //                     ans += cnt[y];
- //                 }
- //             }
- //             while (x >= 10) {
- //                 x /= 10;
- //             }
- //             cnt[x]++; // 统计最高位的出现次数
- //         }
- //         return ans;
- //     }
- // };
- // 2025年1月17日18:00:34
- // 5分钟 n 1 和1010题一模一样
- // class Solution {
- // public:
- //     long long countCompleteDayPairs(vector<int>& hours) {
- //         vector<int> mapping(24, 0);
- //         int i = 1, j = 23;
- //         long ans = 0;
- //         for(int x : hours){
- //             mapping[x % 24]++;
- //         }
- //         for (int j = 0; j < 24;j++){
- //             if(mapping[j]==0) continue;
- //             if(j==0||j==12)
- //                 ans += (long)mapping[j] * (mapping[j]-1);
- //             else
- //                 ans += (long)mapping[j] * mapping[24 - j];
- //         }
- //         return ans/2;
- //     }
- // };
- // 1010. 总持续时间可被 60 整除的歌曲
- // 2025年1月17日15:32:01
- // 2025年1月17日16:20:39
- // 简单模拟算法 难就难在特殊情况处理上，余数为0和余数为30时有特殊处理方式 n n 40mins
- // 如果不在最后return转化为long，则用int作为相乘项的结果也是int，可能会overflow，如果vector<long>又会增加一倍空间，所以在结果处转换更明智
- // class Solution {
- // public:
- //     int numPairsDivisibleBy60(vector<int>& time) {
- //         vector<long> mapping(60, 0);
- //         long ans = 0;
- //         int i = 1, j = 59;
- //         for(int t : time){
- //             mapping[t % 60]++;
- //         }
- //         while(i<j){
- //             ans += mapping[i++] * mapping[j--];
- //         }
- //         ans += mapping[0]*(mapping[0]-1)/2+mapping[30]*(mapping[30]-1)/2;
- //         return ans;
- //     }
- // };
- // 2260. 必须拿起的最小连续卡牌数
- // 2025年1月17日14:37:06
- // 2025年1月17日15:17:24
- // 最高密度的访问次数标记法 n 1 40mins
- // class Solution {
- // public:
- //    int minimumCardPickup(vector<int>& cards) {
- //        unordered_map<int,int>mapping;
- //        int ans=INT_MAX;
- //        for(int i=0;i<cards.size();++i){
- //            if(mapping.count(cards[i])!=0){
- //                ans=min(ans,i-mapping[cards[i]]+1);
- //            }
- //            mapping[cards[i]]=i;
- //        }
- //        return ans == INT_MAX ? -1 : ans;
- //    }
- // };
- // 1679. K 和数对的最大数目
- // 2025年1月17日10:10:46
- // 使用find_if暴力解法，多条件匹配 n*n! 1 超时
- // 记录访问次数法 n,1 题解 20mins
- // class Solution {
- // public:
- //     int maxOperations(vector<int>& nums, int k) {
- //         unordered_map<int, bool> mapping;
- //         int count = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             auto it = mapping.find(k - nums[i]);
- //             if(it!=mapping.end()&&it->second==true){
- //                 count++;
- //                 it->second = false;
- //             }else{
- //                 mapping[nums[i]] = true;
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 一小时，还是错了，但很接近答案，需要换一种思路 n 1 60mins
- // class Solution {/* 错误解法 */
- // public:
- //     int maxOperations(vector<int>& nums, int k) {
- //         unordered_map<int, bool> mapping;
- //         int count = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             bool flag = true;
- //             auto it = mapping.find(k - nums[i]);
- //             if(it!=mapping.end()&&it->second==true){
- //                 count++;
- //                 flag = false;
- //                 it->second = flag;
- //             }
- //             mapping.insert({nums[i], flag});
- //         }
- //         return count;
- //     }
- // };
- // 2342. 数位和相等数对的最大和
- // 简化的算法，抓住核心逻辑的枚举左，维护右方法
- // class Solution {
- // public:
- //     int getSum(int x,int ans =0){
- //         while(x>0){
- //             ans += x % 10;
- //             x /= 10;
- //         }
- //         return ans;
- //     }
- //     int maximumSum(vector<int>& nums) {
- //         int ans = -1;
- //         unordered_map<int, int> mx;
- //         for (int num : nums) {
- //             int s = getSum(num);
- //             if (mx[s]) {
- //                 ans = max(ans, mx[s] + num);
- //             }
- //             mx[s] = max(mx[s], num);
- //         }
- //         return ans;
- //     }
- // };
- // 模拟算法，只维护一个数组中最大的两个值，空间复杂度大大减少O(1)，由于代码逻辑较为复杂，时间上慢了点  n 1 20mins
- // class Solution {
- // public:
- //     int getSum(int x, int ans = 0){
- //         do{
- //             ans += x % 10;
- //         } while (x/=10);
- //         return ans;
- //     }
- //     int maximumSum(vector<int>& nums) {
- //         int max_result = -1;
- //         unordered_map <int, vector<int>> mapping;
- //         for (int i = 0; i < nums.size();i++){
- //             if(mapping[getSum(nums[i])].size()<2){
- //                 mapping[getSum(nums[i])].emplace_back(nums[i]);
- //             }else if(nums[i]>min(mapping[getSum(nums[i])][0],mapping[getSum(nums[i])][1])){
- //                 mapping[getSum(nums[i])][0] = nums[i];
- //             }
- //             sort(mapping[getSum(nums[i])].begin(), mapping[getSum(nums[i])].end());
- //         }
- //         for(auto x : mapping){
- //             if(x.second.size()>1)
- //                 max_result = max(max_result, x.second[0] + x.second[1]);
- //         }
- //         return max_result;
- //     }
- // };
- // 2025年1月16日18:24:13
- // 2025年1月16日18:48:23
- //
- // 同2815，最简单的模拟算法，类似2815，同样利用multiset自动排序对数组分组之后小组内容排序，不更新而是完全存储所有数组存储，nlogn n Leetcode严重超时，400ms 144.95mb内存消耗
- // class Solution {
- // public:
- //     int getSum(int x){
- //         int ans = 0;
- //         while(x>0){
- //             ans += x % 10;
- //             x /= 10;
- //         }
- //         return ans;
- //     }
- //     int maximumSum(vector<int>& nums) {
- //         unordered_map<int,multiset<int>> mapping(9);
- //         for (int i = 0; i < nums.size();i++){
- //             mapping[getSum(nums[i])].insert(nums[i]);
- //         }
- //         int max_result = -1;
- //         for(auto x :mapping){
- //             if(x.second.size()>1){
- //                 max_result = max(max_result, *x.second.rbegin() + *(++x.second.rbegin()));
- //             }
- //         }
- //         return max_result;
- //     }
- // };
- // int main(){
- //     vector<int> test = {18, 43, 36, 13, 7};
- //     Solution s;
- //     cout << s.maximumSum(test);
- //     // cout << s.getSum(12345);
- // }
- // 2815. 数组中的最大数对和
- // 2025年1月16日17:08:58
- // 2025年1月16日18:15:48
- // 模拟算法，太过精妙的逻辑我写不出来，能流畅写出所想的思路就算赢，这个写起来太慢了，归根结底是数据结构学的不好，各种容器不熟练导致的 nlogn n
- // class Solution {
- // public:
- //     // 获取数字的最高位
- //     int findMaxDigit(int number) {
- //         if (number == 0) return 0; // 0 的最大数字是 0
- //         int max_digit = INT32_MIN;
- //         while (number > 0) {
- //             int digit = number % 10;
- //             max_digit = max(max_digit, digit);
- //             number /= 10;
- //         }
- //         return max_digit;
- //     }
- //     int maxSum(vector<int>& nums) {
- //         vector<multiset<int>> mapping(10);
- //         int max_result = -1;
- //         for (int i = 0; i < nums.size();i++){
- //             int section = findMaxDigit(nums[i]);
- //             mapping[section].insert(nums[i]);
- //             if(mapping[section].size()>1){
- //                 auto it = mapping[section].rbegin();
- //                 max_result = max(max_result, *it + *(++it));
- //             }
- //         }
- //         return max_result;
- //     }
- // };
- // 121. 买卖股票的最佳时机、
- // 2025年1月16日16:41:07
- // 2025年1月16日17:04:02
- // class Solution {
- // public:
- //     int maxProfit(vector<int>& prices) {
- //         int max_profit = INT_MIN;
- //         int min_price = INT_MAX;
- //         for (int i = 0; i < prices.size();i++){
- //             min_price = min(min_price, prices[i]);
- //             max_profit = max(max_profit, prices[i] - min_price);
- //         }
- //     }
- // };
- // 219. 存在重复元素 II
- // 2025年1月16日16:09:04
- // 2025年1月16日16:30:33
- // 滑动窗口经典做法，三步走，使用访问次数统计方法并不优雅而且可读性较差
- // class Solution {
- // public:
- //     bool containsNearbyDuplicate(vector<int>& nums, int k) {
- //         unordered_set<int> window;
- //         bool flag = false;
- //         for (int i = 0; i < nums.size();i++){
- //             // check whether elem is exist
- //             if(window.find(nums[i])!=window.end()){
- //                 flag = true;
- //             }
- //             // add new elem
- //             window.insert(nums[i]);
- //             // overflow situation
- //             if(window.size()>k){
- //                 window.erase(nums[i - k]);
- //             }
- //         }
- //         return flag;
- //     }
- // };
- // 2001. 可互换矩形的组数
- // 2025年1月16日14:42:02
- // 2025年1月16日14:47:19
- // 简单哈希表，类似于1512好数，一样的原理，只是这里多了数据精度控制 n 1 5min
- // class Solution {
- // public:
- //     long long interchangeableRectangles(vector<vector<int>>& rectangles) {
- //         unordered_map<double, int> myMap;
- //         long long ans = 0;
- //         for (int i = 0; i < rectangles.size();i++){
- //             ans +=myMap[double(rectangles[i][0]) / double(rectangles[i][1])]++;
- //         }
- //         return ans;
- //     }
- // };
- // 1512. 好数对的数目
- // 2025年1月16日14:22:42
- // 2025年1月16日14:30:54
- // 简单一遍哈希表，自增的同时累加（原因是计算C（2/value）组合数可以化简为公差为一等差数列求和
- // class Solution {
- // public:
- //     int numIdenticalPairs(vector<int>& nums) {
- //         unordered_map<int, int> myMap;
- //         int ans = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             ans += myMap[nums[i]]++;
- //         }
- //         return ans;
- //     }
- // };
- // 1. 两数之和
- // 2025年1月16日13:21:21
- // 2025年1月16日13:48:49
- // 一遍哈希表，在新增的同时匹配**新增之前**的哈希表中的内容是否有结果，新增和匹配的顺序是关键
- // class Solution {
- // public:
- //     vector<int> twoSum(vector<int>& nums, int target) {
- //         unordered_map<int, int> myMap;
- //         vector<int> ans(2,0);
- //         for (int i = 0;i<nums.size();i++){
- //             auto it = myMap.find(nums[i]);
- //             if(it!=myMap.end()){
- //                 ans = {i, it->second};
- //             }
- //             myMap[target - nums[i]] = i;
- //         }
- //         return ans;
- //     }
- // };
+// 2874. 有序三元组中的最大值 II
+// 重写一遍
+// 2025年1月19日09:44:212
+// 枚举k  最关键在于新旧值更替的顺序，被用掉之后的值可以被更新，有先计算答案，后插入内容（更新内容）的，return值在循环语句中的更新语句前写 n 1 30mins
+// class Solution {
+// public:
+//     long long maximumTripletValue(vector<int>& nums) {
+//         int sub = 0, pre_max =0;
+//         long long ans = 0;
+//         for(int num : nums){
+//             ans = max(ans, (long long)num * sub);
+//             sub = max(sub, pre_max - num);
+//             pre_max = max(pre_max, num);
+//         }
+//         return ans;
+//     }
+// };
+// 枚举j
+// class Solution {
+// public:
+//     long long maximumTripletValue(vector<int>& nums) {
+//         vector<int> pre(nums.size() + 1);
+//         vector<int> after(nums.size() + 1);
+//         pre[0] = 0;
+//         after[nums.size()] = 0;
+//         long long ans = 0;
+//         for (int i = 0,j = nums.size(); i < nums.size(), j > 0;i++,j--){
+//             pre[i + 1] = max(pre[i], nums[i]);
+//             after[j - 1] = max(after[j], nums[j-1]);
+//         }
+//         for (int k = 0; k < nums.size();k++){
+//             ans = max(ans, (long long)(pre[k] - nums[k]) * after[k + 1]);
+//         }
+//         return ans;
+//     }
+// };
+// 没做出来看题解
+// class Solution {
+// public:
+//     long long maximumTripletValue(vector<int>& nums) {
+//         long long ans = 0;
+//         int max_diff = 0, minone = 0;
+//         for(int x : nums){
+//             ans = max(ans, (long long)max_diff * x);
+//             max_diff = max(max_diff, x- minone);
+//             minone = max(minone, x);
+//         }
+//         return ans;
+//     }
+// };
+// 2748. 美丽下标对的数目
+// 2025年1月17日18:26:18
+// 简单模拟算法，枚举——维护思想
+// class Solution {
+// public:
+//     int countBeautifulPairs(vector<int>& nums) {
+//         int ans = 0, cnt[10]{};
+//         for (int x : nums) {
+//             for (int y = 1; y < 10; y++) {
+//                 if (cnt[y] && gcd(y, x % 10) == 1) {
+//                     ans += cnt[y];
+//                 }
+//             }
+//             while (x >= 10) {
+//                 x /= 10;
+//             }
+//             cnt[x]++; // 统计最高位的出现次数
+//         }
+//         return ans;
+//     }
+// };
+// 2025年1月17日18:00:34
+// 5分钟 n 1 和1010题一模一样
+// class Solution {
+// public:
+//     long long countCompleteDayPairs(vector<int>& hours) {
+//         vector<int> mapping(24, 0);
+//         int i = 1, j = 23;
+//         long ans = 0;
+//         for(int x : hours){
+//             mapping[x % 24]++;
+//         }
+//         for (int j = 0; j < 24;j++){
+//             if(mapping[j]==0) continue;
+//             if(j==0||j==12)
+//                 ans += (long)mapping[j] * (mapping[j]-1);
+//             else
+//                 ans += (long)mapping[j] * mapping[24 - j];
+//         }
+//         return ans/2;
+//     }
+// };
+// 1010. 总持续时间可被 60 整除的歌曲
+// 2025年1月17日15:32:01
+// 2025年1月17日16:20:39
+// 简单模拟算法 难就难在特殊情况处理上，余数为0和余数为30时有特殊处理方式 n n 40mins
+// 如果不在最后return转化为long，则用int作为相乘项的结果也是int，可能会overflow，如果vector<long>又会增加一倍空间，所以在结果处转换更明智
+// class Solution {
+// public:
+//     int numPairsDivisibleBy60(vector<int>& time) {
+//         vector<long> mapping(60, 0);
+//         long ans = 0;
+//         int i = 1, j = 59;
+//         for(int t : time){
+//             mapping[t % 60]++;
+//         }
+//         while(i<j){
+//             ans += mapping[i++] * mapping[j--];
+//         }
+//         ans += mapping[0]*(mapping[0]-1)/2+mapping[30]*(mapping[30]-1)/2;
+//         return ans;
+//     }
+// };
+// 2260. 必须拿起的最小连续卡牌数
+// 2025年1月17日14:37:06
+// 2025年1月17日15:17:24
+// 最高密度的访问次数标记法 n 1 40mins
+// class Solution {
+// public:
+//    int minimumCardPickup(vector<int>& cards) {
+//        unordered_map<int,int>mapping;
+//        int ans=INT_MAX;
+//        for(int i=0;i<cards.size();++i){
+//            if(mapping.count(cards[i])!=0){
+//                ans=min(ans,i-mapping[cards[i]]+1);
+//            }
+//            mapping[cards[i]]=i;
+//        }
+//        return ans == INT_MAX ? -1 : ans;
+//    }
+// };
+// 1679. K 和数对的最大数目
+// 2025年1月17日10:10:46
+// 使用find_if暴力解法，多条件匹配 n*n! 1 超时
+// 记录访问次数法 n,1 题解 20mins
+// class Solution {
+// public:
+//     int maxOperations(vector<int>& nums, int k) {
+//         unordered_map<int, bool> mapping;
+//         int count = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             auto it = mapping.find(k - nums[i]);
+//             if(it!=mapping.end()&&it->second==true){
+//                 count++;
+//                 it->second = false;
+//             }else{
+//                 mapping[nums[i]] = true;
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 一小时，还是错了，但很接近答案，需要换一种思路 n 1 60mins
+// class Solution {/* 错误解法 */
+// public:
+//     int maxOperations(vector<int>& nums, int k) {
+//         unordered_map<int, bool> mapping;
+//         int count = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             bool flag = true;
+//             auto it = mapping.find(k - nums[i]);
+//             if(it!=mapping.end()&&it->second==true){
+//                 count++;
+//                 flag = false;
+//                 it->second = flag;
+//             }
+//             mapping.insert({nums[i], flag});
+//         }
+//         return count;
+//     }
+// };
+// 2342. 数位和相等数对的最大和
+// 简化的算法，抓住核心逻辑的枚举左，维护右方法
+// class Solution {
+// public:
+//     int getSum(int x,int ans =0){
+//         while(x>0){
+//             ans += x % 10;
+//             x /= 10;
+//         }
+//         return ans;
+//     }
+//     int maximumSum(vector<int>& nums) {
+//         int ans = -1;
+//         unordered_map<int, int> mx;
+//         for (int num : nums) {
+//             int s = getSum(num);
+//             if (mx[s]) {
+//                 ans = max(ans, mx[s] + num);
+//             }
+//             mx[s] = max(mx[s], num);
+//         }
+//         return ans;
+//     }
+// };
+// 模拟算法，只维护一个数组中最大的两个值，空间复杂度大大减少O(1)，由于代码逻辑较为复杂，时间上慢了点  n 1 20mins
+// class Solution {
+// public:
+//     int getSum(int x, int ans = 0){
+//         do{
+//             ans += x % 10;
+//         } while (x/=10);
+//         return ans;
+//     }
+//     int maximumSum(vector<int>& nums) {
+//         int max_result = -1;
+//         unordered_map <int, vector<int>> mapping;
+//         for (int i = 0; i < nums.size();i++){
+//             if(mapping[getSum(nums[i])].size()<2){
+//                 mapping[getSum(nums[i])].emplace_back(nums[i]);
+//             }else if(nums[i]>min(mapping[getSum(nums[i])][0],mapping[getSum(nums[i])][1])){
+//                 mapping[getSum(nums[i])][0] = nums[i];
+//             }
+//             sort(mapping[getSum(nums[i])].begin(), mapping[getSum(nums[i])].end());
+//         }
+//         for(auto x : mapping){
+//             if(x.second.size()>1)
+//                 max_result = max(max_result, x.second[0] + x.second[1]);
+//         }
+//         return max_result;
+//     }
+// };
+// 2025年1月16日18:24:13
+// 2025年1月16日18:48:23
+//
+// 同2815，最简单的模拟算法，类似2815，同样利用multiset自动排序对数组分组之后小组内容排序，不更新而是完全存储所有数组存储，nlogn n Leetcode严重超时，400ms 144.95mb内存消耗
+// class Solution {
+// public:
+//     int getSum(int x){
+//         int ans = 0;
+//         while(x>0){
+//             ans += x % 10;
+//             x /= 10;
+//         }
+//         return ans;
+//     }
+//     int maximumSum(vector<int>& nums) {
+//         unordered_map<int,multiset<int>> mapping(9);
+//         for (int i = 0; i < nums.size();i++){
+//             mapping[getSum(nums[i])].insert(nums[i]);
+//         }
+//         int max_result = -1;
+//         for(auto x :mapping){
+//             if(x.second.size()>1){
+//                 max_result = max(max_result, *x.second.rbegin() + *(++x.second.rbegin()));
+//             }
+//         }
+//         return max_result;
+//     }
+// };
+// int main(){
+//     vector<int> test = {18, 43, 36, 13, 7};
+//     Solution s;
+//     cout << s.maximumSum(test);
+//     // cout << s.getSum(12345);
+// }
+// 2815. 数组中的最大数对和
+// 2025年1月16日17:08:58
+// 2025年1月16日18:15:48
+// 模拟算法，太过精妙的逻辑我写不出来，能流畅写出所想的思路就算赢，这个写起来太慢了，归根结底是数据结构学的不好，各种容器不熟练导致的 nlogn n
+// class Solution {
+// public:
+//     // 获取数字的最高位
+//     int findMaxDigit(int number) {
+//         if (number == 0) return 0; // 0 的最大数字是 0
+//         int max_digit = INT32_MIN;
+//         while (number > 0) {
+//             int digit = number % 10;
+//             max_digit = max(max_digit, digit);
+//             number /= 10;
+//         }
+//         return max_digit;
+//     }
+//     int maxSum(vector<int>& nums) {
+//         vector<multiset<int>> mapping(10);
+//         int max_result = -1;
+//         for (int i = 0; i < nums.size();i++){
+//             int section = findMaxDigit(nums[i]);
+//             mapping[section].insert(nums[i]);
+//             if(mapping[section].size()>1){
+//                 auto it = mapping[section].rbegin();
+//                 max_result = max(max_result, *it + *(++it));
+//             }
+//         }
+//         return max_result;
+//     }
+// };
+// 121. 买卖股票的最佳时机、
+// 2025年1月16日16:41:07
+// 2025年1月16日17:04:02
+// class Solution {
+// public:
+//     int maxProfit(vector<int>& prices) {
+//         int max_profit = INT_MIN;
+//         int min_price = INT_MAX;
+//         for (int i = 0; i < prices.size();i++){
+//             min_price = min(min_price, prices[i]);
+//             max_profit = max(max_profit, prices[i] - min_price);
+//         }
+//     }
+// };
+// 219. 存在重复元素 II
+// 2025年1月16日16:09:04
+// 2025年1月16日16:30:33
+// 滑动窗口经典做法，三步走，使用访问次数统计方法并不优雅而且可读性较差
+// class Solution {
+// public:
+//     bool containsNearbyDuplicate(vector<int>& nums, int k) {
+//         unordered_set<int> window;
+//         bool flag = false;
+//         for (int i = 0; i < nums.size();i++){
+//             // check whether elem is exist
+//             if(window.find(nums[i])!=window.end()){
+//                 flag = true;
+//             }
+//             // add new elem
+//             window.insert(nums[i]);
+//             // overflow situation
+//             if(window.size()>k){
+//                 window.erase(nums[i - k]);
+//             }
+//         }
+//         return flag;
+//     }
+// };
+// 2001. 可互换矩形的组数
+// 2025年1月16日14:42:02
+// 2025年1月16日14:47:19
+// 简单哈希表，类似于1512好数，一样的原理，只是这里多了数据精度控制 n 1 5min
+// class Solution {
+// public:
+//     long long interchangeableRectangles(vector<vector<int>>& rectangles) {
+//         unordered_map<double, int> myMap;
+//         long long ans = 0;
+//         for (int i = 0; i < rectangles.size();i++){
+//             ans +=myMap[double(rectangles[i][0]) / double(rectangles[i][1])]++;
+//         }
+//         return ans;
+//     }
+// };
+// 1512. 好数对的数目
+// 2025年1月16日14:22:42
+// 2025年1月16日14:30:54
+// 简单一遍哈希表，自增的同时累加（原因是计算C（2/value）组合数可以化简为公差为一等差数列求和
+// class Solution {
+// public:
+//     int numIdenticalPairs(vector<int>& nums) {
+//         unordered_map<int, int> myMap;
+//         int ans = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             ans += myMap[nums[i]]++;
+//         }
+//         return ans;
+//     }
+// };
+// 1. 两数之和
+// 2025年1月16日13:21:21
+// 2025年1月16日13:48:49
+// 一遍哈希表，在新增的同时匹配**新增之前**的哈希表中的内容是否有结果，新增和匹配的顺序是关键
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         unordered_map<int, int> myMap;
+//         vector<int> ans(2,0);
+//         for (int i = 0;i<nums.size();i++){
+//             auto it = myMap.find(nums[i]);
+//             if(it!=myMap.end()){
+//                 ans = {i, it->second};
+//             }
+//             myMap[target - nums[i]] = i;
+//         }
+//         return ans;
+//     }
+// };
 
- // 两遍哈希表，一遍构建，一遍遍历 2n 1 28mins。有点忘记C++基本语法了
- // class Solution {
- // public:
- //     vector<int> twoSum(vector<int>& nums, int target) {
- //         unordered_map<int,int> myMap;
- //         vector<int> ans(0,2);
- //         for (int i = 0; i < nums.size();i++){
- //             myMap[target - nums[i]] = i;
- //         }
- //         for (int i = 0; i < nums.size(); i++){
- //             auto it = myMap.find(nums[i]);
- //             if(it != myMap.end()&&it->second!=i){
- //                 ans = {i, it->second};
- //             }
- //         }
- //         return ans;
- //     }
- // };
- // 2260. 必须拿起的最小连续卡牌数
- // 2025年1月8日10:43:52
- // 2815. 数组中的最大数对和
- // 一个半小时
- // 2025年1月7日16:35:31
- // 优化版本，只用一遍循环做完分组和更新两个操作 n 1
- // class Solution {
- // public:
- //     int maxSum(vector<int>& nums) {
- //         int ans = -1;
- //         vector<int> max_val(10, INT_MIN);
- //         for (int v: nums) {
- //             int max_d = 0;
- //             for (int x = v; x; x /= 10)
- //                 max_d = max(max_d, x % 10);
- //             ans = max(ans, v + max_val[max_d]);
- //             max_val[max_d] = max(max_val[max_d], v);
- //         }
- //         return ans;
- //     }
- // };
+// 两遍哈希表，一遍构建，一遍遍历 2n 1 28mins。有点忘记C++基本语法了
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         unordered_map<int,int> myMap;
+//         vector<int> ans(0,2);
+//         for (int i = 0; i < nums.size();i++){
+//             myMap[target - nums[i]] = i;
+//         }
+//         for (int i = 0; i < nums.size(); i++){
+//             auto it = myMap.find(nums[i]);
+//             if(it != myMap.end()&&it->second!=i){
+//                 ans = {i, it->second};
+//             }
+//         }
+//         return ans;
+//     }
+// };
+// 2260. 必须拿起的最小连续卡牌数
+// 2025年1月8日10:43:52
+// 2815. 数组中的最大数对和
+// 一个半小时
+// 2025年1月7日16:35:31
+// 优化版本，只用一遍循环做完分组和更新两个操作 n 1
+// class Solution {
+// public:
+//     int maxSum(vector<int>& nums) {
+//         int ans = -1;
+//         vector<int> max_val(10, INT_MIN);
+//         for (int v: nums) {
+//             int max_d = 0;
+//             for (int x = v; x; x /= 10)
+//                 max_d = max(max_d, x % 10);
+//             ans = max(ans, v + max_val[max_d]);
+//             max_val[max_d] = max(max_val[max_d], v);
+//         }
+//         return ans;
+//     }
+// };
 
- // 中规中矩模拟算法  nlogn 1
- // class Solution {
- // public:
- //     // 获取数字的最高位
- //     int findMaxDigit(int number) {
- //         int max_d = INT_MIN;
- //         for (int x = number; x;x/=10){
- //             max_d = max(max_d, x % 10);
- //         }
- //         return max_d;
- //     }
- //     int maxSum(vector<int>& nums) {
- //         int max_result = -1;
- //         unordered_map<int, vector<int>> mymap;
- //         for (int x : nums) {
- //             mymap[findMaxDigit(x)].emplace_back(x);
- //         }
- //         for (auto& entry : mymap) {
- //             int length = entry.second.size();
- //             if (length > 1) {
- //                 sort(entry.second.begin(), entry.second.end());
- //                 max_result = max(max_result, entry.second[length - 1] + entry.second[length - 2]);
- //             }
- //         }
- //         return max_result;
- //     }
- // };
- // 121. 买卖股票的最佳时机
- // 2025年1月7日13:52:04
- // 20分钟
- // 简单逻辑推演做法
- // class Solution {
- // public:
- //     int maxProfit(vector<int>& prices) {
- //         int min_one = INT_MAX, max_profit =0;
- //         for (int i = 0; i < prices.size();i++){
- //             min_one = min(min_one, prices[i]);
- //             max_profit = max(max_profit, prices[i] - min_one);
- //         }
- //         return max_profit;
- //     }
- // };
- // 219. 存在重复元素 II
- // 2025年1月7日11:52:32
- // 40分钟
- // 暴力方法 n2 1
- // 经典方法  n 1
- // class Solution {
- // public:
- //     bool containsNearbyDuplicate(vector<int>& nums, int k) {
- //         // 哈希表用于存储滑动窗口内的元素
- //         unordered_set<int> window;
- //         for(int i = 0; i < nums.size(); ++i){
- //             // 检查当前元素是否已经在窗口中
- //             if(window.find(nums[i]) != window.end()){
- //                 return true;
- //             }
- //             // 将当前元素插入到窗口中
- //             window.insert(nums[i]);
- //             // 如果窗口大小超过k，移除最左边的元素
- //             if(window.size() > k){
- //                 window.erase(nums[i - k]);
- //             }
- //         }
- //         // 如果没有找到符合条件的元素
- //         return false;
- //     }
- // };
- // 自定义判断几次访问次数 n n
- // class Solution {
- // public:
- //     bool containsNearbyDuplicate(vector<int>& nums, int k,int count = 3) {
- //         int n = nums.size();
- //         unordered_map<int, pair<int,bool>> set;
- //         for(int i = 0; i < n; ++i){
- //             if(i > k) // mark 1
- //                 set[nums[i - k - 1]].second = false;
- //             if(set[nums[i]].first == count-1&&set[nums[i]].second == true) // mark 2
- //                 return true;
- //             set[nums[i]].first++;
- //             set[nums[i]].second = true; // mark 3
- //         }
- //         return false;
- //     }
- // };
- // 判断访问次数方法（两次终止
- // class Solution {
- // public:
- //     bool containsNearbyDuplicate(vector<int>& nums, int k) {
- //         int length = nums.size();
- //         map<int, bool> set;
- //         for (int i = 0; i < length;i++){
- //             if(i>k) // judge whether window overflow
- //                 set[nums[i]] = false; // and set the tail elem to false
- //             if(set[nums[i] == true])// the second visit ,if it is true means this nums[i] is visited two times
- //                 return true;
- //             set[nums[i]] = true; // first mark elem to true
- //         }
- //     }
- // };
- // 2001. 可互换矩形的组数
- // 2025年1月6日19:23:46
- // 20分钟
- // class Solution {
- // public:
- //     long long interchangeableRectangles(vector<vector<int>>& rectangles) {
- //         unordered_map<double, int> count;
- //         long long result = 0;
- //         for (int i = 0; i < rectangles.size();i++){
- //             double index = 1.0 * rectangles[i][0] / rectangles[i][1];
- //             result += count[index]++;
- //         }
- //         return result;
- //     }
- // };
- // 1512. 好数对的数目
- // 2025年1月6日13:56:32
- // 暴力法 n2 1
- // 2025年1月6日14:06:10
- // class Solution {
- // public:
- //     int numIdenticalPairs(vector<int>& nums) {
- //         map<int, int> nums_map;
- //         int count = 0;
- //         if(nums.size()==1)
- //             return 0;
- //         for (int i = 0; i < nums.size();i++){
- //             for (int j = i+1; j < nums.size();j++){
- //                 if (nums[i] == nums[j]){
- //                     count++;
- //                 }
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 最简短，优雅的解法
- // class Solution {
- // public:
- //     int numIdenticalPairs(vector<int>& nums) {
- //         unordered_map<int, int> nums_map;
- //         int result = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             result += nums_map[nums[i]]++;
- //         }
- //         return result;
- //     }
- // };
- // 使用排列组合方法，发现算法计算本质，有多个数字相等，问多个数字中有几个好数对，等价于计算组合数C(n,2) nlogn 1
- // 2025年1月6日14:40:40 20分钟
- // class Solution {
- // public:
- //     int combination(int n, int k) {// 计算C(n,k)
- //         if(k>n)
- //             return 0;
- //         if(k > n - k) k = n - k;
- //         int res = 1;
- //         for(int i = 1; i <= k; ++i) {
- //             res = res * (n - i + 1) / i;
- //         }
- //         return res;
- //     }
- //     int numIdenticalPairs(vector<int>& nums) {
- //         sort(nums.begin(), nums.end());
- //         nums.emplace_back(-1);
- //         int result = 0,count=1;
- //         for (int i = 0; i < nums.size()-1;i++){
- //             if(nums[i]==nums[i+1]){
- //                 count++;
- //             }else{
- //                 result += combination(count,2);
- //                 count = 1;
- //             }
- //         }
- //         return result;
- //     }
- // };
- // 发现算法本质，并且使用优化后的计算方法  n 1
- // class Solution {
- // public:
- //     int combination(int n, int k =2) {// 计算C(n,k)
- //         if(k>n)
- //             return 0;
- //         if(k > n - k) k = n - k;
- //         int res = 1;
- //         for(int i = 1; i <= k; ++i) {
- //             res = res * (n - i + 1) / i;
- //         }
- //         return res;
- //     }
- //     int numIdenticalPairs(vector<int>& nums) {
- //         vector<int> content(100,0);
- //         int result = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             content[nums[i]-1]++;
- //         }
- //         for (int i = 0; i <= 99;i++){
- //             if(content[i]!=0){
- //                 result += combination(content[i]);
- //             }
- //         }
- //         return result;
- //     }
- // };
- // 再次发现优化的本质可以用一种数据结构——哈希表 n  n
- // class Solution {
- // public:
- //     int numIdenticalPairs(vector<int>& nums) {
- //         int ans = 0;
- //         unordered_map<int, int> cnt;
- //         for (int x : nums) {
- //             ans += cnt[x]++;
- //         }
- //         return ans;
- //     }
- // };
- // 1. 两数之和
- // 2025年1月6日11:06:17
- // 30分钟
- // 题目关键不在于等于，而是转化为target-nums[i]><0问题
- // class Solution {
- // public:
- //     vector<int> twoSum(vector<int>& nums, int target) {
- //         map<int,int> a;//建立hash表存放数组元素
- //         vector<int> b(2,-1);//存放结果
- //         for(int i=0;i<nums.size();i++)
- //             a.insert(map<int,int>::value_type(nums[i],i));
- //         for(int i=0;i<nums.size();i++){
- //             if(a.count(target-nums[i])>0&&(a[target-nums[i]]!=i)){
- //                 b[0]=i;
- //                 b[1]=a[target-nums[i]];
- //                 break;
- //             }
- //         }
- //         return b;
- //     };
- // };
- // // 一遍哈希表，添加元素的同时判断是否大于零
- // class Solution{
- //     public:
- //         vector<int> twoSum(vector<int> nums,int target){
- //             map<int, int> a;
- //             vector<int> result(2, -1);
- //             for (int i = 0; i < nums.size(); i++){
- //                 if (a.count(target - nums[i]) > 0){
- //                     result[0]=a[target-nums[i]];
- //                     result[1]=i;
- //                     break;
- //                 }
- //                 a[nums[i]] = i;
- //             }
- //             return result;
- //         }
- // };
- // 1431. 拥有最多糖果的孩子
- // 2025年1月1日09:29:54
- // 40分钟，没看懂题目意思白白浪费很多时间
- // class Solution {
- // public:
- //     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
- //         vector<bool> result;
- //         int max_candy = *max_element(candies.begin(), candies.end());
- //         for (int i = 0; i < candies.size(); i++){
- //             result.emplace_back(candies[i] + extraCandies > max_candy);
- //         }
- //         return result;
- //     }
- // };
- // 3074. 重新分装苹果
- // 2024年12月31日14:31:39
- // class Solution {
- // public:
- //     int minimumBoxes(vector<int>& apple, vector<int>& capacity) {
- //         int count =0;
- //         int sum = accumulate(apple.begin(), apple.end(), 0);
- //         sort(capacity.begin(), capacity.end());
- //         int a_length = apple.size(), c_length = capacity.size()-1;
- //         while(sum>0){
- //             sum -= capacity[c_length--];
- //             count++;
- //         }
- //         return count;
- //     }
- // };
- // 1446. 连续字符
- // 2024年12月30日15:32:13
- // 2024年12月30日15:49:49
- // class Solution {
- // public:
- //     int maxPower(string s) {
- //         int temp = 1, maxResult = 1;
- //         for (int i = 0; i < s.length()-1;i++){
- //             s[i] == s[i + 1] ? temp++ : temp = 1;
- //             maxResult = max(maxResult, temp);
- //         }
- //         return maxResult;
- //     }
- // };
- // int main(){
- //     string str = "leeeeetcodeeee";
- //     Solution s;
- //     cout << s.maxPower(str);
- // }
+// 中规中矩模拟算法  nlogn 1
+// class Solution {
+// public:
+//     // 获取数字的最高位
+//     int findMaxDigit(int number) {
+//         int max_d = INT_MIN;
+//         for (int x = number; x;x/=10){
+//             max_d = max(max_d, x % 10);
+//         }
+//         return max_d;
+//     }
+//     int maxSum(vector<int>& nums) {
+//         int max_result = -1;
+//         unordered_map<int, vector<int>> mymap;
+//         for (int x : nums) {
+//             mymap[findMaxDigit(x)].emplace_back(x);
+//         }
+//         for (auto& entry : mymap) {
+//             int length = entry.second.size();
+//             if (length > 1) {
+//                 sort(entry.second.begin(), entry.second.end());
+//                 max_result = max(max_result, entry.second[length - 1] + entry.second[length - 2]);
+//             }
+//         }
+//         return max_result;
+//     }
+// };
+// 121. 买卖股票的最佳时机
+// 2025年1月7日13:52:04
+// 20分钟
+// 简单逻辑推演做法
+// class Solution {
+// public:
+//     int maxProfit(vector<int>& prices) {
+//         int min_one = INT_MAX, max_profit =0;
+//         for (int i = 0; i < prices.size();i++){
+//             min_one = min(min_one, prices[i]);
+//             max_profit = max(max_profit, prices[i] - min_one);
+//         }
+//         return max_profit;
+//     }
+// };
+// 219. 存在重复元素 II
+// 2025年1月7日11:52:32
+// 40分钟
+// 暴力方法 n2 1
+// 经典方法  n 1
+// class Solution {
+// public:
+//     bool containsNearbyDuplicate(vector<int>& nums, int k) {
+//         // 哈希表用于存储滑动窗口内的元素
+//         unordered_set<int> window;
+//         for(int i = 0; i < nums.size(); ++i){
+//             // 检查当前元素是否已经在窗口中
+//             if(window.find(nums[i]) != window.end()){
+//                 return true;
+//             }
+//             // 将当前元素插入到窗口中
+//             window.insert(nums[i]);
+//             // 如果窗口大小超过k，移除最左边的元素
+//             if(window.size() > k){
+//                 window.erase(nums[i - k]);
+//             }
+//         }
+//         // 如果没有找到符合条件的元素
+//         return false;
+//     }
+// };
+// 自定义判断几次访问次数 n n
+// class Solution {
+// public:
+//     bool containsNearbyDuplicate(vector<int>& nums, int k,int count = 3) {
+//         int n = nums.size();
+//         unordered_map<int, pair<int,bool>> set;
+//         for(int i = 0; i < n; ++i){
+//             if(i > k) // mark 1
+//                 set[nums[i - k - 1]].second = false;
+//             if(set[nums[i]].first == count-1&&set[nums[i]].second == true) // mark 2
+//                 return true;
+//             set[nums[i]].first++;
+//             set[nums[i]].second = true; // mark 3
+//         }
+//         return false;
+//     }
+// };
+// 判断访问次数方法（两次终止
+// class Solution {
+// public:
+//     bool containsNearbyDuplicate(vector<int>& nums, int k) {
+//         int length = nums.size();
+//         map<int, bool> set;
+//         for (int i = 0; i < length;i++){
+//             if(i>k) // judge whether window overflow
+//                 set[nums[i]] = false; // and set the tail elem to false
+//             if(set[nums[i] == true])// the second visit ,if it is true means this nums[i] is visited two times
+//                 return true;
+//             set[nums[i]] = true; // first mark elem to true
+//         }
+//     }
+// };
+// 2001. 可互换矩形的组数
+// 2025年1月6日19:23:46
+// 20分钟
+// class Solution {
+// public:
+//     long long interchangeableRectangles(vector<vector<int>>& rectangles) {
+//         unordered_map<double, int> count;
+//         long long result = 0;
+//         for (int i = 0; i < rectangles.size();i++){
+//             double index = 1.0 * rectangles[i][0] / rectangles[i][1];
+//             result += count[index]++;
+//         }
+//         return result;
+//     }
+// };
+// 1512. 好数对的数目
+// 2025年1月6日13:56:32
+// 暴力法 n2 1
+// 2025年1月6日14:06:10
+// class Solution {
+// public:
+//     int numIdenticalPairs(vector<int>& nums) {
+//         map<int, int> nums_map;
+//         int count = 0;
+//         if(nums.size()==1)
+//             return 0;
+//         for (int i = 0; i < nums.size();i++){
+//             for (int j = i+1; j < nums.size();j++){
+//                 if (nums[i] == nums[j]){
+//                     count++;
+//                 }
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 最简短，优雅的解法
+// class Solution {
+// public:
+//     int numIdenticalPairs(vector<int>& nums) {
+//         unordered_map<int, int> nums_map;
+//         int result = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             result += nums_map[nums[i]]++;
+//         }
+//         return result;
+//     }
+// };
+// 使用排列组合方法，发现算法计算本质，有多个数字相等，问多个数字中有几个好数对，等价于计算组合数C(n,2) nlogn 1
+// 2025年1月6日14:40:40 20分钟
+// class Solution {
+// public:
+//     int combination(int n, int k) {// 计算C(n,k)
+//         if(k>n)
+//             return 0;
+//         if(k > n - k) k = n - k;
+//         int res = 1;
+//         for(int i = 1; i <= k; ++i) {
+//             res = res * (n - i + 1) / i;
+//         }
+//         return res;
+//     }
+//     int numIdenticalPairs(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
+//         nums.emplace_back(-1);
+//         int result = 0,count=1;
+//         for (int i = 0; i < nums.size()-1;i++){
+//             if(nums[i]==nums[i+1]){
+//                 count++;
+//             }else{
+//                 result += combination(count,2);
+//                 count = 1;
+//             }
+//         }
+//         return result;
+//     }
+// };
+// 发现算法本质，并且使用优化后的计算方法  n 1
+// class Solution {
+// public:
+//     int combination(int n, int k =2) {// 计算C(n,k)
+//         if(k>n)
+//             return 0;
+//         if(k > n - k) k = n - k;
+//         int res = 1;
+//         for(int i = 1; i <= k; ++i) {
+//             res = res * (n - i + 1) / i;
+//         }
+//         return res;
+//     }
+//     int numIdenticalPairs(vector<int>& nums) {
+//         vector<int> content(100,0);
+//         int result = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             content[nums[i]-1]++;
+//         }
+//         for (int i = 0; i <= 99;i++){
+//             if(content[i]!=0){
+//                 result += combination(content[i]);
+//             }
+//         }
+//         return result;
+//     }
+// };
+// 再次发现优化的本质可以用一种数据结构——哈希表 n  n
+// class Solution {
+// public:
+//     int numIdenticalPairs(vector<int>& nums) {
+//         int ans = 0;
+//         unordered_map<int, int> cnt;
+//         for (int x : nums) {
+//             ans += cnt[x]++;
+//         }
+//         return ans;
+//     }
+// };
+// 1. 两数之和
+// 2025年1月6日11:06:17
+// 30分钟
+// 题目关键不在于等于，而是转化为target-nums[i]><0问题
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         map<int,int> a;//建立hash表存放数组元素
+//         vector<int> b(2,-1);//存放结果
+//         for(int i=0;i<nums.size();i++)
+//             a.insert(map<int,int>::value_type(nums[i],i));
+//         for(int i=0;i<nums.size();i++){
+//             if(a.count(target-nums[i])>0&&(a[target-nums[i]]!=i)){
+//                 b[0]=i;
+//                 b[1]=a[target-nums[i]];
+//                 break;
+//             }
+//         }
+//         return b;
+//     };
+// };
+// // 一遍哈希表，添加元素的同时判断是否大于零
+// class Solution{
+//     public:
+//         vector<int> twoSum(vector<int> nums,int target){
+//             map<int, int> a;
+//             vector<int> result(2, -1);
+//             for (int i = 0; i < nums.size(); i++){
+//                 if (a.count(target - nums[i]) > 0){
+//                     result[0]=a[target-nums[i]];
+//                     result[1]=i;
+//                     break;
+//                 }
+//                 a[nums[i]] = i;
+//             }
+//             return result;
+//         }
+// };
+// 1431. 拥有最多糖果的孩子
+// 2025年1月1日09:29:54
+// 40分钟，没看懂题目意思白白浪费很多时间
+// class Solution {
+// public:
+//     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+//         vector<bool> result;
+//         int max_candy = *max_element(candies.begin(), candies.end());
+//         for (int i = 0; i < candies.size(); i++){
+//             result.emplace_back(candies[i] + extraCandies > max_candy);
+//         }
+//         return result;
+//     }
+// };
+// 3074. 重新分装苹果
+// 2024年12月31日14:31:39
+// class Solution {
+// public:
+//     int minimumBoxes(vector<int>& apple, vector<int>& capacity) {
+//         int count =0;
+//         int sum = accumulate(apple.begin(), apple.end(), 0);
+//         sort(capacity.begin(), capacity.end());
+//         int a_length = apple.size(), c_length = capacity.size()-1;
+//         while(sum>0){
+//             sum -= capacity[c_length--];
+//             count++;
+//         }
+//         return count;
+//     }
+// };
+// 1446. 连续字符
+// 2024年12月30日15:32:13
+// 2024年12月30日15:49:49
+// class Solution {
+// public:
+//     int maxPower(string s) {
+//         int temp = 1, maxResult = 1;
+//         for (int i = 0; i < s.length()-1;i++){
+//             s[i] == s[i + 1] ? temp++ : temp = 1;
+//             maxResult = max(maxResult, temp);
+//         }
+//         return maxResult;
+//     }
+// };
+// int main(){
+//     string str = "leeeeetcodeeee";
+//     Solution s;
+//     cout << s.maxPower(str);
+// }
 
- // 1464. 数组中两元素的最大乘积
- // 2024年12月30日15:15:40]
- // 五分钟
- // class Solution {
- // public:
- //     int maxProduct(vector<int>& nums) {
- //         int length = nums.size()-1;
- //         sort(nums.begin(), nums.end());
- //         return (nums[length] - 1) * (nums[length - 1] - 1);
- //     }
- // };
- // int main(){
- //     vector<int> vec = {1, 2, 3, 4, 5};
- //     Solution s;
- //     cout << s.maxProduct(vec);
- // }
- // 1470. 重新排列数组
- // 双指针额外数组法
- // class Solution {
- // public:
- //     vector<int> shuffle(vector<int>& nums, int n) {
- //         vector<int> result(2*n);
- //         for (int i = 0, j = n,k=0; k < 2*n;i++,j++){
- //             result[k++] = nums[i];
- //             result[k++] = nums[j];
- //         }
- //         return result;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> vec1 = {2,5,1,3,4,7};
- //     for(int x:s.shuffle(vec1,3)){
- //         cout << x << " ";
- //     }
- // }
- // 利用题目测试数据集条件转化方法
- // 利用每一个数字都是正数，利用负数部分存储数据
- // class Solution {
- // public:
- //     vector<int> shuffle(vector<int>& nums, int n) {
- //         for(int i = 0; i < 2 * n; i ++)
- //             if(nums[i] > 0){
- //                 // j 描述当前的 nums[i] 对应的索引，初始为 i
- //                 int j = i;
- //                 while(nums[i] > 0){
- //                     // 计算 j 索引的元素，也就是现在的 nums[i]，应该放置的索引
- //                     j = j < n ? 2 * j : 2 * (j - n) + 1;
- //                     // 把 nums[i] 放置到 j 的位置，
- //                     // 同时，把 nums[j] 放到 i 的位置，在下一轮循环继续处理
- //                     swap(nums[i], nums[j]);
- //                     // 使用负号标记上，现在 j 位置存储的元素已经是正确的元素了
- //                     nums[j] = -nums[j];
- //                 }
- //             }
- //         for(int& e: nums) e = -e;
- //         return nums;
- //     }
- // };
- // 利用每一个数字最大只有1000，只占用了一个32位int中的10位，22位是空闲的
- // class Solution {
- // public:
- //     vector<int> shuffle(vector<int>& nums, int n) {
+// 1464. 数组中两元素的最大乘积
+// 2024年12月30日15:15:40]
+// 五分钟
+// class Solution {
+// public:
+//     int maxProduct(vector<int>& nums) {
+//         int length = nums.size()-1;
+//         sort(nums.begin(), nums.end());
+//         return (nums[length] - 1) * (nums[length - 1] - 1);
+//     }
+// };
+// int main(){
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     Solution s;
+//     cout << s.maxProduct(vec);
+// }
+// 1470. 重新排列数组
+// 双指针额外数组法
+// class Solution {
+// public:
+//     vector<int> shuffle(vector<int>& nums, int n) {
+//         vector<int> result(2*n);
+//         for (int i = 0, j = n,k=0; k < 2*n;i++,j++){
+//             result[k++] = nums[i];
+//             result[k++] = nums[j];
+//         }
+//         return result;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> vec1 = {2,5,1,3,4,7};
+//     for(int x:s.shuffle(vec1,3)){
+//         cout << x << " ";
+//     }
+// }
+// 利用题目测试数据集条件转化方法
+// 利用每一个数字都是正数，利用负数部分存储数据
+// class Solution {
+// public:
+//     vector<int> shuffle(vector<int>& nums, int n) {
+//         for(int i = 0; i < 2 * n; i ++)
+//             if(nums[i] > 0){
+//                 // j 描述当前的 nums[i] 对应的索引，初始为 i
+//                 int j = i;
+//                 while(nums[i] > 0){
+//                     // 计算 j 索引的元素，也就是现在的 nums[i]，应该放置的索引
+//                     j = j < n ? 2 * j : 2 * (j - n) + 1;
+//                     // 把 nums[i] 放置到 j 的位置，
+//                     // 同时，把 nums[j] 放到 i 的位置，在下一轮循环继续处理
+//                     swap(nums[i], nums[j]);
+//                     // 使用负号标记上，现在 j 位置存储的元素已经是正确的元素了
+//                     nums[j] = -nums[j];
+//                 }
+//             }
+//         for(int& e: nums) e = -e;
+//         return nums;
+//     }
+// };
+// 利用每一个数字最大只有1000，只占用了一个32位int中的10位，22位是空闲的
+// class Solution {
+// public:
+//     vector<int> shuffle(vector<int>& nums, int n) {
 
- //         for(int i = 0; i < 2 * n; i ++){
- //             int j = i < n ? 2 * i : 2 * (i - n) + 1;
- //             nums[j] |= (nums[i] & 1023) << 10;
- //         }
- //         for(int& e: nums) e >>= 10;
- //         return nums;
- //     }
- // };
- // 1394. 找出数组中的幸运数
- // 2024年12月27日19:26:08
- // 2024年12月27日20:05:39
- // 哈希表遍历两遍
- // class Solution {
- // public:
- //     int findLucky(vector<int>& arr) {
- //         unordered_map<int, int> hashTable;
- //         for(int x : arr){
- //             hashTable[x]++;
- //         }
- //         int result = -1;
- //         for(pair<int,int> temp : hashTable){
- //             if(temp.first == temp.second){
- //                 result = max(temp.first, result);
- //             }
- //         }
- //         return result;
- //     }
- // };
- // 统计最大值，判断幸运数字，找到最大的幸运数字三合一
- // class Solution {
- // public:
- //     int findLucky(vector<int>& arr) {
- //         sort(arr.begin(), arr.end());
- //         int count = 1;
- //          for(int i=arr.size()-1;i>0;i--){
- //              if(arr[i]==arr[i-1]){
- //                  count++;
- //              }
- //              else{
- //                  if(count==arr[i]) return arr[i];
- //                  count = 1;
- //              }
- //          }
- //         if(arr[0]==count)
- //             return arr[0];
- //         return -1;
- //     }
- // };
- // int main(){
- //     vector<int> vec = {1, 2, 3, 4, 5};
- //     Solution s;
- //     cout <<s.findLucky(vec);
- // }
- // 1480. 一维数组的动态和
- // 五分钟
- // class Solution {
- // public:
- //     vector<int> runningSum(vector<int>& nums) {
- //         for (int i = 1; i < nums.size();i++){
- //             nums[i] += nums[i - 1];
- //         }
- //         return nums;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> vec = {1,2,3,4,5,6,7};
- //     for(int x : s.runningSum(vec)){
- //         cout << x << " ";
- //     }
- // }
- // 66. 加一
- // 2024年12月22日13:14:51
- // 十分钟 写入笔记 算法优化分析 ### 原地删除容器中元素（可能补全
- // class Solution {
- // public:
- //     int removeElement(vector<int>& nums, int val) {
- //         int current = 0;
- //         for (int i = 0; i < nums.size();i++){
- //             if(nums[i]!=val){
- //                 nums[current++] = nums[i];
- //             }
- //         }
- //         // nums.erase(nums.begin() + current, nums.end());
- //         nums.resize(current);
- //         return current;
- //     }
- // };
- // 使用迭代器移除元素
- // class Solution {
- // public:
- //     int removeElement(vector<int>& nums, int val) {
- //         int count = 0,length = nums.size();
- //         for (int i = 0; i < nums.size();i++){
- //             if(nums[i]==val){
- //                 count++;
- //                 nums.erase(nums.begin() + i--);
- //             }
- //         }
- //         return length - count;
- //     }
- // };
- // int main(){
- //     vector<int> test = {0,1,2,2,3,0,4,2};
- //     int val = 2;
- //     Solution s;
- //     s.removeElement(test, val);
- //     for(int x : test){
- //         cout << x;
- //     }
- // }
- // 202. 快乐数
- // 2024年12月21日15:37:33
- // class Solution {
- // public:
- //     bool isHappy(int n) {
- //         for (int i = 0; i < 10;i++){
- //             int sum = 0;
- //             while(n>0){
- //                 int temp = n % 10;
- //                 sum += temp * temp;
- //                 n /= 10;
- //             }
- //             n = sum;
- //         }
- //         return n == 1;
- //     }
- // };
+//         for(int i = 0; i < 2 * n; i ++){
+//             int j = i < n ? 2 * i : 2 * (i - n) + 1;
+//             nums[j] |= (nums[i] & 1023) << 10;
+//         }
+//         for(int& e: nums) e >>= 10;
+//         return nums;
+//     }
+// };
+// 1394. 找出数组中的幸运数
+// 2024年12月27日19:26:08
+// 2024年12月27日20:05:39
+// 哈希表遍历两遍
+// class Solution {
+// public:
+//     int findLucky(vector<int>& arr) {
+//         unordered_map<int, int> hashTable;
+//         for(int x : arr){
+//             hashTable[x]++;
+//         }
+//         int result = -1;
+//         for(pair<int,int> temp : hashTable){
+//             if(temp.first == temp.second){
+//                 result = max(temp.first, result);
+//             }
+//         }
+//         return result;
+//     }
+// };
+// 统计最大值，判断幸运数字，找到最大的幸运数字三合一
+// class Solution {
+// public:
+//     int findLucky(vector<int>& arr) {
+//         sort(arr.begin(), arr.end());
+//         int count = 1;
+//          for(int i=arr.size()-1;i>0;i--){
+//              if(arr[i]==arr[i-1]){
+//                  count++;
+//              }
+//              else{
+//                  if(count==arr[i]) return arr[i];
+//                  count = 1;
+//              }
+//          }
+//         if(arr[0]==count)
+//             return arr[0];
+//         return -1;
+//     }
+// };
+// int main(){
+//     vector<int> vec = {1, 2, 3, 4, 5};
+//     Solution s;
+//     cout <<s.findLucky(vec);
+// }
+// 1480. 一维数组的动态和
+// 五分钟
+// class Solution {
+// public:
+//     vector<int> runningSum(vector<int>& nums) {
+//         for (int i = 1; i < nums.size();i++){
+//             nums[i] += nums[i - 1];
+//         }
+//         return nums;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> vec = {1,2,3,4,5,6,7};
+//     for(int x : s.runningSum(vec)){
+//         cout << x << " ";
+//     }
+// }
+// 66. 加一
+// 2024年12月22日13:14:51
+// 十分钟 写入笔记 算法优化分析 ### 原地删除容器中元素（可能补全
+// class Solution {
+// public:
+//     int removeElement(vector<int>& nums, int val) {
+//         int current = 0;
+//         for (int i = 0; i < nums.size();i++){
+//             if(nums[i]!=val){
+//                 nums[current++] = nums[i];
+//             }
+//         }
+//         // nums.erase(nums.begin() + current, nums.end());
+//         nums.resize(current);
+//         return current;
+//     }
+// };
+// 使用迭代器移除元素
+// class Solution {
+// public:
+//     int removeElement(vector<int>& nums, int val) {
+//         int count = 0,length = nums.size();
+//         for (int i = 0; i < nums.size();i++){
+//             if(nums[i]==val){
+//                 count++;
+//                 nums.erase(nums.begin() + i--);
+//             }
+//         }
+//         return length - count;
+//     }
+// };
+// int main(){
+//     vector<int> test = {0,1,2,2,3,0,4,2};
+//     int val = 2;
+//     Solution s;
+//     s.removeElement(test, val);
+//     for(int x : test){
+//         cout << x;
+//     }
+// }
+// 202. 快乐数
+// 2024年12月21日15:37:33
+// class Solution {
+// public:
+//     bool isHappy(int n) {
+//         for (int i = 0; i < 10;i++){
+//             int sum = 0;
+//             while(n>0){
+//                 int temp = n % 10;
+//                 sum += temp * temp;
+//                 n /= 10;
+//             }
+//             n = sum;
+//         }
+//         return n == 1;
+//     }
+// };
 
- // 2446. 判断两个事件是否存在冲突
- // 2024年12月19日21:24:01
- // 2024年12月19日21:45:01
- // class Solution {
- // public:
- //     bool haveConflict(vector<string>& event1, vector<string>& event2) {
- //         return ((stoi(event1[0].substr(0, 2)) * 60 + stoi(event1[0].substr(3, 2)) <= stoi(event2[1].substr(0, 2)) * 60 + stoi(event2[1].substr(3, 2))) && (stoi(event2[0].substr(0, 2)) * 60 + stoi(event2[0].substr(3, 2)) <= stoi(event1[1].substr(0, 2)) * 60 + stoi(event1[1].substr(3, 2))));
- //     }
- // };
- // int main(){
- //     vector<string> test1 = {"01:15", "02:00"};
- //     vector<string> test2 = {"02:00", "03:00"};
- //     vector<string> test3 = {"01:00 ","02:00"};
- //     vector<string> test4 = {"01:20", "03:00"};
- //     vector<string> test4 = {"01:20", "03:00"};
- //     vector<string> test4 = {"01:20", "03:00"};
- //     Solution s;
- //     cout << s.haveConflict(test1, test2);
- //     cout << s.haveConflict(test3, test4);
- // }
- // 2956. 找到两个数组中的公共元素
- // 2024年12月19日21:17:21
- // class Solution {
- // public:
- //     vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2) {
- //         vector<int> result{2};
- //         unordered_set<int> us1(nums1.begin(), nums1.end()), us2(nums2.begin(), nums2.end());
- //         for(int x : nums1){
- //             result[0] += us2.count(x);
- //         }
- //         for(int x : nums2){
- //             result[1] += us1.count(x);
- //         }
- //         return result;
- //     }
- // };
- // 2418. 按身高排序
- // 2024年12月19日15:25:55
- // class Solution {
- // public:
- //     vector<string> sortPeople(vector<string>& names, vector<int>& heights,vector<string> results = {}) {
- //         map<int, string> mapping;
- //         for (int i = 0; i < heights.size();i++){
- //             mapping[heights[i]] = names[i];
- //         }
- //         for (map<int, string>::reverse_iterator it = mapping.rbegin(); it != mapping.rend();it++){
- //             results.emplace_back(it->second);
- //         }
- //             return results;
- //     }
- // };
- // 红黑树逆序遍历
- // class Solution {
- // public:
- //     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
- //         vector<int>index(heights.size()); // 索引数组
- //         vector<string> result; // 答案数组
- //         iota(index.begin(),index.end(),0); // 初始化索引数组
- //         sort(index.begin(),index.end(),::greater()); // 降序排序索引并将索引记录在索引数组中
- //         for(int i=0;i<heights.size();i++) result.emplace_back(names[index[i]]); // 通过排序后的索引顺序依次将对应的字符串记录到答案数组中，即得到最后的正确答案
- //         return result; // 返回最后的答案
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<string> names = {"Mary", "John", "Emma"};
- //     vector<int> heights = {180, 165, 170};
- //     for(string x : s.sortPeople(names, heights)){
- //         cout << x << " ";
- //     }
- // }
- // 3099. 哈沙德数
- // 2024年12月19日15:22:01
- // 2024年12月19日15:24:04
- // class Solution {
- // public:
- //     int sumOfTheDigitsOfHarshadNumber(int x) {
- //         int sum = 0, tmp = x;
- //         while(tmp) {
- //             sum += tmp % 10;
- //             tmp /= 10;
- //         }
- //         return (x % sum == 0)? sum: -1;
- //     }
- // };
- // 1108. IP 地址无效化+
- // 2024年12月19日12:58:25
- // 2024年12月19日13:33:41 查方法，添加新内容到笔记 `find()` 和 `replace()` 循环，完成时间9分钟
- // 同类型题1455  3114  面试题01.03
- // 正则表达式解法
- // class Solution {
- // public:
- //     string defangIPaddr(string& address) {
- //         regex reg_patten("\\.");
- //         string result = regex_replace(address, reg_patten, "[.]");
- //         return result;
- //     }
- // };
- // find&replace解法
- // class Solution {
- // public:
- //     string defangIPaddr(string& address) {
- //         size_t pos=0;
- //         while((pos = address.find(".",pos))!=string::npos){
- //             address.replace(pos, 1, "[.]");
- //             pos += 3;
- //         }
- //         return address;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     string str = "1.1.1.1";
- //     cout << s.defangIPaddr(str);
- // }
- // 3285. 找到稳定山的下标 每日一题
- // 2024年12月19日12:20:58
- // 2024年12月19日12:55:37 写题解，笔记`push_back()` 和 `emplace_back()`
- // class Solution {
- // public:
- //     vector<int> stableMountains(vector<int>& height, int threshold) {
- //         vector<int> result(0);
- //         for (int i = 1; i < height.size() ;i++){
- //             if(height[i-1]>threshold){
- //                 result.emplace_back(i);
- //             }
- //         }
- //         return result;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> vec = {10,1,10,1,10};
- //     for(int x : s.stableMountains(vec, 2)){
- //         cout << x << " ";
- //     }
- // }
- // 2024年12月17日19:30:28
- // someone interrupt frequently,and write optimization analysis in ob
- // 2024年12月17日20:20:22
- // class Solution {
- // public:
- //     int hammingDistance(int x, int y) {
- //         int count = 0;
- //         if(x==y){
- //             return 0;
- //         }
- //         while (x != 0||y!=0){
- //             if(x%2!=y%2){
- //                 count++;
- //             }
- //             x /= 2;
- //             y /= 2;
- //         }
- //         return count;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     cout << s.hammingDistance(3,1);
- // }
- // 3028. 边界上的蚂蚁
- // 2024年12月17日18:50:34
- // class Solution {
- // public:
- //     int returnToBoundaryCount(vector<int>& nums) {
- //         int count = 0,result=0;
- //         for(int x : nums){
- //             result += x;
- //             if(result==0){
- //                 count++;
- //             }
- //         }
- //         return count;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> vec = {3,2,-3,-4};
- //     cout << s.returnToBoundaryCount(vec);
- // }
- // 58. 最后一个单词的长度
- // 2024年12月17日12:51:57
+// 2446. 判断两个事件是否存在冲突
+// 2024年12月19日21:24:01
+// 2024年12月19日21:45:01
+// class Solution {
+// public:
+//     bool haveConflict(vector<string>& event1, vector<string>& event2) {
+//         return ((stoi(event1[0].substr(0, 2)) * 60 + stoi(event1[0].substr(3, 2)) <= stoi(event2[1].substr(0, 2)) * 60 + stoi(event2[1].substr(3, 2))) && (stoi(event2[0].substr(0, 2)) * 60 + stoi(event2[0].substr(3, 2)) <= stoi(event1[1].substr(0, 2)) * 60 + stoi(event1[1].substr(3, 2))));
+//     }
+// };
+// int main(){
+//     vector<string> test1 = {"01:15", "02:00"};
+//     vector<string> test2 = {"02:00", "03:00"};
+//     vector<string> test3 = {"01:00 ","02:00"};
+//     vector<string> test4 = {"01:20", "03:00"};
+//     vector<string> test4 = {"01:20", "03:00"};
+//     vector<string> test4 = {"01:20", "03:00"};
+//     Solution s;
+//     cout << s.haveConflict(test1, test2);
+//     cout << s.haveConflict(test3, test4);
+// }
+// 2956. 找到两个数组中的公共元素
+// 2024年12月19日21:17:21
+// class Solution {
+// public:
+//     vector<int> findIntersectionValues(vector<int>& nums1, vector<int>& nums2) {
+//         vector<int> result{2};
+//         unordered_set<int> us1(nums1.begin(), nums1.end()), us2(nums2.begin(), nums2.end());
+//         for(int x : nums1){
+//             result[0] += us2.count(x);
+//         }
+//         for(int x : nums2){
+//             result[1] += us1.count(x);
+//         }
+//         return result;
+//     }
+// };
+// 2418. 按身高排序
+// 2024年12月19日15:25:55
+// class Solution {
+// public:
+//     vector<string> sortPeople(vector<string>& names, vector<int>& heights,vector<string> results = {}) {
+//         map<int, string> mapping;
+//         for (int i = 0; i < heights.size();i++){
+//             mapping[heights[i]] = names[i];
+//         }
+//         for (map<int, string>::reverse_iterator it = mapping.rbegin(); it != mapping.rend();it++){
+//             results.emplace_back(it->second);
+//         }
+//             return results;
+//     }
+// };
+// 红黑树逆序遍历
+// class Solution {
+// public:
+//     vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
+//         vector<int>index(heights.size()); // 索引数组
+//         vector<string> result; // 答案数组
+//         iota(index.begin(),index.end(),0); // 初始化索引数组
+//         sort(index.begin(),index.end(),::greater()); // 降序排序索引并将索引记录在索引数组中
+//         for(int i=0;i<heights.size();i++) result.emplace_back(names[index[i]]); // 通过排序后的索引顺序依次将对应的字符串记录到答案数组中，即得到最后的正确答案
+//         return result; // 返回最后的答案
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<string> names = {"Mary", "John", "Emma"};
+//     vector<int> heights = {180, 165, 170};
+//     for(string x : s.sortPeople(names, heights)){
+//         cout << x << " ";
+//     }
+// }
+// 3099. 哈沙德数
+// 2024年12月19日15:22:01
+// 2024年12月19日15:24:04
+// class Solution {
+// public:
+//     int sumOfTheDigitsOfHarshadNumber(int x) {
+//         int sum = 0, tmp = x;
+//         while(tmp) {
+//             sum += tmp % 10;
+//             tmp /= 10;
+//         }
+//         return (x % sum == 0)? sum: -1;
+//     }
+// };
+// 1108. IP 地址无效化+
+// 2024年12月19日12:58:25
+// 2024年12月19日13:33:41 查方法，添加新内容到笔记 `find()` 和 `replace()` 循环，完成时间9分钟
+// 同类型题1455  3114  面试题01.03
+// 正则表达式解法
+// class Solution {
+// public:
+//     string defangIPaddr(string& address) {
+//         regex reg_patten("\\.");
+//         string result = regex_replace(address, reg_patten, "[.]");
+//         return result;
+//     }
+// };
+// find&replace解法
+// class Solution {
+// public:
+//     string defangIPaddr(string& address) {
+//         size_t pos=0;
+//         while((pos = address.find(".",pos))!=string::npos){
+//             address.replace(pos, 1, "[.]");
+//             pos += 3;
+//         }
+//         return address;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     string str = "1.1.1.1";
+//     cout << s.defangIPaddr(str);
+// }
+// 3285. 找到稳定山的下标 每日一题
+// 2024年12月19日12:20:58
+// 2024年12月19日12:55:37 写题解，笔记`push_back()` 和 `emplace_back()`
+// class Solution {
+// public:
+//     vector<int> stableMountains(vector<int>& height, int threshold) {
+//         vector<int> result(0);
+//         for (int i = 1; i < height.size() ;i++){
+//             if(height[i-1]>threshold){
+//                 result.emplace_back(i);
+//             }
+//         }
+//         return result;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> vec = {10,1,10,1,10};
+//     for(int x : s.stableMountains(vec, 2)){
+//         cout << x << " ";
+//     }
+// }
+// 2024年12月17日19:30:28
+// someone interrupt frequently,and write optimization analysis in ob
+// 2024年12月17日20:20:22
+// class Solution {
+// public:
+//     int hammingDistance(int x, int y) {
+//         int count = 0;
+//         if(x==y){
+//             return 0;
+//         }
+//         while (x != 0||y!=0){
+//             if(x%2!=y%2){
+//                 count++;
+//             }
+//             x /= 2;
+//             y /= 2;
+//         }
+//         return count;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     cout << s.hammingDistance(3,1);
+// }
+// 3028. 边界上的蚂蚁
+// 2024年12月17日18:50:34
+// class Solution {
+// public:
+//     int returnToBoundaryCount(vector<int>& nums) {
+//         int count = 0,result=0;
+//         for(int x : nums){
+//             result += x;
+//             if(result==0){
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> vec = {3,2,-3,-4};
+//     cout << s.returnToBoundaryCount(vec);
+// }
+// 58. 最后一个单词的长度
+// 2024年12月17日12:51:57
 
- // class Solution {
- // public:
- //     int lengthOfLastWord(string s) {
- //         int wordLength = 0;
- //         for (int i = s.size() - 1; i >= 0;i--){
- //             if(s[i]!=' ')
- //                 wordLength++;
- //             if(wordLength != 0 && s[i] == ' ')
- //                 break;
- //         }
- //         return wordLength;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     cout<<s.lengthOfLastWord("a");
- // }
- // 167. 两数之和 II - 输入有序数组
- // 2024年12月16日17:00:03
- // 2024年12月16日17:16:09
- // class Solution {
- // public:
- //     vector<int> twoSum(vector<int>& numbers, int target) {
- //         int left = 0, right = numbers.size()-1, temp = 0;
- //         while(left < right){
- //             temp = numbers[left] + numbers[right];
- //             if(temp == target){
- //                 break;
- //             }
- //             temp < target ? left++ : right--;
- //         }
- //         return {left+1, right+1};
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> vec = {2, 7, 11, 15};
- //     int target = 9;
- //     for(int x : s.twoSum(vec, target))
- //     cout << x;
- // }
- // 11. 盛最多水的容器
- // 2024年12月16日17:04:58
- // 36分钟+看提示题解
- // class Solution {
- // public:
- //     int maxArea(vector<int>& height) {
- //         int i = 0, j = height.size() - 1, max_area = 0;
- //         while(i < j){
- //             int result = min(height[i], height[j]) * (j - i);
- //             max_area = max(result, max_area);
- //             height[i]<height[j] ? i++ : j-- ;
- //         }
- //         return max_area;
- //     }
- // };
- // int main(){
- //     Solution s;
- //     vector<int> test{1, 8, 6, 2, 5, 4, 8, 3, 7};
- //     cout << s.maxArea(test);
- // }
- // 2183. 统计可以被 K 整除的下标对数目困难
- // 2024年12月13日15:34:14
+// class Solution {
+// public:
+//     int lengthOfLastWord(string s) {
+//         int wordLength = 0;
+//         for (int i = s.size() - 1; i >= 0;i--){
+//             if(s[i]!=' ')
+//                 wordLength++;
+//             if(wordLength != 0 && s[i] == ' ')
+//                 break;
+//         }
+//         return wordLength;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     cout<<s.lengthOfLastWord("a");
+// }
+// 167. 两数之和 II - 输入有序数组
+// 2024年12月16日17:00:03
+// 2024年12月16日17:16:09
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& numbers, int target) {
+//         int left = 0, right = numbers.size()-1, temp = 0;
+//         while(left < right){
+//             temp = numbers[left] + numbers[right];
+//             if(temp == target){
+//                 break;
+//             }
+//             temp < target ? left++ : right--;
+//         }
+//         return {left+1, right+1};
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> vec = {2, 7, 11, 15};
+//     int target = 9;
+//     for(int x : s.twoSum(vec, target))
+//     cout << x;
+// }
+// 11. 盛最多水的容器
+// 2024年12月16日17:04:58
+// 36分钟+看提示题解
+// class Solution {
+// public:
+//     int maxArea(vector<int>& height) {
+//         int i = 0, j = height.size() - 1, max_area = 0;
+//         while(i < j){
+//             int result = min(height[i], height[j]) * (j - i);
+//             max_area = max(result, max_area);
+//             height[i]<height[j] ? i++ : j-- ;
+//         }
+//         return max_area;
+//     }
+// };
+// int main(){
+//     Solution s;
+//     vector<int> test{1, 8, 6, 2, 5, 4, 8, 3, 7};
+//     cout << s.maxArea(test);
+// }
+// 2183. 统计可以被 K 整除的下标对数目困难
+// 2024年12月13日15:34:14
 
- // 3162. 优质数对的总数 I
- // 2024年12月13日15:11:50
- // class Solution {
- // public:
- //     int numberOfPairs(vector<int>& nums1, vector<int>& nums2, int k) {
- //         int count = 0;
- //         for (int i = 0; i < nums1.size();i++){
- //             for (int j = 0; j < nums2.size();j++){
- //                 if(nums1[i] % (nums2[j]*k) == 0)
- //                     count++;
- //             }
- //         }
- //         return count;
- //     }
- // };
- // int main(){
- //     vector<int> vec1 = {1, 2, 4, 12};
- //     vector<int> vec2 = {2, 4};
- //     Solution s;
- //     cout << s.numberOfPairs(vec1, vec2, 3);
- // }
- // 2024年12月12日15:45:32
- // 2024年12月12日15:54:28
- // class Solution {
- // public:
- //     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
- //         for (int i = 0; i < n;i++){
- //             nums1[m + i] = nums2[i];
- //         sort(nums1.begin(),nums1.end());
- //         }
- //     }
- // };
- // int main(){
- //     vector<int> vec1 = {1, 2, 3, 0, 0, 0};
- //     vector<int> vec2 = {2, 5, 6};
- //     Solution s;
- //     s.merge(vec1, 3, vec2, 3);
- //     for(int x : vec1){
- //         cout << x << " ";
- //     }
- // }
+// 3162. 优质数对的总数 I
+// 2024年12月13日15:11:50
+// class Solution {
+// public:
+//     int numberOfPairs(vector<int>& nums1, vector<int>& nums2, int k) {
+//         int count = 0;
+//         for (int i = 0; i < nums1.size();i++){
+//             for (int j = 0; j < nums2.size();j++){
+//                 if(nums1[i] % (nums2[j]*k) == 0)
+//                     count++;
+//             }
+//         }
+//         return count;
+//     }
+// };
+// int main(){
+//     vector<int> vec1 = {1, 2, 4, 12};
+//     vector<int> vec2 = {2, 4};
+//     Solution s;
+//     cout << s.numberOfPairs(vec1, vec2, 3);
+// }
+// 2024年12月12日15:45:32
+// 2024年12月12日15:54:28
+// class Solution {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+//         for (int i = 0; i < n;i++){
+//             nums1[m + i] = nums2[i];
+//         sort(nums1.begin(),nums1.end());
+//         }
+//     }
+// };
+// int main(){
+//     vector<int> vec1 = {1, 2, 3, 0, 0, 0};
+//     vector<int> vec2 = {2, 5, 6};
+//     Solution s;
+//     s.merge(vec1, 3, vec2, 3);
+//     for(int x : vec1){
+//         cout << x << " ";
+//     }
+// }
 
- // 3248. 矩阵中的蛇
- // 2024年12月12日15:21:37
- // 2024年12月12日15:31:30
- // class Solution {
- // public:
- //     int finalPositionOfSnake(int n, vector<string>& commands) {
- //         // vector<vector<int>> matrix(n,vector<int>(n));
- //         int i = 0, j = 0;
- //         for(string x :commands){
- //             if(x=="LEFT")
- //                 j--;
- //             else if(x=="RIGHT")
- //                 j++;
- //             else if(x=="UP")
- //                 i--;
- //             else
- //                 i++;
- //         }
- //         return i * n + j;
- //     }
- // };
+// 3248. 矩阵中的蛇
+// 2024年12月12日15:21:37
+// 2024年12月12日15:31:30
+// class Solution {
+// public:
+//     int finalPositionOfSnake(int n, vector<string>& commands) {
+//         // vector<vector<int>> matrix(n,vector<int>(n));
+//         int i = 0, j = 0;
+//         for(string x :commands){
+//             if(x=="LEFT")
+//                 j--;
+//             else if(x=="RIGHT")
+//                 j++;
+//             else if(x=="UP")
+//                 i--;
+//             else
+//                 i++;
+//         }
+//         return i * n + j;
+//     }
+// };
 
- // int main(){
- //     Solution s;
- //     vector<string> commands = {"DOWN", "RIGHT", "UP"};
- //     cout << s.finalPositionOfSnake(2, commands);
- // }
- // 9.回文数
- // class Solution {
- // public:
- //     int the_positive = 0;
- //     int get_size(int x){
- //         int count = 1;
- //         int temp = x;
- //         while(temp / 10 != 0){
- //             count++;
- //             temp /= 10;
- //         }
- //         return count;
- //     }
+// int main(){
+//     Solution s;
+//     vector<string> commands = {"DOWN", "RIGHT", "UP"};
+//     cout << s.finalPositionOfSnake(2, commands);
+// }
+// 9.回文数
+// class Solution {
+// public:
+//     int the_positive = 0;
+//     int get_size(int x){
+//         int count = 1;
+//         int temp = x;
+//         while(temp / 10 != 0){
+//             count++;
+//             temp /= 10;
+//         }
+//         return count;
+//     }
 
- //     pair<int,int> get_start_end(int x){
- //         int start = x / pow(10, get_size(x) - 1);
- //         int end = x % 10;
- //         return make_pair(start, end);
- //     }
+//     pair<int,int> get_start_end(int x){
+//         int start = x / pow(10, get_size(x) - 1);
+//         int end = x % 10;
+//         return make_pair(start, end);
+//     }
 
- //     array<int,5> get5numbers(int start,int end,int number,int size){
- //         int new_start = number / pow(10, size-1) ;
- //         int new_end = number % 10;
- //         if(new_start != new_end){
- //             return array<int, 5>{-1, -1, -1, -1, 1};
- //         }else if(new_start == 0){
- //             int new_number = new_number + pow(10, size) + 1;
- //         }
- //         int new_number = number / 10 - new_start * pow(10, size - 2);
- //         int new_size = size - 2;
- //         if(new_size <2){
- //             return array<int, 5>{-1, -1, -1, -1, 0};
- //         }
- //         return get5numbers(new_start, new_end, new_number, new_size);
- //     }
+//     array<int,5> get5numbers(int start,int end,int number,int size){
+//         int new_start = number / pow(10, size-1) ;
+//         int new_end = number % 10;
+//         if(new_start != new_end){
+//             return array<int, 5>{-1, -1, -1, -1, 1};
+//         }else if(new_start == 0){
+//             int new_number = new_number + pow(10, size) + 1;
+//         }
+//         int new_number = number / 10 - new_start * pow(10, size - 2);
+//         int new_size = size - 2;
+//         if(new_size <2){
+//             return array<int, 5>{-1, -1, -1, -1, 0};
+//         }
+//         return get5numbers(new_start, new_end, new_number, new_size);
+//     }
 
- //     bool judgement(array<int,5> arr){
- //         if(arr[4]){
- //             return false;
- //         }else{
- //             return true;
- //         }
- //     }
- //     bool isPalindrome(int x) {
- //         if(x<0){
- //             return false;
- //         }else{
- //             return true;
- //         }
- //         return judgement(get5numbers(get_start_end(x).first, get_start_end(x).second, x, get_size(x)));
- //     }
- // };
+//     bool judgement(array<int,5> arr){
+//         if(arr[4]){
+//             return false;
+//         }else{
+//             return true;
+//         }
+//     }
+//     bool isPalindrome(int x) {
+//         if(x<0){
+//             return false;
+//         }else{
+//             return true;
+//         }
+//         return judgement(get5numbers(get_start_end(x).first, get_start_end(x).second, x, get_size(x)));
+//     }
+// };
 
- // int main(){
- //     Solution s;
- //     int x = 10;
- //     array<int, 5> arr = s.get5numbers(1,0,10,2);
- //     cout << arr[4] << endl;
- //     if(s.judgement(arr)){
- //         cout << "it is !" << endl;
- //     }else{
- //         cout << "it is not" << endl;
- //     }
- // }
+// int main(){
+//     Solution s;
+//     int x = 10;
+//     array<int, 5> arr = s.get5numbers(1,0,10,2);
+//     cout << arr[4] << endl;
+//     if(s.judgement(arr)){
+//         cout << "it is !" << endl;
+//     }else{
+//         cout << "it is not" << endl;
+//     }
+// }
 
- // 35搜索插入位置
- // #include"header.h"
- // class Solution {
- // public:
- //     int searchInsert(vector<int>& nums, int target) {
- //         int end = nums.size() - 1;
- //         for (int head= 0; head<=end; ){
- //             int mid = (head + end) / 2;
- //             if(target>nums[mid]){
- //                 head = mid + 1;
- //             }else if (target<nums[mid]){
- //                 end = mid - 1;
- //             }else{
- //                 return mid;
- //             }
- //         }
- //         return end + 1;
- //     }
- // };
+// 35搜索插入位置
+// #include"header.h"
+// class Solution {
+// public:
+//     int searchInsert(vector<int>& nums, int target) {
+//         int end = nums.size() - 1;
+//         for (int head= 0; head<=end; ){
+//             int mid = (head + end) / 2;
+//             if(target>nums[mid]){
+//                 head = mid + 1;
+//             }else if (target<nums[mid]){
+//                 end = mid - 1;
+//             }else{
+//                 return mid;
+//             }
+//         }
+//         return end + 1;
+//     }
+// };
 
- // 278 第一个错误的版本
- // #include "header.h"
+// 278 第一个错误的版本
+// #include "header.h"
 
- // class Solution {
- // public:
- //     int firstBadVersion(int n) {
- //         size_t head = 1;
- //         size_t end = n;
- //         int mid = 1;
- //         while (head <= end){
- //             if(head == mid && mid +1 == end){
- //                 return end;
- //             }
- //             mid = (head + end) / 2;
- //                 if(isBadVersion(mid)){
- //                     head = mid;
- //                 }else{
- //                     end = mid;
- //                 }
- //             }
- //         return end;
- //     }
- //     bool isBadVersion(int version){
- //         vector<bool> vec = {1, 1, 1, 0, 0};
- //         if(vec[version-1]){
- //             return true;
- //         }else{
- //             return false;
- //         }
- //     }
- // };
+// class Solution {
+// public:
+//     int firstBadVersion(int n) {
+//         size_t head = 1;
+//         size_t end = n;
+//         int mid = 1;
+//         while (head <= end){
+//             if(head == mid && mid +1 == end){
+//                 return end;
+//             }
+//             mid = (head + end) / 2;
+//                 if(isBadVersion(mid)){
+//                     head = mid;
+//                 }else{
+//                     end = mid;
+//                 }
+//             }
+//         return end;
+//     }
+//     bool isBadVersion(int version){
+//         vector<bool> vec = {1, 1, 1, 0, 0};
+//         if(vec[version-1]){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+// };
 
- // int main(){
- //     Solution s;
- //     cout << s.firstBadVersion(10);
- // }
+// int main(){
+//     Solution s;
+//     cout << s.firstBadVersion(10);
+// }
 
- // 2974. 最小数字游戏
- // class Solution {
- // public:
- //     vector<int> numberGame(vector<int>& nums) {
- //         sort(nums.begin(), nums.end());
- //         for (int i = 0; i < nums.size(); i += 2){
- //             swap(nums[i], nums[i + 1]);
- //         }
- //         return nums;
- //     }
- // };
+// 2974. 最小数字游戏
+// class Solution {
+// public:
+//     vector<int> numberGame(vector<int>& nums) {
+//         sort(nums.begin(), nums.end());
+//         for (int i = 0; i < nums.size(); i += 2){
+//             swap(nums[i], nums[i + 1]);
+//         }
+//         return nums;
+//     }
+// };
 
- // int main(){
- //     Solution s;
- //     vector<int> vec = {4, 7, 83, 2, 1, 8, 834};
- //     vector<int> new_vec = s.numberGame(vec);
- //     for(int x : new_vec){
- //         cout << x << " ";
- //     }
- // }
+// int main(){
+//     Solution s;
+//     vector<int> vec = {4, 7, 83, 2, 1, 8, 834};
+//     vector<int> new_vec = s.numberGame(vec);
+//     for(int x : new_vec){
+//         cout << x << " ";
+//     }
+// }
 
- // // 蓝桥杯填空题
- // #include "header.h"
- // long long factorial_sum_iterative(long long number) {
- //     if (number <= 0) {
- //         return 0;
- //     }
- //     long long sum = 0;       // 用于存储阶乘的和
- //     long long temp = 1;      // 用于存储当前的阶乘值
+// // 蓝桥杯填空题
+// #include "header.h"
+// long long factorial_sum_iterative(long long number) {
+//     if (number <= 0) {
+//         return 0;
+//     }
+//     long long sum = 0;       // 用于存储阶乘的和
+//     long long temp = 1;      // 用于存储当前的阶乘值
 
- //     for(long long i = 1; i <= number; ++i){
- //         temp = (temp * i) % 1000000000;
- //         sum = (sum + temp) % 1000000000;
- //     }
- //     return sum;
- // }
- // int main(){
- //     cout << factorial_sum_iterative(100) << endl;
- // }
+//     for(long long i = 1; i <= number; ++i){
+//         temp = (temp * i) % 1000000000;
+//         sum = (sum + temp) % 1000000000;
+//     }
+//     return sum;
+// }
+// int main(){
+//     cout << factorial_sum_iterative(100) << endl;
+// }
 
- // 2194.Excel 表中某个范围内的单元格
- // 字母和数字位数都只有一位版本
- // class Solution
- // {
- // public:
- //     vector<string> cellsInRange(string s){
- //         vector<string> results;
- //         for (char i = s[0]; i <= s[3]; i++){
- //             for (char j = s[1]; j <= s[4]; j++){
- //                 string single;
- //                 single += i;
- //                 single += j;
- //                 results.push_back(single);
- //             }
- //         }
- //             return results;
- //     }
- // };
- // 字母一位数，数字任意位数版本
- // class Solution {
- // public:
- //     vector<string> split_string(const string& str){
- //         string current = "";
- //         vector<string> result;
- //         for(char c : str){
- //             if(current.empty() || isalpha(c) == current.back()){
- //                 current += c;
- //             }else{
- //                 result.push_back(current);
- //                 current = c;
- //             }
- //         }
- //         if(!current.empty()){
- //             result.push_back(current);
- //         }
- //         return result;
- //     }
- //     void identify_and_classify(const vector<string> result){
- //         for(string x : result){
- //             if(isalpha(x[0])){
- //                 characters.push_back(x);
- //             }else if(isdigit(x[0])){
- //                 numbers.push_back(x);
- //             }
- //         }
- //     }
- //     vector<string> characters;
- //     vector<string> numbers;
- // };
+// 2194.Excel 表中某个范围内的单元格
+// 字母和数字位数都只有一位版本
+// class Solution
+// {
+// public:
+//     vector<string> cellsInRange(string s){
+//         vector<string> results;
+//         for (char i = s[0]; i <= s[3]; i++){
+//             for (char j = s[1]; j <= s[4]; j++){
+//                 string single;
+//                 single += i;
+//                 single += j;
+//                 results.push_back(single);
+//             }
+//         }
+//             return results;
+//     }
+// };
+// 字母一位数，数字任意位数版本
+// class Solution {
+// public:
+//     vector<string> split_string(const string& str){
+//         string current = "";
+//         vector<string> result;
+//         for(char c : str){
+//             if(current.empty() || isalpha(c) == current.back()){
+//                 current += c;
+//             }else{
+//                 result.push_back(current);
+//                 current = c;
+//             }
+//         }
+//         if(!current.empty()){
+//             result.push_back(current);
+//         }
+//         return result;
+//     }
+//     void identify_and_classify(const vector<string> result){
+//         for(string x : result){
+//             if(isalpha(x[0])){
+//                 characters.push_back(x);
+//             }else if(isdigit(x[0])){
+//                 numbers.push_back(x);
+//             }
+//         }
+//     }
+//     vector<string> characters;
+//     vector<string> numbers;
+// };
 
- // int main(){
- //     string s = "A10:B12";
- //     Solution sol;
- //     sol.identify_and_classify(sol.split_string(s));
- //     for (char i = sol.characters[0][0]; i <= sol.characters[1][0];i++){
- //         for (int j = stoi(sol.numbers[0]);j<(stoi(sol.numbers[1])-stoi(sol.numbers[0]));j++){
- //             cout << i + j << "\t";
- //         }
- //     }
- // }
+// int main(){
+//     string s = "A10:B12";
+//     Solution sol;
+//     sol.identify_and_classify(sol.split_string(s));
+//     for (char i = sol.characters[0][0]; i <= sol.characters[1][0];i++){
+//         for (int j = stoi(sol.numbers[0]);j<(stoi(sol.numbers[1])-stoi(sol.numbers[0]));j++){
+//             cout << i + j << "\t";
+//         }
+//     }
+// }
 
- // 正则表达式匹配字符串
- // class Regular {
- // public:
- //     Regular(const string& input) {
- //         re_numbers = regex("\\d+");
- //         re_characters = regex("[A-Za-z]+");
- //         this->input = input;
- //     }
+// 正则表达式匹配字符串
+// class Regular {
+// public:
+//     Regular(const string& input) {
+//         re_numbers = regex("\\d+");
+//         re_characters = regex("[A-Za-z]+");
+//         this->input = input;
+//     }
 
- //     void classify() {
- //         smatch match;
- //         string str = input; // 使用成员变量 input
- //         while (true) {
- //             if (regex_search(str, match, re_characters)) {
- //                 characters.push_back(match.str());
- //                 str = match.suffix().str();
- //             } else if (regex_search(str, match, re_numbers)) {
- //                 numbers.push_back(stoi(match.str()));
- //                 str = match.suffix().str();
- //             }
- //             // else if (/* other conditions */){
- //             //     /* code */
- //             // }
+//     void classify() {
+//         smatch match;
+//         string str = input; // 使用成员变量 input
+//         while (true) {
+//             if (regex_search(str, match, re_characters)) {
+//                 characters.push_back(match.str());
+//                 str = match.suffix().str();
+//             } else if (regex_search(str, match, re_numbers)) {
+//                 numbers.push_back(stoi(match.str()));
+//                 str = match.suffix().str();
+//             }
+//             // else if (/* other conditions */){
+//             //     /* code */
+//             // }
 
- //             if (match.empty()) {
- //                 break;
- //             }
- //         }
- //     }
+//             if (match.empty()) {
+//                 break;
+//             }
+//         }
+//     }
 
- //     void show_results() {
- //         for (auto x : numbers) {
- //             cout << x << "\t";
- //         }
- //         cout << endl;
- //         for (auto y : characters) {
- //             cout << y << "\t";
- //         }
- //     }
+//     void show_results() {
+//         for (auto x : numbers) {
+//             cout << x << "\t";
+//         }
+//         cout << endl;
+//         for (auto y : characters) {
+//             cout << y << "\t";
+//         }
+//     }
 
- //     void one_click() {
- //         classify();
- //         show_results();
- //     }
+//     void one_click() {
+//         classify();
+//         show_results();
+//     }
 
- // private:
- //     regex re_numbers;
- //     regex re_characters;
- //     vector<int> numbers;
- //     vector<string> characters;
- //     string input;
- // };
+// private:
+//     regex re_numbers;
+//     regex re_characters;
+//     vector<int> numbers;
+//     vector<string> characters;
+//     string input;
+// };
 
- // int main() {
- //     string str = "abc123def45";
- //     Regular obj(str);
- //     obj.one_click();
- //     return 0;
- // }
+// int main() {
+//     string str = "abc123def45";
+//     Regular obj(str);
+//     obj.one_click();
+//     return 0;
+// }
 
- // 455. 分发饼干
- // class Solution {
- // public:
- //     int findContentChildren(vector<int>& g, vector<int>& s) {
- //         sort(g.begin(), g.end());
- //         sort(s.begin(), s.end());
- //         int count = 0;
- //          for(int i = s.size() -1;i>= 0;i--){
- //             for(int j = g.size() - 1;j>= 0;j--){
- //                 if(s.empty()){          // mark
- //                     return count;       // mark
- //                 }                       // mark
- //                 if(s[i] >= g[j]){
- //                     count++;
- //                     auto it = next(g.begin(), j);
- //                     g.erase(it, g.end());
- //                     s.pop_back();
- //                 }
- //             }
- //         }
- //         return count;
- //     }
- // };
- // 2024年12月6日14:36:44 实现归并查找
- // const int N =110;
- // int init_array[N]{0};
- // int temp[N]{0};
+// 455. 分发饼干
+// class Solution {
+// public:
+//     int findContentChildren(vector<int>& g, vector<int>& s) {
+//         sort(g.begin(), g.end());
+//         sort(s.begin(), s.end());
+//         int count = 0;
+//          for(int i = s.size() -1;i>= 0;i--){
+//             for(int j = g.size() - 1;j>= 0;j--){
+//                 if(s.empty()){          // mark
+//                     return count;       // mark
+//                 }                       // mark
+//                 if(s[i] >= g[j]){
+//                     count++;
+//                     auto it = next(g.begin(), j);
+//                     g.erase(it, g.end());
+//                     s.pop_back();
+//                 }
+//             }
+//         }
+//         return count;
+//     }
+// };
+// 2024年12月6日14:36:44 实现归并查找
+// const int N =110;
+// int init_array[N]{0};
+// int temp[N]{0};
 
- // void merge(int array[],int left ,int right){
- //     int mid = (left + right) >> 1;
- //     if(left >= right)
- //         return;
- //     merge(array, left, mid);
- //     merge(array, mid + 1, right);
- //     int i = left;
- //     int j = mid + 1;
- //     int k = 0;
- //     while(i<=mid && j<=right){
- //         if(array[i]<array[j]){
- //             temp[k++] = array[i++];
- //         }else{
- //             temp[k++] = array[j++];
- //         }
- //     }
- //     while(i<=mid){
- //         temp[k++] = array[i++];
- //     }
- //     while(j<=right){
- //         temp[k++] = array[j++];
- //     }
- //     for (int i = left, j = 0; i < right; i++,j++){
- //         array[i] = temp[j];
- //     }
- // }
- // int main(){
- //     int n = 0;
- //     cin >> n;
- //     for (int i = 0; i < n;i++){
- //         cin >> init_array[i];
- //     }
- //     merge(init_array, 0, n);
- //     for (int i = 0; i < n;i++){
- //         cout << init_array[i]<<" ";
- //     }
- //     return 0;
- // }
+// void merge(int array[],int left ,int right){
+//     int mid = (left + right) >> 1;
+//     if(left >= right)
+//         return;
+//     merge(array, left, mid);
+//     merge(array, mid + 1, right);
+//     int i = left;
+//     int j = mid + 1;
+//     int k = 0;
+//     while(i<=mid && j<=right){
+//         if(array[i]<array[j]){
+//             temp[k++] = array[i++];
+//         }else{
+//             temp[k++] = array[j++];
+//         }
+//     }
+//     while(i<=mid){
+//         temp[k++] = array[i++];
+//     }
+//     while(j<=right){
+//         temp[k++] = array[j++];
+//     }
+//     for (int i = left, j = 0; i < right; i++,j++){
+//         array[i] = temp[j];
+//     }
+// }
+// int main(){
+//     int n = 0;
+//     cin >> n;
+//     for (int i = 0; i < n;i++){
+//         cin >> init_array[i];
+//     }
+//     merge(init_array, 0, n);
+//     for (int i = 0; i < n;i++){
+//         cout << init_array[i]<<" ";
+//     }
+//     return 0;
+// }
 
- // 88. 合并两个有序数组
- // 莫名其妙抛出错误
- // class Solution {
- // public:
- //     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
- // 		while(nums2.size()){
- //         	for(int i = m;i>0;i--){
- //         		if(nums1[m -1]<=nums2[--n]){
- //         			nums1.insert(nums1.begin()+i+1,nums2[nums2.size()-1]);
- //         			nums2.pop_back();
- //                 }
- // 			}
- // 		}
- //     }
- // };
+// 88. 合并两个有序数组
+// 莫名其妙抛出错误
+// class Solution {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+// 		while(nums2.size()){
+//         	for(int i = m;i>0;i--){
+//         		if(nums1[m -1]<=nums2[--n]){
+//         			nums1.insert(nums1.begin()+i+1,nums2[nums2.size()-1]);
+//         			nums2.pop_back();
+//                 }
+// 			}
+// 		}
+//     }
+// };
 
- // int main(){
- //     vector<int> nums1 = {1, 2, 3, 4,5,6};
- //     vector<int> nums2 = {2, 5, 6};
- //     int m = 6;
- //     int n = 3;
- //     Solution s;
- //     s.merge(nums1, m, nums2, n);
- //     for (int i = 0; i < m;i++){
- //         cout << nums1[i] << " ";
- //     }
- //         return 0;
- // }
+// int main(){
+//     vector<int> nums1 = {1, 2, 3, 4,5,6};
+//     vector<int> nums2 = {2, 5, 6};
+//     int m = 6;
+//     int n = 3;
+//     Solution s;
+//     s.merge(nums1, m, nums2, n);
+//     for (int i = 0; i < m;i++){
+//         cout << nums1[i] << " ";
+//     }
+//         return 0;
+// }
 
- // 算法复习：计算阶乘
- // 普通定义法
- // long get_factorial(long number){
- //     long result = 1;
- //     for (long i = i; i <= number;i++){
- //         result = result * i;
- //     }
- //     return result;
- // }
+// 算法复习：计算阶乘
+// 普通定义法
+// long get_factorial(long number){
+//     long result = 1;
+//     for (long i = i; i <= number;i++){
+//         result = result * i;
+//     }
+//     return result;
+// }
 
- // 迭代法
- // long get_factorial(long number){
- //     if (number < 0){
- //         return 0;
- //     }
- //     if(number == 0|| number == 1){
- //         return 1;
- //     }
- //     return get_factorial(number - 1) * number;
- // }
- // 计算阶乘的和
- // long get_sum_of_factorial(long n){
- //     long long sum = 0;
- //     while(n){
- //         sum += get_factorial(n--);// 注意这里要在factorial中使用，n--而不是在while终止条件中
- //     }
- //     return sum;
- // }
+// 迭代法
+// long get_factorial(long number){
+//     if (number < 0){
+//         return 0;
+//     }
+//     if(number == 0|| number == 1){
+//         return 1;
+//     }
+//     return get_factorial(number - 1) * number;
+// }
+// 计算阶乘的和
+// long get_sum_of_factorial(long n){
+//     long long sum = 0;
+//     while(n){
+//         sum += get_factorial(n--);// 注意这里要在factorial中使用，n--而不是在while终止条件中
+//     }
+//     return sum;
+// }
 
- // 获得范围内的素数
- // 判断一个数是否是素数
- // bool isPrime(long n){
- //     if(n<2||(n!=2&&n%2==0)){
- //         return false;
- //     }else{
- //         for (long i = 3; i * i <= n; i += 2){
- //             if(n%i==0){
- //                 return false;
- //             }
- //         }
- //     }
- //     return true;
- // }
+// 获得范围内的素数
+// 判断一个数是否是素数
+// bool isPrime(long n){
+//     if(n<2||(n!=2&&n%2==0)){
+//         return false;
+//     }else{
+//         for (long i = 3; i * i <= n; i += 2){
+//             if(n%i==0){
+//                 return false;
+//             }
+//         }
+//     }
+//     return true;
+// }
 
- // int main(){
- // cout << get_factorial(4) << endl;
- // cout << get_sum_of_factorial(4) << endl;
- // cout << isPrime(17)<<endl;
- // cout << isPrime(19)<<endl;
- // cout << isPrime(20)<<endl;
- // }
+// int main(){
+// cout << get_factorial(4) << endl;
+// cout << get_sum_of_factorial(4) << endl;
+// cout << isPrime(17)<<endl;
+// cout << isPrime(19)<<endl;
+// cout << isPrime(20)<<endl;
+// }
 
- // vector<string> splitString(const string& input, const string& delimiter) {
- //     vector<string> result;
- //     string current = "";
+// vector<string> splitString(const string& input, const string& delimiter) {
+//     vector<string> result;
+//     string current = "";
 
- //     for (size_t i = 0; i < input.length(); i++) {
- //         // 检查当前字符和下一个字符是否构成分隔符
- //         if (i + delimiter.length() <= input.length()) {
- //             string substr = input.substr(i, delimiter.length());
- //             if (substr == delimiter) {
- //                 if (!current.empty()) {
- //                     result.push_back(current);
- //                     current.clear();
- //                 }
- //                 i += delimiter.length() - 1; // 跳过分隔符
- //                 continue;// 防止分隔符被加入current中
- //             }
- //         }
+//     for (size_t i = 0; i < input.length(); i++) {
+//         // 检查当前字符和下一个字符是否构成分隔符
+//         if (i + delimiter.length() <= input.length()) {
+//             string substr = input.substr(i, delimiter.length());
+//             if (substr == delimiter) {
+//                 if (!current.empty()) {
+//                     result.push_back(current);
+//                     current.clear();
+//                 }
+//                 i += delimiter.length() - 1; // 跳过分隔符
+//                 continue;// 防止分隔符被加入current中
+//             }
+//         }
 
- //         // 如果不是分隔符，则将当前字符加入 current
- //         current += input[i];
- //     }
+//         // 如果不是分隔符，则将当前字符加入 current
+//         current += input[i];
+//     }
 
- //     // 如果最后一个子字符串不为空，加入结果
- //     if (!current.empty()) {
- //         result.push_back(current);
- //     }
+//     // 如果最后一个子字符串不为空，加入结果
+//     if (!current.empty()) {
+//         result.push_back(current);
+//     }
 
- //     return result;
- // }
+//     return result;
+// }
 
- // int main() {
- //     string input = "ghj$\\akgho\\$\\dsghi$\\ageua$\\gdksg";
- //     string delimiter = "$\\";
+// int main() {
+//     string input = "ghj$\\akgho\\$\\dsghi$\\ageua$\\gdksg";
+//     string delimiter = "$\\";
 
- //     vector<string> output = splitString(input, delimiter);
+//     vector<string> output = splitString(input, delimiter);
 
- //     // 输出结果
- //     cout << "分割后的字符串部分：" << endl;
- //     for (const auto& str : output) {
- //         cout << "\"" << str << "\"" << endl;
- //     }
+//     // 输出结果
+//     cout << "分割后的字符串部分：" << endl;
+//     for (const auto& str : output) {
+//         cout << "\"" << str << "\"" << endl;
+//     }
 
- //     return 0;
- // }
+//     return 0;
+// }

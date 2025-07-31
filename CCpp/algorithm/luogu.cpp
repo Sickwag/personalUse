@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-#include<cmath>
+#include <bits/stdc++.h>
+#include <cmath>
 using namespace std;
 
 string convertBase(int from, int to, const string& input) {
@@ -29,7 +29,7 @@ void horizonThrowing(double v, double arc) {
 // P1147 连续自然数和
 void continuousNumber(int target) {
     vector<int> pre_sum(2000001);
-    for (int i = 0;i < pre_sum.size(); i++) {
+    for (int i = 0; i < pre_sum.size(); i++) {
         pre_sum[i] = i * (i + 1) / 2;
     }
 }
@@ -50,7 +50,6 @@ int main() {
 //     }
 //     return 0;
 // }
-
 
 // P7072[CSP - J2020] 直播获奖
 // 桶排序
@@ -239,4 +238,3 @@ int main() {
 //     }
 //     cout << (*records.begin()).first;
 // }
-

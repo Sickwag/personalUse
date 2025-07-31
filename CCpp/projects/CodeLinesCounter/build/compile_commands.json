@@ -1,0 +1,26 @@
+[
+{
+  "directory": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build",
+  "command": "D:\\Program\\mingw64\\bin\\g++.exe  @CMakeFiles/CodeLinesCounter.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\CodeLinesCounter.dir\\src\\main.cpp.obj -c \"D:\\Code Files\\vscode\\CCpp\\projects\\CodeLinesCounter\\src\\main.cpp\"",
+  "file": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/src/main.cpp",
+  "output": "CMakeFiles/CodeLinesCounter.dir/src/main.cpp.obj"
+},
+{
+  "directory": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build",
+  "command": "D:\\Program\\mingw64\\bin\\g++.exe  @CMakeFiles/CodeLinesCounter.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\CodeLinesCounter.dir\\src\\filter.cpp.obj -c \"D:\\Code Files\\vscode\\CCpp\\projects\\CodeLinesCounter\\src\\filter.cpp\"",
+  "file": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/src/filter.cpp",
+  "output": "CMakeFiles/CodeLinesCounter.dir/src/filter.cpp.obj"
+},
+{
+  "directory": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build",
+  "command": "D:\\Program\\mingw64\\bin\\g++.exe  @CMakeFiles/CodeLinesCounter.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\CodeLinesCounter.dir\\src\\counter.cpp.obj -c \"D:\\Code Files\\vscode\\CCpp\\projects\\CodeLinesCounter\\src\\counter.cpp\"",
+  "file": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/src/counter.cpp",
+  "output": "CMakeFiles/CodeLinesCounter.dir/src/counter.cpp.obj"
+},
+{
+  "directory": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/build",
+  "command": "D:\\Program\\mingw64\\bin\\g++.exe  @CMakeFiles/CodeLinesCounter.dir/includes_CXX.rsp -g -std=gnu++20 -o CMakeFiles\\CodeLinesCounter.dir\\src\\CLI_parser.cpp.obj -c \"D:\\Code Files\\vscode\\CCpp\\projects\\CodeLinesCounter\\src\\CLI_parser.cpp\"",
+  "file": "D:/Code Files/vscode/CCpp/projects/CodeLinesCounter/src/CLI_parser.cpp",
+  "output": "CMakeFiles/CodeLinesCounter.dir/src/CLI_parser.cpp.obj"
+}
+]

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/Code Files/vscode/CCpp/projects/CLI11learning/build",
+  "command": "D:\\Program\\mingw64\\bin\\g++.exe  @CMakeFiles/CLI11learning.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\CLI11learning.dir\\src\\main.cpp.obj -c \"D:\\Code Files\\vscode\\CCpp\\projects\\CLI11learning\\src\\main.cpp\"",
+  "file": "D:/Code Files/vscode/CCpp/projects/CLI11learning/src/main.cpp",
+  "output": "CMakeFiles/CLI11learning.dir/src/main.cpp.obj"
+}
+]

@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "name": "GCC",
+            "name": "GCC", // 配置名称，用于切换不同编译器配置
             "includePath": [
                 "${workspaceFolder}/**",
                 "D:/Program/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
@@ -10,17 +10,17 @@
                 "D:/Program/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include",
                 "D:/Program/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
                 "D:/Program/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
-            ],
+            ], // 头文件搜索路径,包含了你项目中的头文件路径和标准库路径（如 <vector>, <iostream>）。如果你使用了第三方库（如 OpenCV、Boost），也需要在这里添加它们的头文件路径。
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ],
-            "windowsSdkVersion": "10.0.18362.0",
-            "compilerPath": "D:\\Program\\mingw64\\bin\\g++.exe",
+            ],// 宏定义（预处理器宏）
+            "windowsSdkVersion": "10.0.18362.0", // Windows SDK 版本（仅用于 MSVC）
+            "compilerPath": "D:\\Program\\mingw64\\bin\\g++.exe",// 编译器路径,用于告诉 VSCode 使用哪个编译器（如 g++, clang++）。IntelliSense 会基于这个编译器的版本解析语法和宏定义。
             "cStandard": "c17",
             "cppStandard": "c++23",
-            "intelliSenseMode": "windows-gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64" // IntelliSense 模式，用于选择语法解析器,如果你使用的是 MinGW，选 windows-gcc-x64 是正确的。
         }
     ],
     "version": 4

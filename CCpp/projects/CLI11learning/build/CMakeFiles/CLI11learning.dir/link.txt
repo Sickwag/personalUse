@@ -1,0 +1,3 @@
+D:\Program\Cmake\bin\cmake.exe -E rm -f CMakeFiles\CLI11learning.dir/objects.a
+D:\Program\mingw64\bin\ar.exe qc CMakeFiles\CLI11learning.dir/objects.a @CMakeFiles\CLI11learning.dir\objects1.rsp
+D:\Program\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CLI11learning.dir/objects.a -Wl,--no-whole-archive -o CLI11learning.exe -Wl,--out-implib,libCLI11learning.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CLI11learning.dir\linkLibs.rsp

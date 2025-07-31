@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\MySQLDB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\CLIEntry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\identities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\src\email_sender.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Code Files\vscode\CCpp\projects\BookManagePlus\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A8E74895-F3D4-36E4-A09C-391F4E22E5B9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -128,6 +128,30 @@ cmake-test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/build
 .PHONY : cmake-test/fast
 
+src/InputValidator.obj: src/InputValidator.cpp.obj
+.PHONY : src/InputValidator.obj
+
+# target to build an object file
+src/InputValidator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/InputValidator.cpp.obj
+.PHONY : src/InputValidator.cpp.obj
+
+src/InputValidator.i: src/InputValidator.cpp.i
+.PHONY : src/InputValidator.i
+
+# target to preprocess a source file
+src/InputValidator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/InputValidator.cpp.i
+.PHONY : src/InputValidator.cpp.i
+
+src/InputValidator.s: src/InputValidator.cpp.s
+.PHONY : src/InputValidator.s
+
+# target to generate assembly for a file
+src/InputValidator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/InputValidator.cpp.s
+.PHONY : src/InputValidator.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -152,6 +176,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mysql_db.obj: src/mysql_db.cpp.obj
+.PHONY : src/mysql_db.obj
+
+# target to build an object file
+src/mysql_db.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/mysql_db.cpp.obj
+.PHONY : src/mysql_db.cpp.obj
+
+src/mysql_db.i: src/mysql_db.cpp.i
+.PHONY : src/mysql_db.i
+
+# target to preprocess a source file
+src/mysql_db.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/mysql_db.cpp.i
+.PHONY : src/mysql_db.cpp.i
+
+src/mysql_db.s: src/mysql_db.cpp.s
+.PHONY : src/mysql_db.s
+
+# target to generate assembly for a file
+src/mysql_db.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-test.dir\build.make CMakeFiles/cmake-test.dir/src/mysql_db.cpp.s
+.PHONY : src/mysql_db.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... cmake-test
+	@echo ... src/InputValidator.obj
+	@echo ... src/InputValidator.i
+	@echo ... src/InputValidator.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/mysql_db.obj
+	@echo ... src/mysql_db.i
+	@echo ... src/mysql_db.s
 .PHONY : help
 
 

@@ -1,0 +1,30 @@
+BookManagementSystem/
+├── CMakeLists.txt
+├── include/
+│   ├── database.h
+│   ├── user.h
+│   ├── book.h
+│   ├── reader.h
+│   ├── librarian.h
+│   ├── system_admin.h
+│   └── main_menu.h
+├── src/
+│   ├── main.cpp
+│   ├── database.cpp
+│   ├── user.cpp
+│   ├── book.cpp
+│   ├── reader.cpp
+│   ├── librarian.cpp
+│   ├── system_admin.cpp
+│   ├── main_menu.cpp
+│   └── utils.cpp
+├── resources/
+│   └── sql_scripts/
+│       ├── create_tables.sql
+│       └── init_data.sql
+├── tests/
+│   ├── CMakeLists.txt
+│   ├── test_database.cpp
+│   ├── test_user.cpp
+│   └── test_book.cpp
+└── README.md

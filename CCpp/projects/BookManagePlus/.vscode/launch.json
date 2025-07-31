@@ -1,0 +1,108 @@
+{
+    // ========================================
+    // VSCode 调试配置文件
+    // 定义F5键和Debug按钮使用的调试配置
+    // 影响Debug按钮的行为
+    // ========================================
+    "version": "0.2.0",
+    "configurations": [
+        // ========================================
+        // 配置1: MSVC调试版本 - 对应Debug按钮的MSVC调试
+        // ========================================
+        {
+            // 配置名称，显示在调试配置下拉列表中
+            "name": "Debug MSVC",
+            
+            // 调试器类型：cppvsdbg - Visual Studio调试器
+            // 用于调试MSVC编译的程序
+            "type": "cppvsdbg",
+            
+            // 请求类型：launch - 启动新程序进行调试
+            // 其他选项: "attach" - 附加到运行中的程序
+            "request": "launch",
+            
+            // 要调试的程序路径
+            // ${workspaceFolder} 是项目根目录
+            // Debug版本的程序在build/Debug目录下
+            "program": "${workspaceFolder}/build/Debug/BookManagePlus.exe",
+            
+            // 程序启动时传递的命令行参数
+            "args": [
+            ],
+            
+            // 是否在程序入口点停止
+            // false - 不停止，直接运行到断点
+            "stopAtEntry": false,
+            
+            // 程序的工作目录
+            // ${workspaceFolder} - 项目根目录
+            "cwd": "${workspaceFolder}",
+            
+            // 环境变量设置
+            // 空数组表示使用系统默认环境变量
+            "environment": [],
+            
+            // 控制台类型：externalTerminal - 使用外部终端
+            // 其他选项: "internalTerminal", "integratedTerminal"
+            // "console": "externalTerminal"
+            "console": "internalConsole"
+        },
+
+        // ========================================
+        // 配置2: MSVC发布版本 - 对应Debug按钮的MSVC发布调试
+        // ========================================
+        {
+            "name": "Release MSVC",
+            "type": "cppvsdbg",
+            "request": "launch",
+            
+            // Release版本的程序在build/Release目录下
+            "program": "${workspaceFolder}/build/Release/BookManagePlus.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+
+        // ========================================
+        // 配置3: MinGW调试 - 对应Debug按钮的MinGW调试
+        // ========================================
+        {
+            "name": "Debug MinGW",
+            
+            // 调试器类型：cppdbg - GDB调试器
+            // 用于调试MinGW编译的程序
+            "type": "cppdbg",
+            "request": "launch",
+            
+            // MinGW编译的程序在build-mingw目录下
+            "program": "${workspaceFolder}/build-mingw/BookManagePlus.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            
+            // 使用外部控制台
+            "externalConsole": true,
+            
+            // GDB模式：gdb - 使用GDB调试器
+            "MIMode": "gdb",
+            
+            // GDB调试器路径
+            "miDebuggerPath": "D:/Program/mingw64/bin/gdb.exe",
+            
+            // GDB初始化命令
+            "setupCommands": [
+                {
+                    // 命令描述
+                    "description": "Enable pretty-printing for gdb",
+                    // GDB命令：启用美化打印
+                    "text": "-enable-pretty-printing",
+                    // 忽略命令执行失败
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

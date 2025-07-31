@@ -1,0 +1,124 @@
+{
+    // ========================================
+    // VSCode 自定义任务配置文件
+    // 定义可以通过 Ctrl+Shift+P -> Tasks: Run Task 执行的自定义任务
+    // 这些任务可以作为CMake Tools按钮的替代方案
+    // ========================================
+    "version": "2.0.0",
+    "tasks": [
+        // ========================================
+        // 任务1: CMake配置 - 对应Build按钮的配置阶段
+        // ========================================
+        {
+            // 任务标签，用于在任务列表中识别
+            "label": "CMake Configure",
+            
+            // 任务类型：shell - 在终端中执行命令
+            "type": "shell",
+            
+            // 要执行的命令
+            "command": "cmake",
+            
+            // 命令参数
+            "args": [
+                "--preset=debug",  // 使用CMakePresets.json中的debug预设
+                // "-DCMAKE_BUILD_TYPE=Debug",
+                // ".."
+            ],
+            
+            // 任务分组：build - 构建相关任务
+            // 其他选项: "test", "deploy", "default"
+            "group": "build",
+            
+            // 任务执行时的显示设置
+            "presentation": {
+                "echo": true,           // 显示执行的命令
+                "reveal": "always",     // 总是显示终端
+                "focus": false,         // 不自动聚焦到终端
+                "panel": "shared"       // 使用共享终端面板
+            },
+            
+            // 问题匹配器：空数组表示不匹配任何编译错误
+            "problemMatcher": []
+        },
+
+        // ========================================
+        // 任务2: CMake构建 - 对应Build按钮的构建阶段
+        // ========================================
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",           // 构建命令
+                "--preset=debug"   // 使用debug构建预设
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            
+            // 问题匹配器：$msCompile - 匹配MSVC编译错误
+            // 这会在Problems面板中显示编译错误和警告
+            "problemMatcher": "$msCompile",
+            
+            // 依赖关系：必须先执行CMake Configure任务
+            "dependsOn": "CMake Configure"
+        },
+
+        // ========================================
+        // 任务3: 运行程序 - 对应Run按钮
+        // ========================================
+        {
+            "label": "Run Program",
+            "type": "shell",
+            
+            // 要运行的程序路径
+            // ${workspaceFolder} 是项目根目录
+            "command": "${workspaceFolder}/build/BookManagePlus.exe",
+            
+            // 程序参数
+            "args": [],
+            
+            // 任务分组：test - 测试相关任务
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            
+            // 依赖关系：必须先构建项目
+            "dependsOn": "CMake Build"
+        },
+
+        // ========================================
+        // 任务4: 清理构建 - 清理构建目录
+        // ========================================
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            
+            // PowerShell命令：删除目录
+            "command": "Remove-Item",
+            "args": [
+                "-Recurse",              // 递归删除
+                "-Force",                // 强制删除，不询问
+                "build",                 // 删除build目录
+                "-ErrorAction",          // 错误处理
+                "SilentlyContinue"       // 静默继续，忽略错误
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}

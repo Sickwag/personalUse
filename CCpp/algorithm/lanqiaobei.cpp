@@ -120,10 +120,6 @@ using namespace std;
 //         return res;
 //     }
 
-
-
-
-
 //     vector<string> generateAllDates(int year) {
 //         vector<string> dates;
 //         int monthDays[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -1237,63 +1233,63 @@ using namespace std;
 //     return 0;
 // }
 
-//整数删除，题中出现了相邻元素操作，所以使用双向链表来实现更改元素，最小堆来返回现在需要操作的数字
-// 三带一
-// set<int> records;
-// vector<int> weights;
-// void traceBack(int startIndex, int curWeight) {
-//     if (startIndex == weights.size()) return;
-//     records.insert(curWeight);
-//     for (int i = startIndex; i < weights.size(); i++) {
-//         traceBack(i + 1, curWeight + weights[i]);
-//     }
-// }
-// int main() {
-//     weights = { 1,2,3,4,5,6 };
-//     traceBack(0, 0);
-//     cout << records.size() - 1;
-//     return 0;
-// }
-// 报数游戏
-// 2019签到题
-// bool isValid(int input) {
-//     while (input > 0) {
-//         int temp = input % 10;
-//         input /= 10;
-//         if (temp % 2 != 1) return false;
-//     }
-//     return true;
-// }
-// int main() {
-//     for (int i = 2019;i < INT_MAX;i += 2019) {
-//         if (isValid(i)) {
-//             cout << i;
-//             break;
-//         }
-//     }
-//     return 0;
-// }
-//公因数匹配 超时
-// pair<int, int> get_input() {
-//     unordered_map<int, pair<bool, int>> records;
-//     int n, temp, min_i = INT_MAX, min_j = INT_MAX;
-//     cin >> n;
-//     for (int i = 0;i < n;i++) {
-//         cin >> temp;
-//         if (records[temp].first == true) {
-//             min_i = min(records[temp].second, min_i);
-//             min_j = min(temp, min_j);
-//         }
-//         else {
-//             for (int j = 1; j * temp < 1000000; j++) {
-//                 records[j * temp].first = true;
-//                 if (records[j * temp].second != 0) continue;
-//                 else records[j * temp].second = i + 1;
-//             }
-//         }
-//     }
-//     return { min_i, min_j };
-// }
+// 整数删除，题中出现了相邻元素操作，所以使用双向链表来实现更改元素，最小堆来返回现在需要操作的数字
+//  三带一
+//  set<int> records;
+//  vector<int> weights;
+//  void traceBack(int startIndex, int curWeight) {
+//      if (startIndex == weights.size()) return;
+//      records.insert(curWeight);
+//      for (int i = startIndex; i < weights.size(); i++) {
+//          traceBack(i + 1, curWeight + weights[i]);
+//      }
+//  }
+//  int main() {
+//      weights = { 1,2,3,4,5,6 };
+//      traceBack(0, 0);
+//      cout << records.size() - 1;
+//      return 0;
+//  }
+//  报数游戏
+//  2019签到题
+//  bool isValid(int input) {
+//      while (input > 0) {
+//          int temp = input % 10;
+//          input /= 10;
+//          if (temp % 2 != 1) return false;
+//      }
+//      return true;
+//  }
+//  int main() {
+//      for (int i = 2019;i < INT_MAX;i += 2019) {
+//          if (isValid(i)) {
+//              cout << i;
+//              break;
+//          }
+//      }
+//      return 0;
+//  }
+// 公因数匹配 超时
+//  pair<int, int> get_input() {
+//      unordered_map<int, pair<bool, int>> records;
+//      int n, temp, min_i = INT_MAX, min_j = INT_MAX;
+//      cin >> n;
+//      for (int i = 0;i < n;i++) {
+//          cin >> temp;
+//          if (records[temp].first == true) {
+//              min_i = min(records[temp].second, min_i);
+//              min_j = min(temp, min_j);
+//          }
+//          else {
+//              for (int j = 1; j * temp < 1000000; j++) {
+//                  records[j * temp].first = true;
+//                  if (records[j * temp].second != 0) continue;
+//                  else records[j * temp].second = i + 1;
+//              }
+//          }
+//      }
+//      return { min_i, min_j };
+//  }
 
 // int main() {
 //     pair<int, int> result = get_input();
@@ -1435,7 +1431,7 @@ using namespace std;
 //     system("pause");
 //     return 0;
 // }
-// int main() {    
+// int main() {
 //     vector<int> records = { 7,3,8,8,1,0,2,7,4,4,4,5,2,6,5 };
 //     int result = INT_MIN;
 //     dfs(1, 0, 0, 5, records[0], 0, result, records);
@@ -1639,7 +1635,7 @@ using namespace std;
 //     // i 物品范围，j重量剩余dp[i][j]价值
 //     vector<vector<int>> dp(n + 1, vector<int>(v + 1, 0));
 //     /*
-//     初始化省略了下面内容   
+//     初始化省略了下面内容
 //     for (int i = 1; i < weight.size(); i++) {  // 当然这一步，如果把dp数组预先初始化为0了，这一步就可以省略，但很多同学应该没有想清楚这一点。
 //         dp[i][0] = 0; // 无论选择物品范围是多少，如果背包重量限制为0则总价值为0
 //     }
@@ -2597,7 +2593,7 @@ using namespace std;
 //     copy(arr.rbegin(), arr.rend(), ostream_iterator<int>(cout, " "));
 //     return 0;
 // }
-//长草
+// 长草
 // 2025-02-14 16:44:11
 
 // 音节判断
@@ -2809,7 +2805,7 @@ using namespace std;
 // }
 
 // 找到给定字符串中的不同字符
-// 2025-02-13 18:11:30 
+// 2025-02-13 18:11:30
 // 10mins n 1 不支持reduce笑了
 // int main() {
 //     string str1, str2;
@@ -3035,8 +3031,6 @@ using namespace std;
 //     cout << get_max_length(maxone, k, chocolates);
 //     return 0;
 // }
-
-
 
 // 归并排序
 // const int N = 110;
@@ -3386,7 +3380,6 @@ using namespace std;
 //         cout << s.productExceptSelf(test2)[temp] << " ";
 //     }
 // }
-
 
 // int main(){
 //     // test arrays

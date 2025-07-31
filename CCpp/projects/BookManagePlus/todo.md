@@ -1,0 +1,6 @@
+- [] 增加同一邮箱多个（最多三个）name账号功能，通过邮箱登录时如果有多账号，提示登录哪一个。现在只做了限制创建3个以上
+- [] 上帝模式，SystemAdmin管理一切参数，在identities中的set_announcement函数中实现
+- [] 修改所有在InputValidator.custom中需要外部变量帮助的函数，不知道funcional<bool<const std::string&>> 能否兼容funcional<bool<const std::string&>>和捕获列表不为空([&])的lambda函数
+- [] 把所有结构体和常量通过constant.json管理，引入nlohmann/json管理
+- [] 把所有数据库异常通过MySQLDBException管理起来
+- [] 所有输入验证器添加统一退出输入接口，现状只能通过停止程序停止

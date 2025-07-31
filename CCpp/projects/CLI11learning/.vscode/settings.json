@@ -1,0 +1,10 @@
+{
+    "cmake.debugConfig": {
+        "args": [
+            "-h"
+        ]
+    },
+    "files.associations": {
+        "iostream": "cpp"
+    }
+}
