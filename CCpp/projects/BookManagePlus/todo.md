@@ -4,3 +4,4 @@
 - [] 把所有结构体和常量通过constant.json管理，引入nlohmann/json管理
 - [] 把所有数据库异常通过MySQLDBException管理起来
 - [] 所有输入验证器添加统一退出输入接口，现状只能通过停止程序停止
+- [] 解开所有的// password_strength()密码强度验证

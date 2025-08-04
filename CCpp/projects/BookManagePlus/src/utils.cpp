@@ -178,6 +178,40 @@ size_t WriteCallback(void* contents, size_t size, size_t nmemb, std::string* out
     return total;
 }
 
+asio::awaitable<void> start_service(asio::io_context& ioc) {
+    try {
+        // 注册服务
+        ServiceLocator::provide<MySQLDB>(std::make_shared<MySQLDB>(ioc.get_executor()));
+        ServiceLocator::provide<InputValidator<std::string>>(std::make_shared<InputValidator<std::string>>());
+        ServiceLocator::provide<InputValidator<int>>(std::make_shared<InputValidator<int>>());
+        ServiceLocator::provide<DBConfig>(std::make_shared<DBConfig>());
+        ServiceLocator::provide<EmailTemplate>(std::make_shared<EmailTemplate>());
+        ServiceLocator::provide<EmailSender>(std::make_shared<EmailSender>());
+
+        std::cout << "Services registered successfully" << std::endl;
+
+        auto& db_config = ServiceLocator::get<DBConfig>();
+        db_config.host = "mysql2.sqlpub.com";
+        db_config.port = 3307;
+        db_config.user = "sickwag";
+        db_config.password = "LqX9jBDqvDJYeooE";
+        db_config.database = "sickwag_learning";
+        db_config.ssl = mysql::ssl_mode::enable;
+
+        // 注意：数据库连接现在在需要时按需创建，而不是在这里预连接
+
+        auto& et = ServiceLocator::get<EmailTemplate>();
+        auto& email = ServiceLocator::get<EmailSender>();
+        email.email_config = et;
+        
+        std::cout << "Service initialization completed" << std::endl;
+    } catch (const std::exception& e) {
+        std::cerr << "Error in start_service: " << e.what() << std::endl;
+    }
+    co_return;
+}
+
+// unused
 void start_service_sync(asio::io_context& ioc) {
     try {
         // 注册服务

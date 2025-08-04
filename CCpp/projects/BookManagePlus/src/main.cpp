@@ -24,7 +24,9 @@ int main(int argc, char* argv[]) {
         // asio::co_spawn(ioc, test_mysql_functions(), asio::detached);
         // asio::co_spawn(ioc, test_reader_functions(), asio::detached);
 
-        start_service_sync(ioc);
+        // 使用异步方式启动服务
+        asio::co_spawn(ioc, start_service(ioc), asio::detached);
+        ioc.run_one(); // 运行一次以确保服务初始化完成
         
         // 创建菜单并显示
         Menu m;

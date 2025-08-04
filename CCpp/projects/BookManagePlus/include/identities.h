@@ -41,7 +41,6 @@ class Role {
     awaitable<void> self_checking(const UserInfo& u);
     awaitable<bool> change_password();
     UserInfo& get_user_info();
-    // void set_user_info(const UserInfo& u) const;
 
     // Librarian
     awaitable<void> check_book();

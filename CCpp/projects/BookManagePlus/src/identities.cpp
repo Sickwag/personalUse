@@ -3,16 +3,25 @@
 
 awaitable<bool> Role::login_with_pwd() {
     std::string name = iv_str.prompt("your username: ").length_range(6, 15).render();
-    std::string password = iv_str.prompt("your password: ").password_strength().render();
-    std::string sql = "select * from users where name = " + name + " and password = " + password + " and is_available = true;";
-    auto users = co_await db_.query_into<UserInfo>(sql);
-    if (users.empty()) {
-        std::cerr << "invalid username or password.";
+    std::string password = iv_str.prompt("your password: ")
+                               // .password_strength()
+                               .render();
+    auto result = co_await db_.query("select * from users where name = ? and password = ?", name, password);
+    if (result.rows().empty()) {
+        std::cerr << "invalid username or password." << std::endl;
         co_return false;
     } else {
-        std::cout << "login successfully, welcomes, " + name + '\n';
+        std::cout << "login successfully, welcomes, " << name << std::endl;
+        // 从查询结果中提取用户信息
+        const auto& row = result.rows().at(0);
+        this->u.name_ = row.at(1).as_string();
+        this->u.password_ = row.at(6).as_string();
+        this->u.permission_ = row.at(2).as_string();
+        this->u.email_ = row.at(3).as_string();
+        this->u.created_at_ = row.at(4).as_string();
+        this->u.last_login_in_ = row.at(5).as_string();
         this->u.is_online = true;
-        co_await self_checking(users[0]);
+        co_await self_checking(this->u);
         co_return true;
     }
 }
@@ -45,10 +54,9 @@ awaitable<bool> Role::login_with_captcha() {
 
 awaitable<UserInfo> Role::register_account() {
     UserInfo u;
-    try{
-        // 数据库连接已经在ServiceLocator中建立，直接使用即可
-        // 如果连接断开，Boost.MySQL会自动处理重连
-
+    try {
+        auto& db_config = ServiceLocator::get<DBConfig>();
+        co_await db_.connect(db_config);
         u.name_ = co_await iv_str.prompt("your name: ")
                       .length_range(6, 15)
                       .custom_async([&](const std::string& s) -> asio::awaitable<bool> {
@@ -58,14 +66,18 @@ awaitable<UserInfo> Role::register_account() {
                       },
                                     "your name has been taken by other.")
                       .render_async();
-        u.password_ = co_await iv_str.prompt("your password:").length_range(8, 20).render_async();
+        u.password_ = co_await iv_str.prompt("your password:")
+                          .length_range(8, 20)
+                          //   .password_strength()
+                          .render_async();
         u.email_ = co_await iv_str.prompt("your email: ")
                        .email()
                        .length_range(4, 40)
                        .custom_async([&](const std::string& s) -> asio::awaitable<bool> {
                            auto users = co_await db_.query("select * from users u where u.email = ?", s);
                            co_return users.rows().size() < 3;  // 一个邮箱最多3个账户
-                            },"one email address only allows 3 accounts.")
+                       },
+                                     "one email address only allows 3 accounts.")
                        .render_async();
         u.created_at_ = Time::get_current_time().second;
         u.is_online = false;
@@ -73,10 +85,11 @@ awaitable<UserInfo> Role::register_account() {
         u.permission_ = co_await iv_str.prompt(R"(the identity you wanna be("reader", "librarian" or "system admin"): )")
                             .enum_str({"reader", "librarian", "system admin"})
                             .render_async();
-        std::string sql = std::format("insert into users (name, password, permission, email, is_online, created_at, last_login_in) values ('{}', '{}', '{}', '{}', {}, '{}', '{}')", u.name_.value(), u.password_.value(),u.permission_.value(),u.email_.value(),u.is_online, u.created_at_.value(), u.last_login_in_.value());
-        auto affected = co_await db_.execute(sql);
-        is_already_done(affected > 0, "register account");
-    }catch (const std::exception& err){
+        // 使用预处理语句来避免SQL注入和长度问题
+        auto result = co_await db_.query("INSERT INTO users (name, password, permission, email, is_online, created_at, last_login_in) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                                         u.name_.value(), u.password_.value(), u.permission_.value(), u.email_.value(), u.is_online, u.created_at_.value(), u.last_login_in_.value());
+        is_already_done(result.affected_rows() > 0, "register account");
+    } catch (const std::exception& err) {
         std::cerr << "Error in register_account: " << err.what() << std::endl;
     }
     co_return u;
@@ -86,30 +99,36 @@ awaitable<bool> Role::borrow_book() {
     this->u.check_online();
     std::string title = iv_str.prompt("the book title you wanna borrow: ").length_range(1, 30).render();
     std::string author = iv_str.prompt(std::format("the author of {}: ", title)).length_range(1, 20).render();
-    auto remain = co_await db_.query("select b.remain from books b where b.title = ? and b.author = ?", title, author);
-    if (remain.rows().at(0).at(0).as_uint64() == 0){
-        std::cerr << "the " + title + " written by " + author + " was borrowed out.";
+    auto result = co_await db_.query("select b.remain from books b where b.title = ? and b.author = ?", title, author);
+    if (result.rows().empty() || result.rows().at(0).at(0).as_uint64() == 0) {
+        std::cerr << "the " + title + " written by " + author + " was borrowed out." << std::endl;
         co_return false;
-    }else{
-        auto affected = co_await db_.execute("UPDATE books SET lending = lending + 1, remain = remain - 1 WHERE title = '" + title + "' AND author = '" + author + "'");
-        is_already_done(affected, "borrow book");
+    } else {
+        std::string sql = "UPDATE books SET lending = lending + 1, remain = remain - 1 WHERE title = '" + title + "' AND author = '" + author + "'";
+        auto affected = co_await db_.execute(sql);
+        is_already_done(affected > 0, "borrow book");
+        co_return affected > 0;
     }
-    co_return true;
 }
 
 awaitable<bool> Role::return_book() {
     this->u.check_online();
     std::string title = iv_str.prompt("the book title you wanna return: ").length_range(1, 30).render();
     std::string author = iv_str.prompt(std::format("the author of {}: ", title)).length_range(1, 20).render();
-    auto affected = co_await db_.execute("UPDATE books SET lending = lending - 1, remaining = remaining + 1, sum = sum + 1 WHERE title = '" + title + "' AND author = '" + author + "'");
+    std::string sql = "UPDATE books SET lending = lending - 1, remain = remain + 1, sum = sum + 1 WHERE title = '" + title + "' AND author = '" + author + "'";
+    auto affected = co_await db_.execute(sql);
+    is_already_done(affected > 0, "return book");
     co_return affected > 0;
 }
 
 awaitable<void> Role::self_checking(const UserInfo& u) {
     std::string line("====================== self-checking ======================\n");
-    std::cout << line << std::setw(25) << std::left << u.name_.value() << std::setw(25) << std::left << u.email_.value() << '\n'
-    << std::setw(25) << std::left << u.permission_.value() << '\n'
-    << u.last_login_in_.value();
+    std::cout << line 
+              << std::setw(25) << std::left << u.name_.value() 
+              << std::setw(25) << std::left << u.email_.value() << "\n"
+              << std::setw(25) << std::left << u.permission_.value() << "\n"
+              << u.last_login_in_.value() << std::endl;
+    std::cout << line;
     co_return;
 }
 
@@ -117,15 +136,17 @@ awaitable<bool> Role::change_password() {
     this->u.check_online();
     std::string new_password = iv_str.prompt("new password: ")
                                    .length_range(8, 20)
-                                   .password_strength()
+                                   //    .password_strength()
                                    .render();
-    auto affected_rows = co_await db_.execute("update users u set password = " + new_password + " where u.name = " + this->u.name_.value() + " and " + " u.email = " + u.email_.value());
-    is_already_done(affected_rows, "change password");
-    co_return affected_rows;
+    std::string sql = "update users u set password = '" + new_password + "' where u.name = '" + this->u.name_.value() + "' and u.email = '" + this->u.email_.value() + "'";
+    auto affected_rows = co_await db_.execute(sql);
+    is_already_done(affected_rows > 0, "change password");
+    co_return affected_rows > 0;
 }
 
-UserInfo& Role::get_user_info() { return this->u; }
-
+UserInfo& Role::get_user_info() {
+    return this->u;
+}
 
 void UserInfo::check_online() const {
     if (!this->is_online) {
@@ -135,7 +156,7 @@ void UserInfo::check_online() const {
 
 awaitable<void> Role::check_book() {
     this->u.check_online();
-    if(this->u.permission_ != "Librarian" or this->u.permission_ != "SystemAdmin"){
+    if (this->u.permission_ != "Librarian" or this->u.permission_ != "SystemAdmin") {
         throw std::runtime_error("operate denied by your " + this->u.permission_.value() + " role now.");
     }
     std::vector<Book, std::allocator<Book>> result;
@@ -145,7 +166,7 @@ awaitable<void> Role::check_book() {
                                [&](const std::string& s) -> asio::awaitable<bool> {
                                    std::string sql = "select * from books b where b.code = " + s;
                                    result = co_await db_.query_into<Book>(sql);
-                                   co_return result.empty();
+                                   co_return !result.empty();
                                },
                                " the code points no book, ")
                            .render_async();
@@ -155,7 +176,7 @@ awaitable<void> Role::check_book() {
 }
 
 awaitable<bool> Role::add_book() {
-    if (this->u.permission_ != "Librarian" or this->u.permission_ != "SystemAdmin") {
+    if (this->u.permission_ != "Librarian" && this->u.permission_ != "SystemAdmin") {
         throw std::runtime_error("operate denied by your " + this->u.permission_.value() + " role now.");
     }
     this->u.check_online();
@@ -168,16 +189,17 @@ awaitable<bool> Role::add_book() {
                    .render();
     b.created_at = Time::get_current_time().second;
     b.lending = 0;
-    b.remain = iv_int.range(0,150).render();
+    b.remain = iv_int.range(0, 150).render();
     b.sum = b.remain;
-    std::string sql = std::format("insert into books(title, author, lending, remaining, sum) values({},{},{},{}.{})", b.title.value(), b.author.value(), b.lending, b.remain, b.sum);
+    std::string sql = "insert into books(title, author, lending, remain, sum) values('" + b.title.value() + "', '" + b.author.value() + "', " + std::to_string(b.lending) + ", " + std::to_string(b.remain) + ", " + std::to_string(b.sum) + ")";
     auto affected = co_await db_.execute(sql);
-    is_already_done(affected, "add book");
+    is_already_done(affected > 0, "add book");
     co_return affected > 0;
 }
 
 awaitable<bool> Role::remove_book() {
-    if (this->u.permission_ != "Librarian" or this->u.permission_ != "SystemAdmin") {
+    this->u.check_online();
+    if (this->u.permission_ != "Librarian" && this->u.permission_ != "SystemAdmin") {
         throw std::runtime_error("operate denied by your " + this->u.permission_.value() + " role now.");
     }
     this->u.check_online();
@@ -186,28 +208,28 @@ awaitable<bool> Role::remove_book() {
                            .length_range(8)
                            .custom_async(
                                [&](const std::string& s) -> asio::awaitable<bool> {
-                                   std::string sql = "select * from books b where b.code = " + s;
-                                   result = co_await db_.query_into<Book>(sql);
-                                   co_return result.empty();
+                                   auto books = co_await db_.query("select * from books b where b.code = ?", s);
+                                   co_return books.rows().empty();
                                },
                                " the code points no book, ")
                            .render_async();
-    Book& u = result[0];
-    u.show_book_info(this->u.permission_.value());
+    // Book& u = result[0];
+    // u.show_book_info(this->u.permission_.value());
     std::string d_code = iv_str.prompt("the code of book you wanna delete: ").length_range(8).render();
-    std::string choice = iv_str.prompt("delete the book which coded of "+ d_code + "?").yes_or_no().render();
-    if(choice[0] == 'y'){
-        std::string sql = std::format("delete from books b where b.code = {}", d_code);
+    std::string choice = iv_str.prompt("delete the book which coded of " + d_code + "?").yes_or_no().render();
+    if (choice[0] == 'y') {
+        std::string sql = "delete from books b where b.code = '" + d_code + "'";
         auto affected_rows = co_await db_.execute(sql);
-        is_already_done(affected_rows, "delete book");
-        co_return true;
-    }else{
+        is_already_done(affected_rows > 0, "delete book");
+        co_return affected_rows > 0;
+    } else {
         std::cout << "you canceled the delete operation.\n";
     }
     co_return false;
 }
 
 awaitable<bool> Role::adjust_permission() {
+    this->u.check_online();
     if (this->u.permission_ != "SystemAdmin") {
         throw std::runtime_error("operate denied by your " + this->u.permission_.value() + " role now.");
     }
@@ -218,18 +240,19 @@ awaitable<bool> Role::adjust_permission() {
                                auto users = co_await db_.query("select u.permission from users u where u.name = ? and u.permission <=> \"system admin\"", s);
                                co_return users.rows().size() != 0;
                            },
-                            "The user whose name you gave is not an system admin does not exist.")
+                                         "The user whose name you gave is not an system admin does not exist.")
                            .render_async();
     std::string permission = iv_str.prompt("the permission you wanna give to " + name)
                                  .enum_str({"system admin", "librarian"})
                                  .render();
-    std::string sql = std::format("update users u set u.permission = {} where u.name = {}", permission, name);
+    std::string sql = "update users u set u.permission = '" + permission + "' where u.name = '" + name + "'";
     auto affected = co_await db_.execute(sql);
-    is_already_done(affected, "change permission");
+    is_already_done(affected > 0, "change permission");
     co_return affected > 0;
 }
 
 awaitable<bool> Role::set_announcement() {
+    this->u.check_online();
     if (this->u.permission_ != "SystemAdmin") {
         throw std::runtime_error("operate denied by your " + this->u.permission_.value() + " role now.");
     }
@@ -240,11 +263,9 @@ awaitable<bool> Role::set_announcement() {
     co_return true;
 }
 
-
-
 void Book::show_book_info(std::string_view permission) const {
-    std::cout << std::setw(15) << std::left << this->title.value() << std::setw(10) << std::left << this->author.value() << std::setw(10) << std::left << "remaining" << std::setw(10) << std::left<< this->remain;
-    if(permission == "librarian" || permission == "system admin"){
+    std::cout << std::setw(15) << std::left << this->title.value() << std::setw(10) << std::left << this->author.value() << std::setw(10) << std::left << "remaining" << std::setw(10) << std::left << this->remain;
+    if (permission == "librarian" || permission == "system admin") {
         std::cout << std::setw(10) << std::left << this->lending << std::setw(10) << std::left << this->created_at.value() << std::setw(10) << std::left << this->sum;
     }
 }
