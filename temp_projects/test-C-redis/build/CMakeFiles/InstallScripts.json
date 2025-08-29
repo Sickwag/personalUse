@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/test-C-redis/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

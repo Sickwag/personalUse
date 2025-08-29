@@ -1,0 +1,79 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "default",
+            "displayName": "Debug MSVC Config",
+            "description": "Debug build using Visual Studio 2022 and vcpkg",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "toolchainFile": "D:/Program/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "debug",
+            "displayName": "Debug Config",
+            "description": "Debug build using Visual Studio 2022 and vcpkg",
+            "generator": "Visual Studio 17 2022",
+            "architecture": "x64",
+            "toolchainFile": "D:/Program/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "mingw",
+            "displayName": "MinGW Release",
+            "description": "Release build using MinGW and vcpkg",
+            "generator": "MinGW Makefiles",
+            "toolchainFile": "D:/Program/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "binaryDir": "${sourceDir}/build-mingw",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_C_COMPILER": "D:/Program/mingw64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "D:/Program/mingw64/bin/g++.exe",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        },
+        {
+            "name": "mingw-debug",
+            "displayName": "MinGW Debug",
+            "description": "Debug build using MinGW and vcpkg",
+            "generator": "MinGW Makefiles",
+            "toolchainFile": "D:/Program/vcpkg/scripts/buildsystems/vcpkg.cmake",
+            "binaryDir": "${sourceDir}/build-mingw",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_C_COMPILER": "D:/Program/mingw64/bin/gcc.exe",
+                "CMAKE_CXX_COMPILER": "D:/Program/mingw64/bin/g++.exe",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default",
+            "configurePreset": "default",
+            "configuration": "Release"
+        },
+        {
+            "name": "debug",
+            "configurePreset": "debug",
+            "configuration": "Debug"
+        },
+        {
+            "name": "mingw",
+            "configurePreset": "mingw",
+            "configuration": "Release"
+        },
+        {
+            "name": "mingw-debug",
+            "configurePreset": "mingw-debug",
+            "configuration": "Debug"
+        }
+    ]
+}

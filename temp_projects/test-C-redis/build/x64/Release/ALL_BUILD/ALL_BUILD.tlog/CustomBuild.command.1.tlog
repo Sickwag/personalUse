@@ -1,0 +1,10 @@
+^E:\TEST-C-REDIS\CMAKELISTS.TXT
+setlocal
+D:\Program\Cmake\bin\cmake.exe -SE:/test-C-redis -BE:/test-C-redis/build --check-stamp-file E:/test-C-redis/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

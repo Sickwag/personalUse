@@ -1,0 +1,483 @@
+"filename", "language", "MS SQL", "JSON with Comments", "HTML", "JSON", "JavaScript", "Python", "TypeScript", "Markdown", "PostCSS", "pip requirements", "C++", "BibTeX", "XML", "Java", "Log", "LaTeX", "Batch", "PowerShell", "C", "CMake", "CMake Cache", "YAML", "Makefile", "Docker", "comment", "blank", "total"
+"d:\Code Files\vscode\CCpp\Data Struct\1weekquiz.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 114, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 115
+"d:\Code Files\vscode\CCpp\Data Struct\MOOC_data_struct.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 108, 17, 125
+"d:\Code Files\vscode\CCpp\Data Struct\dataStruct.c", "C", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 72, 0, 0, 0, 0, 0, 6, 17, 95
+"d:\Code Files\vscode\CCpp\Data Struct\dialogue.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 213, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 12, 258
+"d:\Code Files\vscode\CCpp\Data Struct\dsacpp_learn.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 17, 225
+"d:\Code Files\vscode\CCpp\Data Struct\experimental_design.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 360, 26, 387
+"d:\Code Files\vscode\CCpp\Data Struct\jiwang_exam.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 22, 115
+"d:\Code Files\vscode\CCpp\Data Struct\runoob.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2013, 266, 2318
+"d:\Code Files\vscode\CCpp\algorithm\C_lang_website.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 9, 137
+"d:\Code Files\vscode\CCpp\algorithm\Leecode.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8879, 141, 9028
+"d:\Code Files\vscode\CCpp\algorithm\PTA.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 821, 47, 869
+"d:\Code Files\vscode\CCpp\algorithm\Standard_template.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 2, 99
+"d:\Code Files\vscode\CCpp\algorithm\StdTept_test.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 22
+"d:\Code Files\vscode\CCpp\algorithm\acwing.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 5, 22
+"d:\Code Files\vscode\CCpp\algorithm\caculat.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 241, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 181, 20, 442
+"d:\Code Files\vscode\CCpp\algorithm\dataStruct.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 107, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 115
+"d:\Code Files\vscode\CCpp\algorithm\labuladuo_terms.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 87, 3, 92
+"d:\Code Files\vscode\CCpp\algorithm\lanqiaobei.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3304, 111, 3418
+"d:\Code Files\vscode\CCpp\algorithm\luogu.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 201, 6, 241
+"d:\Code Files\vscode\CCpp\algorithm\newLeetcode.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\CCpp\algorithm\random.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 142, 5, 164
+"d:\Code Files\vscode\CCpp\algorithm\tempCodeRunnerFile.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\CCpp\algorithm\wushixiong.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 220, 5, 227
+"d:\Code Files\vscode\CCpp\cmake-projects\CMakeLists.txt", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 1, 6, 29
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\query\client-vscode\query.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\cache-v2-be6175c942cf5707d520.json", "JSON", 0, 0, 0, 2407, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2408
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\cmakeFiles-v1-a9792f58b3b44556cdc6.json", "JSON", 0, 0, 0, 1018, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1019
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\codemodel-v2-33528fd8d6685977a59a.json", "JSON", 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 61
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\directory-.-Debug-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\index-2025-07-13T03-03-17-0283.json", "JSON", 0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 133
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\target-cmake-test-Debug-7550adbf4346fc4dad70.json", "JSON", 0, 0, 0, 190, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 191
+"d:\Code Files\vscode\CCpp\cmake-projects\build\.cmake\api\v1\reply\toolchains-v1-c5a7cb7b2870dc559920.json", "JSON", 0, 0, 0, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 139
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeCache.txt", "CMake Cache", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 548, 0, 0, 0, 0, 156, 704
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CMakeCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 0, 1, 18, 82
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CMakeCXXCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 0, 0, 0, 0, 3, 26, 106
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CMakeRCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CMakeSystem.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 5, 16
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CompilerIdCXX\CMakeCXXCompilerId.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 707, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 151, 920
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\3.31.0-rc1\CompilerIdC\CMakeCCompilerId.c", "C", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 689, 0, 0, 0, 0, 0, 61, 155, 905
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\CMakeConfigureLog.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 688, 0, 0, 4, 34, 726
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\CMakeDirectoryInformation.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 5, 5, 17
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\Makefile.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 194, 0, 0, 0, 0, 7, 6, 207
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\cmake-test.dir\DependInfo.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 6, 7, 26
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\cmake-test.dir\cmake_clean.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 1, 2, 18
+"d:\Code Files\vscode\CCpp\cmake-projects\build\CMakeFiles\cmake-test.dir\compiler_depend.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\Code Files\vscode\CCpp\cmake-projects\build\Makefile", "Makefile", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 123, 0, 53, 59, 235
+"d:\Code Files\vscode\CCpp\cmake-projects\build\cmake_install.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 6, 8, 62
+"d:\Code Files\vscode\CCpp\cmake-projects\build\compile_commands.json", "JSON", 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20
+"d:\Code Files\vscode\CCpp\cmake-projects\include\CSVReader.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 41
+"d:\Code Files\vscode\CCpp\cmake-projects\include\InputValidator.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 149, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 18, 177
+"d:\Code Files\vscode\CCpp\cmake-projects\include\mysql_db.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 41
+"d:\Code Files\vscode\CCpp\cmake-projects\include\users.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 16
+"d:\Code Files\vscode\CCpp\cmake-projects\include\users.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"d:\Code Files\vscode\CCpp\cmake-projects\src\CSVReader.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18, 129
+"d:\Code Files\vscode\CCpp\cmake-projects\src\InputValidator.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\CCpp\cmake-projects\src\main.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"d:\Code Files\vscode\CCpp\cmake-projects\src\mysql_db.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 92, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 108
+"d:\Code Files\vscode\CCpp\modernCpp\cpp20feature.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 10, 160
+"d:\Code Files\vscode\CCpp\modernCpp\learn.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 115, 34, 206
+"d:\Code Files\vscode\CCpp\modernCpp\temp.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\CMakeLists.txt", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 2, 4, 43
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\CMakePresets.json", "JSON", 0, 0, 0, 79, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 79
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\query\client-vscode\query.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\cache-v2-6a9b56cd99651544f617.json", "JSON", 0, 0, 0, 2423, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2424
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\cmakeFiles-v1-4f0ab570b1ad15ab93ad.json", "JSON", 0, 0, 0, 1472, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1473
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\codemodel-v2-232d73299f489c5a04c1.json", "JSON", 0, 0, 0, 264, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 265
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\directory-.-Debug-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\directory-.-MinSizeRel-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\directory-.-RelWithDebInfo-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\directory-.-Release-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\index-2025-08-03T06-34-02-0471.json", "JSON", 0, 0, 0, 133, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 134
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ALL_BUILD-Debug-7c4a625073d14f36083c.json", "JSON", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 37
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ALL_BUILD-MinSizeRel-7c4a625073d14f36083c.json", "JSON", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 37
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ALL_BUILD-RelWithDebInfo-7c4a625073d14f36083c.json", "JSON", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 37
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ALL_BUILD-Release-7c4a625073d14f36083c.json", "JSON", 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 37
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-BookManagePlus-Debug-c1e8a19f8feb5bf62daa.json", "JSON", 0, 0, 0, 593, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 594
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-BookManagePlus-MinSizeRel-f32c262b2618d8264ec9.json", "JSON", 0, 0, 0, 593, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 594
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-BookManagePlus-RelWithDebInfo-36da56472c15f08b20a1.json", "JSON", 0, 0, 0, 593, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 594
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-BookManagePlus-Release-a1323ea82fd10d50ed0b.json", "JSON", 0, 0, 0, 593, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 594
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ZERO_CHECK-Debug-93a7cae917929ede4d3e.json", "JSON", 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 46
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ZERO_CHECK-MinSizeRel-93a7cae917929ede4d3e.json", "JSON", 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 46
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ZERO_CHECK-RelWithDebInfo-93a7cae917929ede4d3e.json", "JSON", 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 46
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\target-ZERO_CHECK-Release-93a7cae917929ede4d3e.json", "JSON", 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 46
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\.cmake\api\v1\reply\toolchains-v1-3571e7675515c2ff03e9.json", "JSON", 0, 0, 0, 78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 79
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\ALL_BUILD.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 185
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\BookManagePlus.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 412, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 412
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeCache.txt", "CMake Cache", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 505, 0, 0, 0, 0, 152, 657
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CMakeCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 0, 1, 16, 85
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CMakeCXXCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 81, 0, 0, 0, 0, 2, 22, 105
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CMakeRCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CMakeSystem.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 5, 16
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdCXX\CMakeCXXCompilerId.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 151, 921
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdCXX\CompilerIdCXX.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 73
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdCXX\Debug\vcpkg.applocal.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdC\CMakeCCompilerId.c", "C", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 690, 0, 0, 0, 0, 0, 61, 155, 906
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdC\CompilerIdC.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 73
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\CompilerIdC\Debug\vcpkg.applocal.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\4.0.3\VCTargetsPath.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 32
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\CMakeConfigureLog.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 484, 0, 0, 0, 55, 539
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\CMakeFiles\InstallScripts.json", "JSON", 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\ZERO_CHECK.vcxproj", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 179, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 179
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\build\cmake_install.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 5, 7, 57
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\configs\all_text.json", "JSON", 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\CLI11\CLI11.hpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8366, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1597, 1565, 11528
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\CLIEntry.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\MySQLDB.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 13, 106
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\email_sender.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 34
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\identities.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 10, 60
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\menu.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 18
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\service_locator.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 47
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\include\utils.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 304, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 34, 350
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\scripts\emailSender.py", "Python", 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 46
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\scripts\email_sender_cli.py", "Python", 0, 0, 0, 0, 0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15, 101
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\scripts\today_weather.py", "Python", 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 32
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\CLIEntry.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\MySQLDB.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 16, 137
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\email_sender.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 160, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 30, 204
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\identities.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 247, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 17, 272
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\main.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 10, 52
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\menu.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 121
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\src\utils.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 188, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 38, 246
+"d:\Code Files\vscode\CCpp\projects\BookManagePlus\todo.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\CMakeLists.txt", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 3, 10
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\query\client-vscode\query.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\cache-v2-936e1caf38c35b812f7a.json", "JSON", 0, 0, 0, 1591, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1592
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\cmakeFiles-v1-0557652123101ef8fcb1.json", "JSON", 0, 0, 0, 229, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 230
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\codemodel-v2-01339547192c2d36d12f.json", "JSON", 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 61
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\directory-.-Debug-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\index-2025-07-18T08-40-47-0484.json", "JSON", 0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 133
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\target-CLI11learning-Debug-6cdc2cba38e8b62e3667.json", "JSON", 0, 0, 0, 124, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 125
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\.cmake\api\v1\reply\toolchains-v1-c5a7cb7b2870dc559920.json", "JSON", 0, 0, 0, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 139
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeCache.txt", "CMake Cache", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 397, 0, 0, 0, 0, 93, 490
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CMakeCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 66, 0, 0, 0, 0, 1, 18, 85
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CMakeCXXCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 0, 0, 0, 0, 3, 26, 109
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CMakeRCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CMakeSystem.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 5, 16
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CompilerIdCXX\CMakeCXXCompilerId.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 151, 921
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\4.0.3\CompilerIdC\CMakeCCompilerId.c", "C", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 690, 0, 0, 0, 0, 0, 61, 155, 906
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\CLI11learning.dir\DependInfo.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 6, 7, 24
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\CLI11learning.dir\cmake_clean.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 1, 2, 14
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\CLI11learning.dir\compiler_depend.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\CMakeConfigureLog.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 638, 0, 0, 4, 32, 674
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\CMakeDirectoryInformation.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 5, 5, 17
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\InstallScripts.json", "JSON", 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\CMakeFiles\Makefile.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 0, 7, 6, 65
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\Makefile", "Makefile", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 87, 0, 47, 47, 181
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\cmake_install.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 6, 8, 62
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\build\compile_commands.json", "JSON", 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\include\CLI11.hpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8366, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1597, 1565, 11528
+"d:\Code Files\vscode\CCpp\projects\CLI11learning\src\main.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 32
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\CMakeLists.txt", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 4, 17
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\query\client-vscode\query.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\cache-v2-2c183f28c3c5b0d381a7.json", "JSON", 0, 0, 0, 2315, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2316
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\cmakeFiles-v1-f2a563fcf5814626e002.json", "JSON", 0, 0, 0, 229, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 230
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\codemodel-v2-bff73de103c09b9e4271.json", "JSON", 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 61
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\directory-.-Debug-d0094a50bb2071803777.json", "JSON", 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\index-2025-07-28T16-16-31-0257.json", "JSON", 0, 0, 0, 132, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 133
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\target-CodeLinesCounter-Debug-06d028eee932a4d6e13f.json", "JSON", 0, 0, 0, 148, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 149
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\.cmake\api\v1\reply\toolchains-v1-9db770237144eeb6b911.json", "JSON", 0, 0, 0, 138, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 139
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeCache.txt", "CMake Cache", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 515, 0, 0, 0, 0, 151, 666
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CMakeCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 66, 0, 0, 0, 0, 1, 18, 85
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CMakeCXXCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 80, 0, 0, 0, 0, 3, 26, 109
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CMakeRCCompiler.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CMakeSystem.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 5, 16
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CompilerIdCXX\CMakeCXXCompilerId.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 708, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 151, 921
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\4.0.3\CompilerIdC\CMakeCCompilerId.c", "C", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 690, 0, 0, 0, 0, 0, 61, 155, 906
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\CMakeConfigureLog.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 689, 0, 0, 4, 35, 728
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\CMakeDirectoryInformation.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 5, 5, 17
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\CodeLinesCounter.dir\DependInfo.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 6, 7, 27
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\CodeLinesCounter.dir\cmake_clean.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 1, 2, 20
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\CodeLinesCounter.dir\compiler_depend.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\InstallScripts.json", "JSON", 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\CMakeFiles\Makefile.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 0, 7, 6, 65
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\Makefile", "Makefile", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 141, 0, 56, 65, 262
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\cmake_install.cmake", "CMake", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 6, 8, 62
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\build\compile_commands.json", "JSON", 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\include\CLI11\CLI11.hpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8366, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1597, 1565, 11528
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\include\CLI_parser.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 29
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\include\counter.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 34
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\include\filter.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 37
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\src\CLI_parser.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 105
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\src\counter.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 87, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 8, 108
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\src\filter.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 72
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\src\main.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 27
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\run.bat", "Batch", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\innerFolder\test.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\test\test.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\CCpp\projects\CodeLinesCounter\todo.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2
+"d:\Code Files\vscode\CCpp\projects\DirectoryFromText\CLI_version.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 161, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 32, 204
+"d:\Code Files\vscode\CCpp\projects\DirectoryFromText\hardcode_version.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 159, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 34, 206
+"d:\Code Files\vscode\CCpp\projects\cpp-emain\sender.py", "Python", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 6, 42
+"d:\Code Files\vscode\Docker\Dockerfile", "Docker", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 3
+"d:\Code Files\vscode\Docker\node.js", "JavaScript", 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\Drafts\CCppOutput\test.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CCppOutput\test.h", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CCppOutput\test.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CCppOutput\test.json", "JSON", 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CCppOutput\test.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CCppOutput\test.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\Drafts\CLIScripts\clean_vscode_cache.bat", "Batch", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 0, 0, 0, 0, 0, 0, 0, 4, 5, 33
+"d:\Code Files\vscode\Drafts\CLIScripts\curDialog.ps1", "PowerShell", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 11, 6, 67
+"d:\Code Files\vscode\Drafts\CLIScripts\lastCommand.ps1", "PowerShell", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 5, 4, 28
+"d:\Code Files\vscode\Drafts\CLIScripts\lastCommandLog.ps1", "PowerShell", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 6, 5, 32
+"d:\Code Files\vscode\Drafts\CLIScripts\learnBatch.bat", "Batch", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 0, 5
+"d:\Code Files\vscode\Drafts\CLIScripts\openFile.ps1", "PowerShell", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 12, 5, 40
+"d:\Code Files\vscode\Drafts\CLIScripts\reBuildDesktopIcons.bat", "Batch", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5
+"d:\Code Files\vscode\Drafts\CLIScripts\recordALL.ps1", "PowerShell", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 14, 4, 44
+"d:\Code Files\vscode\Drafts\inputFile.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 56
+"d:\Code Files\vscode\Drafts\outputFile.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 53
+"d:\Code Files\vscode\Drafts\temp.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1336, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1336
+"d:\Code Files\vscode\Drafts\terminalLog\allRecords.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\Drafts\terminalLog\powershellLog_20250406_182527.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 19
+"d:\Code Files\vscode\Drafts\terminalLog\powershellLog_20250406_183002.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 75
+"d:\Code Files\vscode\HTML\Learning\GreedySnake.html", "HTML", 0, 0, 109, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 23, 132
+"d:\Code Files\vscode\HTML\Learning\LearnHTMLRunoob.html", "HTML", 0, 0, 228, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 103, 18, 349
+"d:\Code Files\vscode\HTML\Learning\chicks.html", "HTML", 0, 0, 238, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 42, 280
+"d:\Code Files\vscode\HTML\Learning\test.html", "HTML", 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 711, 12, 735
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\LoginRegPage.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 0, 322, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 370
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\LoginRegPage.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\LoginRegPage.js", "JavaScript", 0, 0, 0, 0, 61, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 77
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\components\MainLayout.html", "HTML", 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 39
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\components\Sidebar.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\components\Sidebar.html", "HTML", 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\imgs\Logo.svg", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\items.html", "HTML", 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\analysis.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\architecture.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\crops.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\dashboard.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\devices.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\irrigation.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\logs.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\overview.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\settings.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\users.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\pages\weather.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\privacy.html", "HTML", 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56
+"d:\Code Files\vscode\HTML\Projects\IntelligentIrrigationSystem\settings.html", "HTML", 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14
+"d:\Code Files\vscode\HTML\Projects\LoginRegPage\.continue\docs\new-doc.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\HTML\Projects\LoginRegPage\LoginRegPage.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 0, 198, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 25, 233
+"d:\Code Files\vscode\HTML\Projects\LoginRegPage\LoginRegPage.html", "HTML", 0, 0, 78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 6, 91
+"d:\Code Files\vscode\HTML\Projects\LoginRegPage\LoginRegPage.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\HTML\src\html\mercur.html", "HTML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"d:\Code Files\vscode\HTML\src\html\sun.html", "HTML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"d:\Code Files\vscode\HTML\src\html\venus.html", "HTML", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10
+"d:\Code Files\vscode\Latex\Ali-loner.github.io-master\The LaTeX testfile for vscode\The testfile for vscode.log", "Log", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 537, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 575
+"d:\Code Files\vscode\Latex\Ali-loner.github.io-master\The LaTeX testfile for vscode\The testfile for vscode.tex", "LaTeX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 47
+"d:\Code Files\vscode\Latex\Ali-loner.github.io-master\The LaTeX testfile for vscode\books.bib", "BibTeX", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"d:\Code Files\vscode\java\.idea\checkstyle-idea.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16
+"d:\Code Files\vscode\java\.idea\material_theme_project_new.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12
+"d:\Code Files\vscode\java\.idea\vcs.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6
+"d:\Code Files\vscode\java\.idea\workspace.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48
+"d:\Code Files\vscode\java\primary_learn\.idea\workspace.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55
+"d:\Code Files\vscode\java\primary_learn\src\ExamOriented.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 43
+"d:\Code Files\vscode\java\primary_learn\src\ExamOrientedTest.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 84
+"d:\Code Files\vscode\java\primary_learn\src\Main.java", "Java", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 169, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 212, 47, 428
+"d:\Code Files\vscode\java\primary_learn\test.cpp", "C++", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5
+"d:\Code Files\vscode\python\Alien_invasion\.idea\alien_invasion.iml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"d:\Code Files\vscode\python\Alien_invasion\.idea\inspectionProfiles\profiles_settings.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6
+"d:\Code Files\vscode\python\Alien_invasion\.idea\misc.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"d:\Code Files\vscode\python\Alien_invasion\.idea\modules.xml", "XML", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8
+"d:\Code Files\vscode\python\Alien_invasion\alien.py", "Python", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 33
+"d:\Code Files\vscode\python\Alien_invasion\alien_invasion.py", "Python", 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10, 55
+"d:\Code Files\vscode\python\Alien_invasion\bullet.py", "Python", 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 29
+"d:\Code Files\vscode\python\Alien_invasion\button.py", "Python", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15, 41
+"d:\Code Files\vscode\python\Alien_invasion\game_functions.py", "Python", 0, 0, 0, 0, 0, 181, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 38, 231
+"d:\Code Files\vscode\python\Alien_invasion\game_stats.py", "Python", 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 9
+"d:\Code Files\vscode\python\Alien_invasion\practice\rain_drop.py", "Python", 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 48
+"d:\Code Files\vscode\python\Alien_invasion\scoreboard.py", "Python", 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 9, 42
+"d:\Code Files\vscode\python\Alien_invasion\settings.py", "Python", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 18
+"d:\Code Files\vscode\python\Alien_invasion\ship.py", "Python", 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 9, 47
+"d:\Code Files\vscode\python\ArcGISPro\test_arcpy.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\python\Pics\挑战杯\matplolib\2. 用户增长预测图.py", "Python", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 16
+"d:\Code Files\vscode\python\Pics\挑战杯\matplolib\成本收益比分析图（ROI、盈亏平衡点）.py", "Python", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 8, 34
+"d:\Code Files\vscode\python\Pics\挑战杯\matplolib\数据对比图.py", "Python", 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 41
+"d:\Code Files\vscode\python\Pics\挑战杯\功能模块图.py", "Python", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 30
+"d:\Code Files\vscode\python\Pics\挑战杯\成本收益比分析图（ROI、盈亏平衡点）.py", "Python", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 26
+"d:\Code Files\vscode\python\Pics\挑战杯\数据对比图.py", "Python", 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 33
+"d:\Code Files\vscode\python\Pics\挑战杯\用户增长预测图.py", "Python", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 19
+"d:\Code Files\vscode\python\Projects\AiCLIClient\api_client.py", "Python", 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 46
+"d:\Code Files\vscode\python\Projects\AiCLIClient\args.py", "Python", 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 25
+"d:\Code Files\vscode\python\Projects\AiCLIClient\chat-history\ai-chat-history-or-ds-chat.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 163, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 202
+"d:\Code Files\vscode\python\Projects\AiCLIClient\chat-history\ai-chat-history-or-ds.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7
+"d:\Code Files\vscode\python\Projects\AiCLIClient\chat-history\ai-chat-history-or-k2.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"d:\Code Files\vscode\python\Projects\AiCLIClient\config.py", "Python", 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 23
+"d:\Code Files\vscode\python\Projects\AiCLIClient\constants.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 7
+"d:\Code Files\vscode\python\Projects\AiCLIClient\conversation.py", "Python", 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11, 54
+"d:\Code Files\vscode\python\Projects\AiCLIClient\history.py", "Python", 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9, 26
+"d:\Code Files\vscode\python\Projects\AiCLIClient\main.py", "Python", 0, 0, 0, 0, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 19, 79
+"d:\Code Files\vscode\python\Projects\AiCLIClient\prompt.py", "Python", 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"d:\Code Files\vscode\python\Projects\AiCLIClient\utils.py", "Python", 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8, 31
+"d:\Code Files\vscode\python\Projects\clipboard_saver.py", "Python", 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 34
+"d:\Code Files\vscode\python\Python Deeplearn\LICENSE.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 22
+"d:\Code Files\vscode\python\Python Deeplearn\README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 52
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\._LICENSE.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\._README.md", "Markdown", 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._hungry.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._img_show.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._man.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._simple_graph.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._sin_cos_graph.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch01\._sin_graph.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch02\._and_gate.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch02\._nand_gate.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch02\._or_gate.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch02\._xor_gate.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._mnist_show.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._neuralnet_mnist.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._neuralnet_mnist_batch.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._relu.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._sig_step_compare.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._sigmoid.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch03\._step_function.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._gradient_1d.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._gradient_2d.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._gradient_method.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._gradient_simplenet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._train_neuralnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch04\._two_layer_net.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._buy_apple.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._buy_apple_orange.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._gradient_check.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._layer_naive.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._train_neuralnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch05\._two_layer_net.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._batch_norm_gradient_check.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._batch_norm_test.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._hyperparameter_optimization.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._optimizer_compare_mnist.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._optimizer_compare_naive.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._overfit_dropout.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._overfit_weight_decay.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._weight_init_activation_histogram.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch06\._weight_init_compare.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch07\._apply_filter.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch07\._gradient_check.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch07\._simple_convnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch07\._train_convnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch07\._visualize_filter.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch08\._awesome_net.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch08\._deep_convnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch08\._half_float_network.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch08\._misclassified_mnist.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\ch08\._train_deepnet.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\.___init__.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._functions.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._gradient.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._layers.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._multi_layer_net.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._multi_layer_net_extend.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._optimizer.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._trainer.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\common\._util.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\dataset\.___init__.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\__MACOSX\dataset\._mnist.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\hungry.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\img_show.py", "Python", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 8
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\man.py", "Python", 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 17
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\simple_graph.py", "Python", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 11
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\sin_cos_graph.py", "Python", 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2, 17
+"d:\Code Files\vscode\python\Python Deeplearn\ch01\sin_graph.py", "Python", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 12
+"d:\Code Files\vscode\python\Python Deeplearn\ch02\and_gate.py", "Python", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 19
+"d:\Code Files\vscode\python\Python Deeplearn\ch02\nand_gate.py", "Python", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 19
+"d:\Code Files\vscode\python\Python Deeplearn\ch02\or_gate.py", "Python", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 18
+"d:\Code Files\vscode\python\Python Deeplearn\ch02\xor_gate.py", "Python", 0, 0, 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 16
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\mnist_show.py", "Python", 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7, 24
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\neuralnet_mnist.py", "Python", 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 11, 44
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\neuralnet_mnist_batch.py", "Python", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14, 48
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\relu.py", "Python", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 14
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\sig_step_compare.py", "Python", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 7, 21
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\sigmoid.py", "Python", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 14
+"d:\Code Files\vscode\python\Python Deeplearn\ch03\step_function.py", "Python", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 14
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\gradient_1d.py", "Python", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10, 32
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\gradient_2d.py", "Python", 0, 0, 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 18, 70
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\gradient_method.py", "Python", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 12, 38
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\gradient_simplenet.py", "Python", 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10, 32
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\train_neuralnet.py", "Python", 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 11, 57
+"d:\Code Files\vscode\python\Python Deeplearn\ch04\two_layer_net.py", "Python", 0, 0, 0, 0, 0, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 19, 78
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\buy_apple.py", "Python", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 25
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\buy_apple_orange.py", "Python", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 35
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\gradient_check.py", "Python", 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 21
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\layer_naive.py", "Python", 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 13, 37
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\train_neuralnet.py", "Python", 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 12, 47
+"d:\Code Files\vscode\python\Python Deeplearn\ch05\two_layer_net.py", "Python", 0, 0, 0, 0, 0, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 19, 78
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\batch_norm_gradient_check.py", "Python", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 23
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\batch_norm_test.py", "Python", 0, 0, 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 19, 87
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\hyperparameter_optimization.py", "Python", 0, 0, 0, 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 15, 78
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\optimizer_compare_mnist.py", "Python", 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 67
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\optimizer_compare_naive.py", "Python", 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 17, 70
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\overfit_dropout.py", "Python", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 40
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\overfit_weight_decay.py", "Python", 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 15, 68
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\weight_init_activation_histogram.py", "Python", 0, 0, 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 17, 54
+"d:\Code Files\vscode\python\Python Deeplearn\ch06\weight_init_compare.py", "Python", 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 14, 63
+"d:\Code Files\vscode\python\Python Deeplearn\ch07\apply_filter.py", "Python", 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 14, 54
+"d:\Code Files\vscode\python\Python Deeplearn\ch07\gradient_check.py", "Python", 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 16
+"d:\Code Files\vscode\python\Python Deeplearn\ch07\simple_convnet.py", "Python", 0, 0, 0, 0, 0, 88, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 23, 160
+"d:\Code Files\vscode\python\Python Deeplearn\ch07\train_convnet.py", "Python", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 43
+"d:\Code Files\vscode\python\Python Deeplearn\ch07\visualize_filter.py", "Python", 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 28
+"d:\Code Files\vscode\python\Python Deeplearn\ch08\awesome_net.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1
+"d:\Code Files\vscode\python\Python Deeplearn\ch08\deep_convnet.py", "Python", 0, 0, 0, 0, 0, 102, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 20, 137
+"d:\Code Files\vscode\python\Python Deeplearn\ch08\half_float_network.py", "Python", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 29
+"d:\Code Files\vscode\python\Python Deeplearn\ch08\misclassified_mnist.py", "Python", 0, 0, 0, 0, 0, 41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 16, 61
+"d:\Code Files\vscode\python\Python Deeplearn\ch08\train_deepnet.py", "Python", 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 22
+"d:\Code Files\vscode\python\Python Deeplearn\common\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\Python Deeplearn\common\functions.py", "Python", 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 24, 62
+"d:\Code Files\vscode\python\Python Deeplearn\common\gradient.py", "Python", 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 15, 52
+"d:\Code Files\vscode\python\Python Deeplearn\common\layers.py", "Python", 0, 0, 0, 0, 0, 200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 72, 285
+"d:\Code Files\vscode\python\Python Deeplearn\common\multi_layer_net.py", "Python", 0, 0, 0, 0, 0, 73, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 24, 161
+"d:\Code Files\vscode\python\Python Deeplearn\common\multi_layer_net_extend.py", "Python", 0, 0, 0, 0, 0, 90, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 25, 163
+"d:\Code Files\vscode\python\Python Deeplearn\common\optimizer.py", "Python", 0, 0, 0, 0, 0, 81, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 38, 131
+"d:\Code Files\vscode\python\Python Deeplearn\common\trainer.py", "Python", 0, 0, 0, 0, 0, 59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 16, 79
+"d:\Code Files\vscode\python\Python Deeplearn\common\util.py", "Python", 0, 0, 0, 0, 0, 39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 45, 15, 99
+"d:\Code Files\vscode\python\Python Deeplearn\dataset\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\Python Deeplearn\dataset\mnist.py", "Python", 0, 0, 0, 0, 0, 84, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 30, 129
+"d:\Code Files\vscode\python\ScriptTools\aliyun_translate.py", "Python", 0, 0, 0, 0, 0, 55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 11, 87
+"d:\Code Files\vscode\python\ScriptTools\emailSender.py", "Python", 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 47
+"d:\Code Files\vscode\python\ScriptTools\email_sender_cli.py", "Python", 0, 0, 0, 0, 0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 15, 102
+"d:\Code Files\vscode\python\ScriptTools\fetchWifiSavedonWindows.py", "Python", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 21
+"d:\Code Files\vscode\python\ScriptTools\fileTreeImplement.py", "Python", 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19, 16, 95
+"d:\Code Files\vscode\python\ScriptTools\get_baisi.py", "Python", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 41
+"d:\Code Files\vscode\python\ScriptTools\get_heisi.py", "Python", 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 27
+"d:\Code Files\vscode\python\ScriptTools\moveFilesBySuffix.py", "Python", 0, 0, 0, 0, 0, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 12, 51
+"d:\Code Files\vscode\python\ScriptTools\readDirectory.py", "Python", 0, 0, 0, 0, 0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 11, 36
+"d:\Code Files\vscode\python\ScriptTools\removeRepeatLines.py", "Python", 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 12, 68
+"d:\Code Files\vscode\python\ScriptTools\remove_blank.py", "Python", 0, 0, 0, 0, 0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 34, 195
+"d:\Code Files\vscode\python\ScriptTools\scripts_manager.py", "Python", 0, 0, 0, 0, 0, 141, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21, 36, 198
+"d:\Code Files\vscode\python\ScriptTools\today_weather.py", "Python", 0, 0, 0, 0, 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 32
+"d:\Code Files\vscode\python\ScriptTools\translate.py", "Python", 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 11
+"d:\Code Files\vscode\python\ScriptTools\writeByMyself.py", "Python", 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 18, 67
+"d:\Code Files\vscode\python\chore\AI_chat\chat.py", "Python", 0, 0, 0, 0, 0, 85, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 26, 123
+"d:\Code Files\vscode\python\chore\AI_chat\draft.py", "Python", 0, 0, 0, 0, 0, 140, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26, 34, 200
+"d:\Code Files\vscode\python\chore\AI_chat\main.py", "Python", 0, 0, 0, 0, 0, 29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 38
+"d:\Code Files\vscode\python\chore\AI_chat\menu.py", "Python", 0, 0, 0, 0, 0, 60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 12, 81
+"d:\Code Files\vscode\python\chore\AI_chat\utils.py", "Python", 0, 0, 0, 0, 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 24
+"d:\Code Files\vscode\python\chore\MyNoteBook\diary_editor.py", "Python", 0, 0, 0, 0, 0, 167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 26, 217
+"d:\Code Files\vscode\python\chore\MyNoteBook\main.py", "Python", 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 15
+"d:\Code Files\vscode\python\chore\MyNoteBook\requirements.txt", "pip requirements", 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"d:\Code Files\vscode\python\chore\MyNoteBook\res\style.css", "PostCSS", 0, 0, 0, 0, 0, 0, 0, 0, 78, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 94
+"d:\Code Files\vscode\python\chore\PicToAscii\main.py", "Python", 0, 0, 0, 0, 0, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 10, 48
+"d:\Code Files\vscode\python\chore\Text_editor\editor.py", "Python", 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 14
+"d:\Code Files\vscode\python\chore\Text_editor\main.py", "Python", 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 15
+"d:\Code Files\vscode\python\chore\Text_editor\menu.py", "Python", 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 52
+"d:\Code Files\vscode\python\chore\Text_editor\ui.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\chore\Text_editor\utils.py", "Python", 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 63
+"d:\Code Files\vscode\python\chore\excels\extract_strings.py", "Python", 0, 0, 0, 0, 0, 32, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15, 8, 55
+"d:\Code Files\vscode\python\chore\excels\replaceResults.py", "Python", 0, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 16, 62
+"d:\Code Files\vscode\python\djangoTutorial\manage.py", "Python", 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 23
+"d:\Code Files\vscode\python\djangoTutorial\mysite\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\djangoTutorial\mysite\asgi.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 17
+"d:\Code Files\vscode\python\djangoTutorial\mysite\settings.py", "Python", 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27, 32, 123
+"d:\Code Files\vscode\python\djangoTutorial\mysite\urls.py", "Python", 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 3, 24
+"d:\Code Files\vscode\python\djangoTutorial\mysite\wsgi.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 5, 17
+"d:\Code Files\vscode\python\djangoTutorial\polls\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\djangoTutorial\polls\admin.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4
+"d:\Code Files\vscode\python\djangoTutorial\polls\apps.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 7
+"d:\Code Files\vscode\python\djangoTutorial\polls\migrations\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\python\djangoTutorial\polls\models.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4
+"d:\Code Files\vscode\python\djangoTutorial\polls\tests.py", "Python", 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4
+"d:\Code Files\vscode\python\djangoTutorial\polls\urls.py", "Python", 0, 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 8
+"d:\Code Files\vscode\python\djangoTutorial\polls\views.py", "Python", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 8
+"d:\Code Files\vscode\sqlfiles\Leetcode.sql", "MS SQL", 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4
+"d:\Code Files\vscode\sqlfiles\algorithm.sql", "MS SQL", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3
+"d:\Code Files\vscode\sqlfiles\db_design_work.sql", "MS SQL", 94, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 19, 124
+"d:\Code Files\vscode\sqlfiles\girls.sql", "MS SQL", 40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 22, 73
+"d:\Code Files\vscode\sqlfiles\myemployees.sql", "MS SQL", 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 27, 103
+"d:\Code Files\vscode\typescript\package-lock.json", "JSON", 0, 0, 0, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 27
+"d:\Code Files\vscode\typescript\package.json", "JSON", 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"d:\Code Files\vscode\typescript\src\hello.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1
+"d:\Code Files\vscode\typescript\src\helloworld.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 12, 69
+"d:\Code Files\vscode\typescript\src\index.html", "HTML", 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 9
+"d:\Code Files\vscode\typescript\tsconfig.json", "JSON with Comments", 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18, 6, 46
+"Total", "-", 204, 22, 1041, 16600, 62, 4643, 58, 1655, 648, 3, 31710, 7, 1094, 285, 598, 37, 44, 139, 2831, 1317, 1965, 2505, 351, 3, 24439, 10322, 102583

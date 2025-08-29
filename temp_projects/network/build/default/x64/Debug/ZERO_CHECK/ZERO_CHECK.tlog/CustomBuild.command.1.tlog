@@ -1,0 +1,10 @@
+^D:\CODE FILES\TEMP_PROJECTS\NETWORK\BUILD\DEFAULT\CMAKEFILES\B67F9F18F37506A1BD689FB3380C1525\GENERATE.STAMP.RULE
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/temp_projects/network" "-BD:/Code Files/temp_projects/network/build/default" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Code Files/temp_projects/network/build/default/network.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

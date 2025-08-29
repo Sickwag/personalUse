@@ -1,0 +1,10 @@
+^D:\CODE FILES\TEMP_PROJECTS\FRONT_BACKND_INTERACT\CMAKELISTS.TXT
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/temp_projects/front_backnd_interact" "-BD:/Code Files/temp_projects/front_backnd_interact/build/default_config" --check-stamp-file "D:/Code Files/temp_projects/front_backnd_interact/build/default_config/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

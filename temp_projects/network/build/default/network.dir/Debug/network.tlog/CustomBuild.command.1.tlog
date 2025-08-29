@@ -1,0 +1,10 @@
+^D:\CODE FILES\TEMP_PROJECTS\NETWORK\CMAKELISTS.TXT
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/temp_projects/network" "-BD:/Code Files/temp_projects/network/build/default" --check-stamp-file "D:/Code Files/temp_projects/network/build/default/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
