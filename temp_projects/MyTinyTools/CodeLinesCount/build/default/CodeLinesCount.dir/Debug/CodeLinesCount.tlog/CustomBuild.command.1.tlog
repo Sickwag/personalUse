@@ -1,0 +1,10 @@
+^D:\CODE FILES\TEMP_PROJECTS\MYTINYTOOLS\CODELINESCOUNT\CMAKELISTS.TXT
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/temp_projects/MyTinyTools/CodeLinesCount" "-BD:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default" --check-stamp-file "D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

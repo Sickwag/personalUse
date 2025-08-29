@@ -1,0 +1,28 @@
+===============================================================================
+"EXTENSION NAME","linecount"
+"EXTENSION VERSION","0.1.7"
+-------------------------------------------------------------------------------
+
+"count time","2025-08-29 15:51:55"
+"count workspace","d:\Code Files\temp_projects\MyTinyTools\CodeLinesCount"
+"total files","11"
+"total code lines","312"
+"total comment lines","4"
+"total blank lines","52"
+
+
+"filename","code","comment","blank"
+"CMakeLists.txt","29","0","7"
+"CMakePresets.json","27","0","0"
+"include\arg_parse.h","13","0","4"
+"include\config.h","24","3","5"
+"include\count.h","55","1","8"
+"include\output.h","12","0","2"
+"src\arg_parse.cpp","26","0","7"
+"src\config.cpp","83","0","9"
+"src\count.cpp","16","0","2"
+"src\main.cpp","9","0","2"
+"src\output.cpp","18","0","6"
+===============================================================================
+
+

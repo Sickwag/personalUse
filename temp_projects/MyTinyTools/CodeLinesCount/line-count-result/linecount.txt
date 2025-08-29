@@ -1,0 +1,23 @@
+===============================================================================
+EXTENSION NAME : linecount
+EXTENSION VERSION : 0.1.7
+-------------------------------------------------------------------------------
+count time : 2025-08-29 15:51:55
+count workspace : d:\Code Files\temp_projects\MyTinyTools\CodeLinesCount
+total files : 11
+total code lines : 312
+total comment lines : 4
+total blank lines : 52
+
+CMakeLists.txt, code is 29, comment is 0, blank is 7.
+CMakePresets.json, code is 27, comment is 0, blank is 0.
+include\arg_parse.h, code is 13, comment is 0, blank is 4.
+include\config.h, code is 24, comment is 3, blank is 5.
+include\count.h, code is 55, comment is 1, blank is 8.
+include\output.h, code is 12, comment is 0, blank is 2.
+src\arg_parse.cpp, code is 26, comment is 0, blank is 7.
+src\config.cpp, code is 83, comment is 0, blank is 9.
+src\count.cpp, code is 16, comment is 0, blank is 2.
+src\main.cpp, code is 9, comment is 0, blank is 2.
+src\output.cpp, code is 18, comment is 0, blank is 6.
+===============================================================================

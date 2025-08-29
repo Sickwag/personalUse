@@ -1,0 +1,83 @@
+{
+    "extension": "linecount",
+    "version": "0.1.7",
+    "workspace": "d:\\Code Files\\temp_projects\\MyTinyTools\\CodeLinesCount",
+    "linecount": [
+        {
+            "version": "0.1.7",
+            "counttime": "2025-08-29 15:51:55",
+            "filesum": 11,
+            "codesum": 312,
+            "commentsum": 4,
+            "blanksum": 52,
+            "filelist": [
+                {
+                    "blank": 7,
+                    "code": 29,
+                    "comment": 0,
+                    "filename": "CMakeLists.txt"
+                },
+                {
+                    "blank": 0,
+                    "code": 27,
+                    "comment": 0,
+                    "filename": "CMakePresets.json"
+                },
+                {
+                    "blank": 4,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "include\\arg_parse.h"
+                },
+                {
+                    "blank": 5,
+                    "code": 24,
+                    "comment": 3,
+                    "filename": "include\\config.h"
+                },
+                {
+                    "blank": 8,
+                    "code": 55,
+                    "comment": 1,
+                    "filename": "include\\count.h"
+                },
+                {
+                    "blank": 2,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "include\\output.h"
+                },
+                {
+                    "blank": 7,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "src\\arg_parse.cpp"
+                },
+                {
+                    "blank": 9,
+                    "code": 83,
+                    "comment": 0,
+                    "filename": "src\\config.cpp"
+                },
+                {
+                    "blank": 2,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "src\\count.cpp"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\main.cpp"
+                },
+                {
+                    "blank": 6,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "src\\output.cpp"
+                }
+            ]
+        }
+    ]
+}

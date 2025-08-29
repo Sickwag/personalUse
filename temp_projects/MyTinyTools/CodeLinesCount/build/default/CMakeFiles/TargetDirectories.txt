@@ -1,0 +1,3 @@
+D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CodeLinesCount.dir
+D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/ALL_BUILD.dir
+D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/ZERO_CHECK.dir

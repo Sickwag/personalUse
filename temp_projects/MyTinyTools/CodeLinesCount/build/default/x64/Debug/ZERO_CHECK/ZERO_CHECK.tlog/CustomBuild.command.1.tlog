@@ -1,0 +1,10 @@
+^D:\CODE FILES\TEMP_PROJECTS\MYTINYTOOLS\CODELINESCOUNT\BUILD\DEFAULT\CMAKEFILES\B3BF1F9C1B0CB4C12604194975115295\GENERATE.STAMP.RULE
+setlocal
+D:\Program\Cmake\bin\cmake.exe "-SD:/Code Files/temp_projects/MyTinyTools/CodeLinesCount" "-BD:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CodeLinesCount.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
