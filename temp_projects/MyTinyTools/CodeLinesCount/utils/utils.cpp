@@ -31,13 +31,18 @@ std::string get_exec_path() {
 #error "Unsupported platform"
 #endif
 
-inline std::string get_current_time_str() {
+std::string get_current_time_str() {
     auto now = std::chrono::system_clock::now();
     std::time_t now_c = std::chrono::system_clock::to_time_t(now);
-    return ctime(&now_c);
+    std::string time_str = std::ctime(&now_c);
+    // 移除末尾的换行符
+    if (!time_str.empty() && time_str.back() == '\n') {
+        time_str.pop_back();
+    }
+    return time_str;
 }
 
-inline std::vector<std::regex> transfor_glob_to_reg(const std::vector<std::string>& globs) {
+std::vector<std::regex> transfor_glob_to_reg(const std::vector<std::string>& globs) {
     std::vector<std::regex> result;
     for(const auto& glob : globs){
         result.emplace_back(glob_to_regex(glob));
@@ -59,4 +64,3 @@ std::string glob_to_regex(const std::string& glob) {
     }
     return "^" + result + "$";
 }
-

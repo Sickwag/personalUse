@@ -1,5 +1,6 @@
 #include "output.h"
-#include <utils.h>
+#include "utils.h"
+#include "config.h"
 #include <algorithm>
 #include <boost/json.hpp>
 #include <fstream>
@@ -16,27 +17,33 @@ Outputer::Outputer(Config& cfg, std::vector<CodeStats>& count_result, ParsedArgs
     switch (cfg_.sort_method){
         case (static_cast<int>(Sort_method::FILEPATH)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.file_path < rhs.file_path; });
+            break;
         case (static_cast<int>(Sort_method::BLANK_SUM)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.blank_lines < rhs.blank_lines; });
+            break;
         case (static_cast<int>(Sort_method::COMMENT_SUM)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.comment_lines < rhs.comment_lines; });
+            break;
         case (static_cast<int>(Sort_method::MIXED_SUM)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.mixed_lines < rhs.mixed_lines; });
+            break;
         case (static_cast<int>(Sort_method::TOTAL_SUM)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.total_lines < rhs.total_lines; });
+            break;
+        // TODO default branch
     }
 
 }
 
 void Outputer::to_json() {
-    json::object root, workspace;
-    root["count_time"] = get_current_time_str();
+    json::object root;
     json::array workspace;
+    root["count_time"] = get_current_time_str();
     for (const auto& f : args_.file_list) {
-        workspace.insert(f);
+        workspace.push_back(json::string(f));
     }
     for (const auto& d : args_.directory_list) {
-        workspace.insert(d);
+        workspace.push_back(json::string(d));
     }
     root["final_sum"] = std::move(sum_.to_json_object());
     root["workspace"] = std::move(workspace);
@@ -82,10 +89,13 @@ void Outputer::to_terminal() {
 }
 
 void Outputer::start() {
-    if (cfg_.output_type & static_cast<int>(Output_type::JSON))
+    if (cfg_.output_type & static_cast<int>(Output_type::JSON)) {
         this->to_json();
-    if (cfg_.output_type & static_cast<int>(Output_type::CSV))
+    }
+    if (cfg_.output_type & static_cast<int>(Output_type::CSV)) {
         this->to_csv();
-    if (cfg_.output_type & static_cast<int>(Output_type::TERMINAL))
+    }
+    if (cfg_.output_type & static_cast<int>(Output_type::TERMINAL)) {
         this->to_terminal();
+    }
 }

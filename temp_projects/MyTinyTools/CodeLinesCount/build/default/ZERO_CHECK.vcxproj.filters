@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\Code Files\temp_projects\MyTinyTools\CodeLinesCount\build\default\CMakeFiles\b3bf1f9c1b0cb4c12604194975115295\generate.stamp.rule">
+    <CustomBuild Include="D:\Code Files\vscode\temp_projects\MyTinyTools\CodeLinesCount\build\default\CMakeFiles\2caf945f0f042171e4054b68b7224329\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{474E791E-3BD3-347C-8D61-91225544EB8F}</UniqueIdentifier>
+      <UniqueIdentifier>{45A0EF5F-2DE1-3C9D-9970-FB1180527265}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

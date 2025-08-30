@@ -1,4 +1,6 @@
 #pragma once
+#include <vector>
+#include <string>
 
 struct ParsedArgs {
     std::vector<std::string> file_list;

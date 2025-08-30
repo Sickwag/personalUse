@@ -1,9 +1,9 @@
 # CMake generation dependency list for this directory.
-D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/CMakeLists.txt
-D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeCCompiler.cmake
-D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake
-D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeRCCompiler.cmake
-D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeSystem.cmake
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/CMakeLists.txt
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeCCompiler.cmake
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeRCCompiler.cmake
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CMakeSystem.cmake
 D:/Program/Cmake/share/cmake-4.0/Modules/CMakeCInformation.cmake
 D:/Program/Cmake/share/cmake-4.0/Modules/CMakeCXXInformation.cmake
 D:/Program/Cmake/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake

@@ -1,8 +1,8 @@
-# Install script for directory: D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount
+# Install script for directory: D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/install/default")
+  set(CMAKE_INSTALL_PREFIX "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/install/default")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -35,7 +35,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/install_local_manifest.txt"
+  file(WRITE "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -51,6 +51,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "D:/Code Files/temp_projects/MyTinyTools/CodeLinesCount/build/default/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

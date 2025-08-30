@@ -80,8 +80,16 @@ void Counter::analyze_single_file(const fs::path& file_path) {
             return;
         }
     }
-    for(const auto& in_reg : cfg_.include){
-        if(!std::regex_match(file_path.generic_string(),in_reg)){
+    // 只有当include列表不为空时才进行包含检查
+    if (!cfg_.include.empty()) {
+        bool included = false;
+        for(const auto& in_reg : cfg_.include){
+            if(std::regex_match(file_path.generic_string(),in_reg)){
+                included = true;
+                break;
+            }
+        }
+        if (!included) {
             // TODO: add ignore reason
             return;
         }

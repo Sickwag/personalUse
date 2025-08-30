@@ -34,12 +34,13 @@ struct CodeStats {
     std::string to_csv_row();
 
     std::string to_string(const std::string& delimiter);
-    CodeStats& operator+=(CodeStats& other){
+    CodeStats& operator+=(const CodeStats& other){
         this->blank_lines += other.blank_lines;
         this->code_lines += other.code_lines;
         this->comment_lines += other.comment_lines;
         this->mixed_lines += other.mixed_lines;
         this->total_lines += other.total_lines;
+        return *this;
     }
     // void process_mode(Output_type& type);
 };

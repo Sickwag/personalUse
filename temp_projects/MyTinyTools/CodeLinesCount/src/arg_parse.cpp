@@ -16,7 +16,7 @@ ParsedArgs arg_parse(int argc, char** argv) {
     app.add_option("-o, --output", args.output_path, "the result output path")
         ->default_str(get_exec_path());
 
-    args.config_file_path = R"(../config.json)";
+    args.config_file_path = "";
     app.add_option("-c, --config", args.config_file_path, "config file path (json file)");
 
     app.parse_complete_callback([&args]() {

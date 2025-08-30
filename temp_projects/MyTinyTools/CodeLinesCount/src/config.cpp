@@ -6,6 +6,7 @@
 #include <filesystem>
 #include <fstream>
 #include <regex>
+#include <unordered_map>
 
 namespace json = boost::json;
 namespace fs = std::filesystem;
@@ -33,24 +34,56 @@ void make_default_config_file() {
     json::object j;
     j["include"] = json::array_kind;
     j["exclude"] = json::array_kind;
-    j["file_sum"] = true;
-    j["comment_line_sum"] = true;
-    j["code_sum"] = true;
-    j["blank_line_sum"] = true;
-    j["sort_method"] = "filename";
-    fs::path cfg_file = fs::path(get_exec_path()) / "config.json";
+
+    // 创建display对象
+    json::object display_obj;
+    display_obj["TOTAL"] = true;
+    display_obj["CODE"] = true;
+    display_obj["COMMENT"] = true;
+    display_obj["BLANK"] = true;
+    j["display"] = std::move(display_obj);
+
+    // 创建output_type对象
+    json::object output_obj;
+    output_obj["TERMINAL"] = true;
+    output_obj["CSV"] = false;
+    output_obj["JSON"] = false;
+    j["output_type"] = std::move(output_obj);
+
+    // 创建sort_method对象
+    json::object sort_obj;
+    sort_obj["FILEPATH"] = true;
+    sort_obj["TOTAL_SUM"] = false;
+    sort_obj["CODE_SUM"] = false;
+    sort_obj["COMMENT_SUM"] = false;
+    sort_obj["BLANK_SUM"] = false;
+    sort_obj["MIXED_SUM"] = false;
+    j["sort_method"] = std::move(sort_obj);
+
+    // 获取可执行文件所在目录
+    fs::path exe_path = fs::path(get_exec_path());
+    fs::path cfg_file = exe_path.parent_path() / "config.json";
     std::ofstream default_f(cfg_file);
     default_f << json::serialize(j);
 }
 
 Config read_config(const std::string& config_path) {
+    fs::path cfg_file;
     if (config_path.empty()) {
-        make_default_config_file();
+        // 获取可执行文件所在目录
+        fs::path exe_path = fs::path(get_exec_path());
+        cfg_file = exe_path.parent_path() / "config.json";
+        // 检查配置文件是否存在，如果不存在则创建默认配置
+        if (!fs::exists(cfg_file)) {
+            make_default_config_file();
+        }
+    } else {
+        cfg_file = config_path;
     }
-    fs::path cfg_file = fs::path(get_exec_path()) / "config.json";
+
     std::ifstream file(cfg_file);
-    if (file.is_open()) {
-        throw std::runtime_error("cannot open file " + config_path);
+    if (!file.is_open()) {
+        throw std::runtime_error("cannot open file " + cfg_file.string());
     }
     std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
     remove_utf8_bom(content);
@@ -63,4 +96,3 @@ Config read_config(const std::string& config_path) {
     cfg.sort_method = generate_bitmask<Sort_method>(get_key<json::object>(j, "sort_method"));
     return cfg;
 }
-

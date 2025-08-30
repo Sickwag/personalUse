@@ -92,5 +92,11 @@
         "xutility": "cpp",
         "regex": "cpp",
         "unordered_set": "cpp"
+    },
+    "cmake.debugConfig": {
+        "args": [
+            "-d",
+            "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools"
+        ]
     }
 }
