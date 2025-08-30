@@ -26,7 +26,16 @@ Counter::Counter(const Config& cfg, const ParsedArgs& args) :cfg_(cfg), args_(ar
     patterns_[Language::JAVASCRIPT] = patterns_[Language::C_FAMILY];
 }
 
-auto Counter::get_count_result() {
+void Counter::start() {
+    for(const auto& f : args_.file_list){
+        analyze_single_file(f);
+    }
+    for(const auto& d : args_.directory_list){
+        analyze_directory(d);
+    }
+}
+
+std::vector<CodeStats>& Counter::get_count_result() {
     return this->count_result_;
 }
 
@@ -63,11 +72,25 @@ Language Counter::try_detect_by_content(const std::string& filename) const {
 }
 
 void Counter::analyze_single_file(const fs::path& file_path) {
+    if(!fs::is_regular_file(file_path))
+        return;
+    for(const auto& ex_reg : cfg_.exclude){
+        if(std::regex_match(file_path.generic_string(),ex_reg)){
+            // TODO: add ignore reason
+            return;
+        }
+    }
+    for(const auto& in_reg : cfg_.include){
+        if(!std::regex_match(file_path.generic_string(),in_reg)){
+            // TODO: add ignore reason
+            return;
+        }
+    }
     Language lang = detect_language(file_path);
     if (lang == Language::UNKNOWN) {
         lang = try_detect_by_content(file_path);
         if (lang == Language::UNKNOWN) {
-            throw std::runtime_error("cannot identify the type of" + file_path.filename().string());
+            // throw std::runtime_error("cannot identify the type of" + file_path.filename().string());
             // TODO add ignore and explain reason
         }
     }
@@ -187,12 +210,24 @@ void CodeStats::add_to_terminal_row(tab::Table& table) {
     });
 }
 
-std::string CodeStats::to_csv_row() {
-    return this->file_path+ ", " +
-                std::to_string(this->total_lines)+ ", " +
-                std::to_string(this->code_lines)+ ", " +
-                std::to_string(this->comment_lines)+ ", " +
-                std::to_string(this->mixed_lines)+ ", " +
-                std::to_string(this->blank_lines);
+void CodeStats::add_to_terminal_col(tab::Table& parent) {
+    parent.add_row({"item", "value"});
+    parent.add_row({"total_lines", std::to_string(this->total_lines)});
+    parent.add_row({"code_lines", std::to_string(this->code_lines)});
+    parent.add_row({"blank_lines", std::to_string(this->blank_lines)});
+    parent.add_row({"comment_lines", std::to_string(this->comment_lines)});
+    parent.add_row({"mixed_lines", std::to_string(this->mixed_lines)});
 }
 
+std::string CodeStats::to_csv_row() {
+    return this->to_string(",");
+}
+
+std::string CodeStats::to_string(const std::string& delimiter = ", ") {
+    return this->file_path + delimiter +
+           std::to_string(this->total_lines) + delimiter +
+           std::to_string(this->code_lines) + delimiter +
+           std::to_string(this->comment_lines) + delimiter +
+           std::to_string(this->mixed_lines) + delimiter +
+           std::to_string(this->blank_lines);
+}

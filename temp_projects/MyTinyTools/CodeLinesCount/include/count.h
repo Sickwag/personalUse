@@ -29,8 +29,18 @@ struct CodeStats {
     int mixed_lines = 0;
 
     boost::json::object to_json_object();
-    void add_to_terminal_row(tab::Table& table);
+    void add_to_terminal_row(tab::Table& parent);
+    void add_to_terminal_col(tab::Table& parent);
     std::string to_csv_row();
+
+    std::string to_string(const std::string& delimiter);
+    CodeStats& operator+=(CodeStats& other){
+        this->blank_lines += other.blank_lines;
+        this->code_lines += other.code_lines;
+        this->comment_lines += other.comment_lines;
+        this->mixed_lines += other.mixed_lines;
+        this->total_lines += other.total_lines;
+    }
     // void process_mode(Output_type& type);
 };
 
@@ -64,5 +74,6 @@ class Counter {
 
    public:
     Counter(const Config& cfg_, const ParsedArgs& args_);
-    auto get_count_result();
+    void start();
+    std::vector<CodeStats>& get_count_result();
 };

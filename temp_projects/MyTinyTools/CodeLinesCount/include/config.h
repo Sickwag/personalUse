@@ -1,5 +1,6 @@
 #pragma once
 #include <boost/json.hpp>
+#include <regex>
 #include <string>
 #include <vector>
 
@@ -27,17 +28,17 @@ enum class Display_column {
     TOTAL = 1 << 9,
     CODE = 1 << 10,
     COMMENT = 1 << 11,
-    Blank = 1 << 12,
+    BLANK = 1 << 12,
 };
 
-constexpr int OUTPUT_MASK = (1 << OUTPUT) - 1;                     // (1 << 3) - 1 = 8 - 1 = 7 (0b111) 最终0b000000000000111 (位 0-2)
-constexpr int SORT_MASK = ((1 << SORT) - 1) << OUTPUT;             // (1 << 6) - 1 = 64 - 1 = 63 (0b111111)需要左移 最终// 0b000111111111000 (位 3-8)
+constexpr int OUTPUT_MASK = (1 << OUTPUT) - 1;             // (1 << 3) - 1 = 8 - 1 = 7 (0b111) 最终0b000000000000111 (位 0-2)
+constexpr int SORT_MASK = ((1 << SORT) - 1) << OUTPUT;     // (1 << 6) - 1 = 64 - 1 = 63 (0b111111)需要左移 最终// 0b000111111111000 (位 3-8)
 constexpr int DISPLAY_MASK = ((1 << DISPLAY) - 1) << (OUTPUT+SORT);// (1 << 4) - 1 = 16 - 1 = 15 (0b1111)需要左移 最终// 0b111100000000000 (位 9-12)
 
 struct Config {
     // 2+4 configuration
     // std::string include, exclude;
-    std::vector<std::string> include, exclude;
+    std::vector<std::regex> include, exclude;
     int display;
     int output_type;
     int sort_method;

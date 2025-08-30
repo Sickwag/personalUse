@@ -56,21 +56,11 @@ Config read_config(const std::string& config_path) {
     remove_utf8_bom(content);
     json::value j = json::parse(content);
     Config cfg;
-    cfg.include = get_key<std::vector<std::string>>(j, "include");
-    cfg.exclude = get_key<std::vector<std::string>>(j, "exclude");
-
+    cfg.include = transfor_glob_to_reg(get_key<std::vector<std::string>>(j, "include"));
+    cfg.exclude = transfor_glob_to_reg(get_key<std::vector<std::string>>(j, "exclude"));
+    cfg.display = generate_bitmask<Display_column>(get_key<json::object>(j, "display"));
+    cfg.output_type = generate_bitmask<Output_type>(get_key<json::object>(j, "output_type"));
+    cfg.sort_method = generate_bitmask<Sort_method>(get_key<json::object>(j, "sort_method"));
     return cfg;
 }
 
-
-int parse_switch_set(boost::json::object set){
-    int bitmask = 0;
-    for(const auto& s : set){
-        bitmask |= s.value().as_bool();
-    }
-    return bitmask;
-}
-
-void take_action_to_switches(int bitmask, Config& cfg){
-    
-}
