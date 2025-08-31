@@ -32,7 +32,6 @@ static T get_key(const json::value& json, const std::string& key) {
 
 void make_default_config_file() {
     json::object j;
-    j["include"] = json::array_kind;
     j["exclude"] = json::array_kind;
 
     // 创建display对象
@@ -89,8 +88,7 @@ Config read_config(const std::string& config_path) {
     remove_utf8_bom(content);
     json::value j = json::parse(content);
     Config cfg;
-    cfg.include = transfor_glob_to_reg(get_key<std::vector<std::string>>(j, "include"));   // UNTEST regex func
-    cfg.exclude = transfor_glob_to_reg(get_key<std::vector<std::string>>(j, "exclude"));   // UNTEST regex func
+    cfg.exclude = get_key<std::vector<std::string>>(j, "exclude");   // UNTEST regex func
     cfg.display = generate_bitmask<Display_column>(get_key<json::object>(j, "display"));   // UNSURE binary value is right?
     cfg.output_type = generate_bitmask<Output_type>(get_key<json::object>(j, "output_type"));
     cfg.sort_method = generate_bitmask<Sort_method>(get_key<json::object>(j, "sort_method"));

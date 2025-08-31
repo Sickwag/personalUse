@@ -1,12 +1,13 @@
 #include "output.h"
-#include "utils.h"
-#include "config.h"
 #include <algorithm>
+#include <boost/algorithm/string/join.hpp>
 #include <boost/json.hpp>
 #include <fstream>
 #include <tabulate/color.hpp>
 #include <tabulate/font_align.hpp>
 #include <tabulate/table.hpp>
+#include "config.h"
+#include "utils.h"
 
 namespace json = boost::json;
 
@@ -14,7 +15,7 @@ Outputer::Outputer(Config& cfg, std::vector<CodeStats>& count_result, ParsedArgs
     for (auto& item : count_result_) {
         sum_ += item;
     }
-    switch (cfg_.sort_method){
+    switch (cfg_.sort_method) {
         case (static_cast<int>(Sort_method::FILEPATH)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.file_path < rhs.file_path; });
             break;
@@ -30,11 +31,10 @@ Outputer::Outputer(Config& cfg, std::vector<CodeStats>& count_result, ParsedArgs
         case (static_cast<int>(Sort_method::TOTAL_SUM)):
             std::sort(count_result_.begin(), count_result_.end(), [](auto& lhs, auto& rhs) { return lhs.total_lines < rhs.total_lines; });
             break;
-        default:{
+        default: {
             std::cerr << "wrong config item in \"sort type\" \n";
         }
     }
-
 }
 
 void Outputer::to_json() {
@@ -47,13 +47,26 @@ void Outputer::to_json() {
     for (const auto& d : args_.directory_list) {
         workspace.push_back(json::string(d));
     }
-    root["final_sum"] = std::move(sum_.to_json_object());
+    auto kv = sum_.to_json_object();
+    if (kv.find("filepath") != kv.end()) {
+        kv.erase("filepath");
+        kv["files amount"] = count_result_.size();
+    }
+    root["final_sum"] = std::move(kv);
     root["workspace"] = std::move(workspace);
+
+    json::array exclude;
+    for (const auto& exc : cfg_.exclude) {
+        exclude.emplace_back(exc);
+    }
+    root["exclude"] = std::move(exclude);
+
     json::array file_list;
     for (auto& item : count_result_) {
         file_list.push_back(item.to_json_object());
     }
     root["file_list"] = std::move(file_list);
+
     std::ofstream output_json(fs::path(args_.output_path) / "line-count-result.json");
     output_json << json::serialize(root);
     output_json.close();
@@ -64,8 +77,13 @@ void Outputer::to_csv() {
         return record.to_string(",") + "\n";
     };
     std::ofstream output_csv(fs::path(args_.output_path) / "line-count-result.csv");
-    output_csv << make_csv_row(sum_);
-
+    output_csv << std::string("=", 50) << '\n'
+               << "count time," << get_current_time_str() << '\n'
+               << "workspace file(s)," << boost::algorithm::join(args_.file_list, "\n,") << '\n'
+               << "workspace folder(s)," << boost::algorithm::join(args_.directory_list, "\n,") << '\n'
+               << "exclude(s)," << boost::algorithm::join(cfg_.exclude, "\n,")
+               << std::string("=", 50) << "\n\n\n";
+    output_csv << "total sum," << make_csv_row(sum_);
     for (auto& record : count_result_) {
         output_csv << make_csv_row(record);
     }
@@ -73,20 +91,27 @@ void Outputer::to_csv() {
 }
 
 void Outputer::to_terminal() {
+
     tab::Table sum_table;
     sum_table.format().font_align(tab::FontAlign::left);
     sum_table.add_row({"sum", ""}).format().font_style({tab::FontStyle::bold});
     sum_table[0].format().font_align(tab::FontAlign::center);
     sum_.add_to_terminal_col(sum_table);
 
-    std::cout << sum_table << "\n\n\n";
+    std::cout << sum_table << "\n\n\n"
+              << std::string("=", 50) << '\n'
+              << "count time," << get_current_time_str() << '\n'
+              << "workspace file(s)," << boost::algorithm::join(args_.file_list, "\n") << '\n'
+              << "workspace folder(s)," << boost::algorithm::join(args_.directory_list, "\n") << '\n'
+              << "exclude(s)," << boost::algorithm::join(cfg_.exclude, ",")
+              << std::string("=", 50) << "\n\n\n";
 
     tab::Table details;
     details.format().font_align(tab::FontAlign::left);
     details.add_row({"details", "", "", "", "", ""}).format().font_style({tab::FontStyle::bold});
     details[0].format().font_align(tab::FontAlign::center);
     details[0][0].format().width(20);
-    details.add_row({"total","filepath" "code", "comment","mixed" , "blank"});
+    details.add_row({"total", "filepath", "code", "comment", "mixed", "blank"});
     for (auto& item : count_result_) {
         item.add_to_terminal_row(details);
     }

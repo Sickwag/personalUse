@@ -1,6 +1,5 @@
 #pragma once
 #include <boost/json.hpp>
-#include <regex>
 #include <string>
 #include <vector>
 
@@ -38,7 +37,7 @@ constexpr int DISPLAY_MASK = ((1 << DISPLAY) - 1) << (OUTPUT+SORT);// (1 << 4) -
 struct Config {
     // 2+4 configuration
     // std::string include, exclude;
-    std::vector<std::regex> include, exclude; // TOTEST: have not test include and exclude glob
+    std::vector<std::string> exclude; // TOTEST: have not test include and exclude glob
     int display;
     int output_type;
     int sort_method;

@@ -9,8 +9,8 @@
     },
     "output_type": {
         "terminal": true,
-        "csv": false,
-        "json": false
+        "csv": true,
+        "json": true
     },
     "sort_method": {
         "filepath": true,

@@ -12,7 +12,7 @@ std::string get_exec_path();
 std::string get_current_time_str();
 std::vector<std::regex> transfor_glob_to_reg(const std::vector<std::string>& globs);
 std::string glob_to_regex(const std::string& glob);
-
+std::vector<std::string> make_regex_row(std::vector<std::regex>& vec);
 
 template <typename EnumT>
 struct EnumMapping;

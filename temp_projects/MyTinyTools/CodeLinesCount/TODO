@@ -1,0 +1,11 @@
+- [x] 配置文件选项调整为小写
+- [ ] 添加display筛选逻辑  // tabulate库不支持跨行/列居中和固定行列数，暂时搁置
+- [x] 输出目录命名
+- [ ] 配置文件和结果文件格式化   // boost.json 不支持写入文件后格式化，暂时搁置
+- [x] 编辑--help和示例配置
+- [x] output.json中展示exclude
+- [x] output.csv中展示标题
+- [x] final sum 问题
+- [x] json output中的filepath = ""
+
+

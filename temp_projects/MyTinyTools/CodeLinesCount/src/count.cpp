@@ -9,7 +9,7 @@
 namespace fs = std::filesystem;
 namespace tab = tabulate;
 
-Counter::Counter(const Config& cfg, const ParsedArgs& args) :cfg_(cfg), args_(args) {
+Counter::Counter(const Config& cfg, const ParsedArgs& args) : cfg_(cfg), args_(args) {
     patterns_[Language::C_FAMILY] = {
         std::regex(R"(//)"),
         std::regex(R"(/\*)"),
@@ -27,10 +27,10 @@ Counter::Counter(const Config& cfg, const ParsedArgs& args) :cfg_(cfg), args_(ar
 }
 
 void Counter::start() {
-    for(const auto& f : args_.file_list){
+    for (const auto& f : args_.file_list) {
         analyze_single_file(f);
     }
-    for(const auto& d : args_.directory_list){
+    for (const auto& d : args_.directory_list) {
         analyze_directory(d);
     }
 }
@@ -46,7 +46,8 @@ Language Counter::detect_language(const std::string& filename) const {
 
 Language Counter::detect_language(const fs::path& file_path) const {
     for (const auto& pattern : patterns_) {
-        if (pattern.second.extensions.contains(file_path.filename().extension().string().substr(1))) {
+        auto ext = file_path.filename().extension().string();
+        if (!ext.empty() && pattern.second.extensions.contains(ext.substr(1))) {
             return pattern.first;
         }
     }
@@ -75,26 +76,20 @@ void Counter::analyze_single_file(const std::string& file_path) {
     return analyze_single_file(fs::path(file_path));
 }
 void Counter::analyze_single_file(const fs::path& file_path) {
-    if(!fs::is_regular_file(file_path))
+    if (!fs::is_regular_file(file_path))
         return;
-    for(const auto& ex_reg : cfg_.exclude){
-        if(std::regex_match(file_path.generic_string(),ex_reg)){
+    for (const auto& ex_reg : cfg_.exclude) {
+        std::regex pattern = std::regex(ex_reg);
+        if (std::regex_match(file_path.generic_string(), pattern)) {
             // TODO: add ignore reason
             return;
         }
     }
-    // 只有当include列表不为空时才进行包含检查
-    if (!cfg_.include.empty()) {
-        bool included = false;
-        for(const auto& in_reg : cfg_.include){
-            if(std::regex_match(file_path.generic_string(),in_reg)){
-                included = true;
-                break;
+    if (!cfg_.exclude.empty()) {
+        for (const auto& ex_reg : cfg_.exclude) {
+            if (std::regex_search(file_path.generic_string(), std::regex(ex_reg))) {
+                return;
             }
-        }
-        if (!included) {
-            // TODO: add ignore reason
-            return;
         }
     }
     Language lang = detect_language(file_path);
@@ -123,7 +118,6 @@ void Counter::analyze_single_file(const fs::path& file_path) {
     stats.file_path = fs::path(file_path).generic_string();
     count_result_.push_back(stats);
 }
-
 
 void Counter::analyze_directory(const std::string& directory_path) {
     fs::path dir_path(directory_path);
@@ -196,7 +190,6 @@ std::string Counter::trim_right(const std::string& s) const {
     size_t end = s.find_last_not_of(" \t\r\n");
     return (end == std::string::npos) ? "" : s.substr(0, end + 1);
 }
-
 
 boost::json::object CodeStats::to_json_object() {
     boost::json::object obj;
