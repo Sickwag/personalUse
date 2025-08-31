@@ -9,8 +9,8 @@ class AliyunTranslator:
         self,
         source_language: str,
         target_language: str,
-        access_key_id: str = "LTAI5tLynqGJ5mRv5zPJTihz",
-        access_key_secret: str = "DV1HN5IOo89H0Ib1wC4ZXnYK8rYiwo",
+        access_key_id: str = "",
+        access_key_secret: str = "",
     ):
         """
         初始化翻译器
@@ -66,8 +66,8 @@ def output_result(
     source_text="你好，世界！",
     source_language="zh",
     target_language="en",
-    access_key_id="LTAI5tLynqGJ5mRv5zPJTihz",
-    access_key_secret="DV1HN5IOo89H0Ib1wC4ZXnYK8rYiwo",
+    access_key_id="",
+    access_key_secret="",
 ) -> str:
     """兼容旧版本的独立函数"""
     translator = AliyunTranslator(

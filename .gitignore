@@ -4,3 +4,4 @@
 **/*.vcxproj
 **/out/build/
 **/.vscode
+**/.VSCodeCounter
