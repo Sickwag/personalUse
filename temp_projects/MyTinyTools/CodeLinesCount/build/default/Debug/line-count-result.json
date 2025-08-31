@@ -1,1 +1,153 @@
-{"count_time":"Sun Aug 31 21:51:51 2025","final_sum":{"mixed_lines":17,"total_lines":2675,"code_lines":1379,"comment_lines":884,"blank_lines":395,"files amount":14},"workspace":["D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\src\\arg_parse.cpp","D:\\Code Files\\vscode\\temp_projects\\MyTinyTools"],"exclude":[],"file_list":[{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdC/CMakeCCompilerId.c","total_lines":905,"code_lines":359,"comment_lines":387,"blank_lines":154,"mixed_lines":5},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdCXX/CMakeCXXCompilerId.cpp","total_lines":920,"code_lines":287,"comment_lines":478,"blank_lines":150,"mixed_lines":5},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/arg_parse.h","total_lines":19,"code_lines":11,"comment_lines":4,"blank_lines":4,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/config.h","total_lines":46,"code_lines":33,"comment_lines":2,"blank_lines":7,"mixed_lines":4},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/count.h","total_lines":80,"code_lines":69,"comment_lines":1,"blank_lines":10,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/output.h","total_lines":19,"code_lines":17,"comment_lines":0,"blank_lines":2,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/utils.h","total_lines":69,"code_lines":59,"comment_lines":0,"blank_lines":10,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp","total_lines":34,"code_lines":28,"comment_lines":0,"blank_lines":6,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp","total_lines":34,"code_lines":28,"comment_lines":0,"blank_lines":6,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/config.cpp","total_lines":96,"code_lines":77,"comment_lines":6,"blank_lines":10,"mixed_lines":3},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/count.cpp","total_lines":235,"code_lines":212,"comment_lines":5,"blank_lines":18,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/main.cpp","total_lines":20,"code_lines":19,"comment_lines":0,"blank_lines":1,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/output.cpp","total_lines":132,"code_lines":119,"comment_lines":0,"blank_lines":13,"mixed_lines":0},{"filepath":"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/utils/utils.cpp","total_lines":66,"code_lines":61,"comment_lines":1,"blank_lines":4,"mixed_lines":0}]}
+{
+    "count_time": "Sun Aug 31 19:43:05 2025",
+    "final_sum": {
+        "mixed_lines": 21,
+        "total_lines": 2726,
+        "code_lines": 1376,
+        "comment_lines": 919,
+        "blank_lines": 410,
+        "files amount": 17
+    },
+    "workspace": [
+        "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\src\\arg_parse.cpp",
+        "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools"
+    ],
+    "file_list": [
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdC/CMakeCCompilerId.c",
+            "total_lines": 905,
+            "code_lines": 359,
+            "comment_lines": 387,
+            "blank_lines": 154,
+            "mixed_lines": 5
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdCXX/CMakeCXXCompilerId.cpp",
+            "total_lines": 920,
+            "code_lines": 287,
+            "comment_lines": 478,
+            "blank_lines": 150,
+            "mixed_lines": 5
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/arg_parse.h",
+            "total_lines": 19,
+            "code_lines": 11,
+            "comment_lines": 4,
+            "blank_lines": 4,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/config.h",
+            "total_lines": 47,
+            "code_lines": 34,
+            "comment_lines": 2,
+            "blank_lines": 7,
+            "mixed_lines": 4
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/count.h",
+            "total_lines": 80,
+            "code_lines": 69,
+            "comment_lines": 1,
+            "blank_lines": 10,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/output.h",
+            "total_lines": 19,
+            "code_lines": 17,
+            "comment_lines": 0,
+            "blank_lines": 2,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/utils.h",
+            "total_lines": 69,
+            "code_lines": 58,
+            "comment_lines": 0,
+            "blank_lines": 11,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp",
+            "total_lines": 34,
+            "code_lines": 28,
+            "comment_lines": 0,
+            "blank_lines": 6,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp",
+            "total_lines": 34,
+            "code_lines": 28,
+            "comment_lines": 0,
+            "blank_lines": 6,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/config.cpp",
+            "total_lines": 98,
+            "code_lines": 78,
+            "comment_lines": 6,
+            "blank_lines": 10,
+            "mixed_lines": 4
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/count.cpp",
+            "total_lines": 242,
+            "code_lines": 215,
+            "comment_lines": 7,
+            "blank_lines": 20,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/main.cpp",
+            "total_lines": 20,
+            "code_lines": 19,
+            "comment_lines": 0,
+            "blank_lines": 1,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/output.cpp",
+            "total_lines": 112,
+            "code_lines": 101,
+            "comment_lines": 0,
+            "blank_lines": 11,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/subdir/another_test.cpp",
+            "total_lines": 11,
+            "code_lines": 1,
+            "comment_lines": 8,
+            "blank_lines": 2,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/test.cpp",
+            "total_lines": 20,
+            "code_lines": 3,
+            "comment_lines": 13,
+            "blank_lines": 4,
+            "mixed_lines": 0
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/test.py",
+            "total_lines": 30,
+            "code_lines": 7,
+            "comment_lines": 12,
+            "blank_lines": 8,
+            "mixed_lines": 3
+        },
+        {
+            "filepath": "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/utils/utils.cpp",
+            "total_lines": 66,
+            "code_lines": 61,
+            "comment_lines": 1,
+            "blank_lines": 4,
+            "mixed_lines": 0
+        }
+    ]
+}
