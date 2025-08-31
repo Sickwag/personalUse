@@ -1,4 +1,6 @@
-/build/
-*.exe
-/out/build/
-/.vscode
+**/build/
+**/*.exe
+**/*.obj
+**/*.vcxproj
+**/out/build/
+**/.vscode
