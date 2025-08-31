@@ -24,7 +24,7 @@ events:
       The output was:
       0
       閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-      鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:01銆?
+      鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:29:59銆?
       
       鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\4.0.3\\CompilerIdC\\CompilerIdC.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
@@ -62,7 +62,7 @@ events:
           0 涓鍛?
           0 涓敊璇?
       
-      宸茬敤鏃堕棿 00:00:00.89
+      宸茬敤鏃堕棿 00:00:01.05
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -88,7 +88,7 @@ events:
       The output was:
       0
       閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-      鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:02銆?
+      鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:00銆?
       
       鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\4.0.3\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
@@ -145,8 +145,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-1sfheo"
-      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-1sfheo"
+      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-cqmyb3"
+      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-cqmyb3"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -159,40 +159,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-1sfheo'
+        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-cqmyb3'
         
-        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a2f6b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_dfe6f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-        鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:03銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:01銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-1sfheo\\cmTC_a2f6b.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-cqmyb3\\cmTC_dfe6f.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a2f6b.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_dfe6f.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-1sfheo\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a2f6b.dir\\Debug\\cmTC_a2f6b.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-cqmyb3\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_dfe6f.dir\\Debug\\cmTC_dfe6f.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_a2f6b.dir\\Debug\\cmTC_a2f6b.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_a2f6b.dir\\Debug\\cmTC_a2f6b.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_dfe6f.dir\\Debug\\cmTC_dfe6f.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_dfe6f.dir\\Debug\\cmTC_dfe6f.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a2f6b.dir\\Debug\\\\" /Fd"cmTC_a2f6b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dfe6f.dir\\Debug\\\\" /Fd"cmTC_dfe6f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35211 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a2f6b.dir\\Debug\\\\" /Fd"cmTC_a2f6b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dfe6f.dir\\Debug\\\\" /Fd"cmTC_dfe6f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-1sfheo\\Debug\\cmTC_a2f6b.exe" /INCREMENTAL /ILK:"cmTC_a2f6b.dir\\Debug\\cmTC_a2f6b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-1sfheo/Debug/cmTC_a2f6b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-1sfheo/Debug/cmTC_a2f6b.lib" /MACHINE:X64  /machine:x64 cmTC_a2f6b.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_a2f6b.vcxproj -> D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-1sfheo\\Debug\\cmTC_a2f6b.exe
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-cqmyb3\\Debug\\cmTC_dfe6f.exe" /INCREMENTAL /ILK:"cmTC_dfe6f.dir\\Debug\\cmTC_dfe6f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-cqmyb3/Debug/cmTC_dfe6f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-cqmyb3/Debug/cmTC_dfe6f.lib" /MACHINE:X64  /machine:x64 cmTC_dfe6f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_dfe6f.vcxproj -> D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-cqmyb3\\Debug\\cmTC_dfe6f.exe
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_a2f6b.dir\\Debug\\cmTC_a2f6b.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_a2f6b.dir\\Debug\\cmTC_a2f6b.tlog\\cmTC_a2f6b.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-1sfheo\\cmTC_a2f6b.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_dfe6f.dir\\Debug\\cmTC_dfe6f.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_dfe6f.dir\\Debug\\cmTC_dfe6f.tlog\\cmTC_dfe6f.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-cqmyb3\\cmTC_dfe6f.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.45
+        宸茬敤鏃堕棿 00:00:00.44
         
       exitCode: 0
   -
@@ -232,8 +232,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-vgt3ff"
-      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-vgt3ff"
+      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-go6jyz"
+      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-go6jyz"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -247,40 +247,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-vgt3ff'
+        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-go6jyz'
         
-        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_56112.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_689e3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-        鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:04銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:02銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-vgt3ff\\cmTC_56112.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-go6jyz\\cmTC_689e3.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_56112.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_689e3.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-vgt3ff\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_56112.dir\\Debug\\cmTC_56112.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-go6jyz\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_689e3.dir\\Debug\\cmTC_689e3.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_56112.dir\\Debug\\cmTC_56112.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_56112.dir\\Debug\\cmTC_56112.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_689e3.dir\\Debug\\cmTC_689e3.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_689e3.dir\\Debug\\cmTC_689e3.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_56112.dir\\Debug\\\\" /Fd"cmTC_56112.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_689e3.dir\\Debug\\\\" /Fd"cmTC_689e3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35211 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_56112.dir\\Debug\\\\" /Fd"cmTC_56112.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_689e3.dir\\Debug\\\\" /Fd"cmTC_689e3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "D:\\Program\\Cmake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-vgt3ff\\Debug\\cmTC_56112.exe" /INCREMENTAL /ILK:"cmTC_56112.dir\\Debug\\cmTC_56112.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-vgt3ff/Debug/cmTC_56112.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-vgt3ff/Debug/cmTC_56112.lib" /MACHINE:X64  /machine:x64 cmTC_56112.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_56112.vcxproj -> D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-vgt3ff\\Debug\\cmTC_56112.exe
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-go6jyz\\Debug\\cmTC_689e3.exe" /INCREMENTAL /ILK:"cmTC_689e3.dir\\Debug\\cmTC_689e3.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-go6jyz/Debug/cmTC_689e3.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-go6jyz/Debug/cmTC_689e3.lib" /MACHINE:X64  /machine:x64 cmTC_689e3.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_689e3.vcxproj -> D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-go6jyz\\Debug\\cmTC_689e3.exe
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_56112.dir\\Debug\\cmTC_56112.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_56112.dir\\Debug\\cmTC_56112.tlog\\cmTC_56112.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-vgt3ff\\cmTC_56112.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_689e3.dir\\Debug\\cmTC_689e3.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_689e3.dir\\Debug\\cmTC_689e3.tlog\\cmTC_689e3.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-go6jyz\\cmTC_689e3.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.46
+        宸茬敤鏃堕棿 00:00:00.44
         
       exitCode: 0
   -
@@ -333,8 +333,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-ukhnqq"
-      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-ukhnqq"
+      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-3dp81m"
+      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-3dp81m"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -347,40 +347,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-ukhnqq'
+        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-3dp81m'
         
-        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a0091.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ca660.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-        鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:06銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:03銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\cmTC_a0091.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\cmTC_ca660.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a0091.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_ca660.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a0091.dir\\Debug\\cmTC_a0091.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_ca660.dir\\Debug\\cmTC_ca660.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_a0091.dir\\Debug\\cmTC_a0091.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_a0091.dir\\Debug\\cmTC_a0091.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_ca660.dir\\Debug\\cmTC_ca660.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_ca660.dir\\Debug\\cmTC_ca660.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a0091.dir\\Debug\\\\" /Fd"cmTC_a0091.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\src.c"
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca660.dir\\Debug\\\\" /Fd"cmTC_ca660.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\src.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35211 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a0091.dir\\Debug\\\\" /Fd"cmTC_a0091.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\src.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca660.dir\\Debug\\\\" /Fd"cmTC_ca660.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\src.c"
           src.c
-        D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\cmTC_a0091.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\cmTC_a0091.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\cmTC_ca660.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\cmTC_ca660.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\cmTC_a0091.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\cmTC_ca660.vcxproj鈥?榛樿鐩爣) (1) ->
         (ClCompile 鐩爣) -> 
-          D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-ukhnqq\\cmTC_a0091.vcxproj]
+          D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\src.c(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-3dp81m\\cmTC_ca660.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.27
+        宸茬敤鏃堕棿 00:00:00.28
         
       exitCode: 1
   -
@@ -404,8 +404,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-7zaxv9"
-      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-7zaxv9"
+      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-d1gswx"
+      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-d1gswx"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -418,42 +418,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-7zaxv9'
+        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-d1gswx'
         
-        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a9d8a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_93e01.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-        鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:06銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:04銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\cmTC_a9d8a.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\cmTC_93e01.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a9d8a.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_93e01.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a9d8a.dir\\Debug\\cmTC_a9d8a.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_93e01.dir\\Debug\\cmTC_93e01.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_a9d8a.dir\\Debug\\cmTC_a9d8a.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_a9d8a.dir\\Debug\\cmTC_a9d8a.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_93e01.dir\\Debug\\cmTC_93e01.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_93e01.dir\\Debug\\cmTC_93e01.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a9d8a.dir\\Debug\\\\" /Fd"cmTC_a9d8a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\CheckFunctionExists.c"
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_93e01.dir\\Debug\\\\" /Fd"cmTC_93e01.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\CheckFunctionExists.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35211 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a9d8a.dir\\Debug\\\\" /Fd"cmTC_a9d8a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_93e01.dir\\Debug\\\\" /Fd"cmTC_93e01.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\Debug\\cmTC_a9d8a.exe" /INCREMENTAL /ILK:"cmTC_a9d8a.dir\\Debug\\cmTC_a9d8a.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-7zaxv9/Debug/cmTC_a9d8a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-7zaxv9/Debug/cmTC_a9d8a.lib" /MACHINE:X64  /machine:x64 cmTC_a9d8a.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\cmTC_a9d8a.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\cmTC_a9d8a.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\Debug\\cmTC_93e01.exe" /INCREMENTAL /ILK:"cmTC_93e01.dir\\Debug\\cmTC_93e01.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-d1gswx/Debug/cmTC_93e01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-d1gswx/Debug/cmTC_93e01.lib" /MACHINE:X64  /machine:x64 cmTC_93e01.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\cmTC_93e01.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\cmTC_93e01.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\cmTC_a9d8a.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\cmTC_93e01.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-7zaxv9\\cmTC_a9d8a.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-d1gswx\\cmTC_93e01.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.36
+        宸茬敤鏃堕棿 00:00:00.35
         
       exitCode: 1
   -
@@ -477,8 +477,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-i48rz3"
-      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-i48rz3"
+      source: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-0smh3m"
+      binary: "D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-0smh3m"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -491,42 +491,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-i48rz3'
+        Change Dir: 'D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-0smh3m'
         
-        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_fe7bf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): D:/Program/VisualStudio/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_629e9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 17.14.14+a129329f1
-        鐢熸垚鍚姩鏃堕棿涓?2025/8/30 16:51:06銆?
+        鐢熸垚鍚姩鏃堕棿涓?2025/8/31 17:30:04銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\cmTC_fe7bf.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\cmTC_629e9.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_fe7bf.dir\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_629e9.dir\\Debug\\鈥濄€?
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_fe7bf.dir\\Debug\\cmTC_fe7bf.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_629e9.dir\\Debug\\cmTC_629e9.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_fe7bf.dir\\Debug\\cmTC_fe7bf.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_fe7bf.dir\\Debug\\cmTC_fe7bf.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_629e9.dir\\Debug\\cmTC_629e9.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_629e9.dir\\Debug\\cmTC_629e9.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fe7bf.dir\\Debug\\\\" /Fd"cmTC_fe7bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\CheckFunctionExists.c"
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_629e9.dir\\Debug\\\\" /Fd"cmTC_629e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\CheckFunctionExists.c"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.44.35211 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fe7bf.dir\\Debug\\\\" /Fd"cmTC_fe7bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_629e9.dir\\Debug\\\\" /Fd"cmTC_629e9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\Debug\\cmTC_fe7bf.exe" /INCREMENTAL /ILK:"cmTC_fe7bf.dir\\Debug\\cmTC_fe7bf.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-i48rz3/Debug/cmTC_fe7bf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-i48rz3/Debug/cmTC_fe7bf.lib" /MACHINE:X64  /machine:x64 cmTC_fe7bf.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\cmTC_fe7bf.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\cmTC_fe7bf.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          D:\\Program\\VisualStudio\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\Debug\\cmTC_629e9.exe" /INCREMENTAL /ILK:"cmTC_629e9.dir\\Debug\\cmTC_629e9.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-0smh3m/Debug/cmTC_629e9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/CMakeScratch/TryCompile-0smh3m/Debug/cmTC_629e9.lib" /MACHINE:X64  /machine:x64 cmTC_629e9.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\cmTC_629e9.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\cmTC_629e9.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\cmTC_fe7bf.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\cmTC_629e9.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-i48rz3\\cmTC_fe7bf.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\build\\default\\CMakeFiles\\CMakeScratch\\TryCompile-0smh3m\\cmTC_629e9.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.35
+        宸茬敤鏃堕棿 00:00:00.36
         
       exitCode: 1
 ...

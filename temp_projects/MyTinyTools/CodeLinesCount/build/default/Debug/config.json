@@ -1,28 +1,23 @@
 {
-    "include": [],
-    "exclude": [
-        "**/build/**",
-        "**/CMakeFiles/**",
-        "**/.vscode/**",
-        "**/node_modules/**"
-    ],
+    "exclude": [],
     "display": {
-        "TOTAL": true,
-        "CODE": true,
-        "COMMENT": true,
-        "BLANK": true
+        "total": true,
+        "code": true,
+        "comment": true,
+        "blank": true,
+        "mixed": true
     },
     "output_type": {
-        "TERMINAL": true,
-        "CSV": true,
-        "JSON": true
+        "terminal": true,
+        "csv": false,
+        "json": false
     },
     "sort_method": {
-        "FILEPATH": true,
-        "TOTAL_SUM": false,
-        "CODE_SUM": false,
-        "COMMENT_SUM": false,
-        "BLANK_SUM": false,
-        "MIXED_SUM": false
+        "filepath": true,
+        "total_sum": false,
+        "code_sum": false,
+        "comment_sum": false,
+        "blank_sum": false,
+        "mixed_sum": false
     }
 }

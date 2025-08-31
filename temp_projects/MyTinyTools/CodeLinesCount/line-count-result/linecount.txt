@@ -21,29 +21,3 @@ src\count.cpp, code is 16, comment is 0, blank is 2.
 src\main.cpp, code is 9, comment is 0, blank is 2.
 src\output.cpp, code is 18, comment is 0, blank is 6.
 ===============================================================================
-===============================================================================
-EXTENSION NAME : linecount
-EXTENSION VERSION : 0.1.7
--------------------------------------------------------------------------------
-count time : 2025-08-31 15:10:48
-count workspace : d:\Code Files\vscode\temp_projects\MyTinyTools\CodeLinesCount
-total files : 14
-total code lines : 557
-total comment lines : 22
-total blank lines : 75
-
-CMakeLists.txt, code is 30, comment is 0, blank is 8.
-CMakePresets.json, code is 27, comment is 0, blank is 0.
-include\arg_parse.h, code is 11, comment is 4, blank is 4.
-include\config.h, code is 38, comment is 6, blank is 7.
-include\count.h, code is 69, comment is 1, blank is 10.
-include\output.h, code is 17, comment is 0, blank is 2.
-include\utils.h, code is 58, comment is 0, blank is 11.
-src\arg_parse.cpp, code is 28, comment is 0, blank is 6.
-src\config.cpp, code is 82, comment is 7, blank is 10.
-src\count.cpp, code is 16, comment is 0, blank is 2.
-src\main.cpp, code is 19, comment is 0, blank is 1.
-src\output.cpp, code is 96, comment is 3, blank is 10.
-TODO, code is 5, comment is 0, blank is 0.
-utils\utils.cpp, code is 61, comment is 1, blank is 4.
-===============================================================================

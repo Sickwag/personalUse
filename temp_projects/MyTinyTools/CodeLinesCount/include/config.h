@@ -29,7 +29,6 @@ enum class Display_column {
     CODE = 1 << 10,
     COMMENT = 1 << 11,
     BLANK = 1 << 12,
-    MIXED = 1 << 13
 };
 
 constexpr int OUTPUT_MASK = (1 << OUTPUT) - 1;             // (1 << 3) - 1 = 8 - 1 = 7 (0b111) 最终0b000000000000111 (位 0-2)
@@ -39,7 +38,7 @@ constexpr int DISPLAY_MASK = ((1 << DISPLAY) - 1) << (OUTPUT+SORT);// (1 << 4) -
 struct Config {
     // 2+4 configuration
     // std::string include, exclude;
-    std::vector<std::regex> exclude; // TOTEST: have not test include and exclude glob
+    std::vector<std::regex> include, exclude; // TOTEST: have not test include and exclude glob
     int display;
     int output_type;
     int sort_method;

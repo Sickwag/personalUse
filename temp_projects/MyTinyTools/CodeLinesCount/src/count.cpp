@@ -83,11 +83,18 @@ void Counter::analyze_single_file(const fs::path& file_path) {
             return;
         }
     }
-    if (!cfg_.exclude.empty()) {
-        for(const auto& ex_reg : cfg_.exclude){
-            if(std::regex_match(file_path.generic_string(), ex_reg)){
-                return;
+    // 只有当include列表不为空时才进行包含检查
+    if (!cfg_.include.empty()) {
+        bool included = false;
+        for(const auto& in_reg : cfg_.include){
+            if(std::regex_match(file_path.generic_string(),in_reg)){
+                included = true;
+                break;
             }
+        }
+        if (!included) {
+            // TODO: add ignore reason
+            return;
         }
     }
     Language lang = detect_language(file_path);
@@ -221,12 +228,12 @@ void CodeStats::add_to_terminal_col(tab::Table& parent) {
     parent.add_row({"blank_lines", std::to_string(this->blank_lines)});
 }
 
-std::string CodeStats::to_csv_row(bool include_filename) {
-    return this->CodeStats_to_string(",", include_filename);
+std::string CodeStats::to_csv_row() {
+    return this->to_string(",");
 }
 
-std::string CodeStats::CodeStats_to_string(const std::string& delimiter = ", ", bool include_filename = true) {
-    return include_filename ? (this->file_path + delimiter) : "" +
+std::string CodeStats::to_string(const std::string& delimiter = ", ") {
+    return this->file_path + delimiter +
            std::to_string(this->total_lines) + delimiter +
            std::to_string(this->code_lines) + delimiter +
            std::to_string(this->comment_lines) + delimiter +

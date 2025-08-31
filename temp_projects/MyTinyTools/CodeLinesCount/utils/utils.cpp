@@ -3,7 +3,6 @@
 #include <boost/json.hpp>
 #include <boost/algorithm/string.hpp>
 #include <string_view>
-#include <vector>
 #include <chrono>
 #include <string>
 namespace json = boost::json;
@@ -65,4 +64,3 @@ std::string glob_to_regex(const std::string& glob) {
     }
     return "^" + result + "$";
 }
-
