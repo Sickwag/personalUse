@@ -1,0 +1,18 @@
+,2722,1371,920,21,410
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdC/CMakeCCompilerId.c,905,359,387,5,154
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/build/default/CMakeFiles/4.0.3/CompilerIdCXX/CMakeCXXCompilerId.cpp,920,287,478,5,150
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/arg_parse.h,19,11,4,0,4
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/config.h,47,34,2,4,7
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/count.h,80,69,1,0,10
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/output.h,19,17,0,0,2
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/include/utils.h,69,58,0,0,11
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp,34,28,0,0,6
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/arg_parse.cpp,34,28,0,0,6
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/config.cpp,98,78,6,4,10
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/count.cpp,243,216,7,0,20
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/main.cpp,20,19,0,0,1
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/src/output.cpp,107,95,1,0,11
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/subdir/another_test.cpp,11,1,8,0,2
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/test.cpp,20,3,13,0,4
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/test_files/test.py,30,7,12,3,8
+D:/Code Files/vscode/temp_projects/MyTinyTools/CodeLinesCount/utils/utils.cpp,66,61,1,0,4

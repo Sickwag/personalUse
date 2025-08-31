@@ -91,12 +91,20 @@
         "xtree": "cpp",
         "xutility": "cpp",
         "regex": "cpp",
-        "unordered_set": "cpp"
+        "unordered_set": "cpp",
+        "*.rh": "cpp",
+        "*.inc": "cpp",
+        "bitset": "cpp",
+        "cinttypes": "cpp",
+        "ranges": "cpp"
     },
     "cmake.debugConfig": {
+        "console": "internalConsole",
         "args": [
             "-d",
-            "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools"
+            "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools",
+            "-f",
+            "D:\\Code Files\\vscode\\temp_projects\\MyTinyTools\\CodeLinesCount\\src\\arg_parse.cpp"
         ]
     }
 }

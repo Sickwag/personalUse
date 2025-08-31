@@ -46,7 +46,7 @@ Language Counter::detect_language(const std::string& filename) const {
 
 Language Counter::detect_language(const fs::path& file_path) const {
     for (const auto& pattern : patterns_) {
-        if (pattern.second.extensions.contains(file_path.filename().extension().string())) {
+        if (pattern.second.extensions.contains(file_path.filename().extension().string().substr(1))) {
             return pattern.first;
         }
     }
@@ -71,6 +71,9 @@ Language Counter::try_detect_by_content(const std::string& filename) const {
     return try_detect_by_content(fs::path(filename));
 }
 
+void Counter::analyze_single_file(const std::string& file_path) {
+    return analyze_single_file(fs::path(file_path));
+}
 void Counter::analyze_single_file(const fs::path& file_path) {
     if(!fs::is_regular_file(file_path))
         return;
@@ -80,24 +83,19 @@ void Counter::analyze_single_file(const fs::path& file_path) {
             return;
         }
     }
-    // 只有当include列表不为空时才进行包含检查
-    if (!cfg_.include.empty()) {
-        bool included = false;
-        for(const auto& in_reg : cfg_.include){
-            if(std::regex_match(file_path.generic_string(),in_reg)){
-                included = true;
-                break;
+    if (!cfg_.exclude.empty()) {
+        for(const auto& ex_reg : cfg_.exclude){
+            if(std::regex_match(file_path.generic_string(), ex_reg)){
+                return;
             }
-        }
-        if (!included) {
-            // TODO: add ignore reason
-            return;
         }
     }
     Language lang = detect_language(file_path);
     if (lang == Language::UNKNOWN) {
         lang = try_detect_by_content(file_path);
         if (lang == Language::UNKNOWN) {
+            std::cerr << "ignore unknow language in file: " << file_path << std::endl;
+            return;
             // throw std::runtime_error("cannot identify the type of" + file_path.filename().string());
             // TODO add ignore and explain reason
         }
@@ -119,9 +117,6 @@ void Counter::analyze_single_file(const fs::path& file_path) {
     count_result_.push_back(stats);
 }
 
-void Counter::analyze_single_file(const std::string& file_path) {
-    return analyze_single_file(fs::path(file_path));
-}
 
 void Counter::analyze_directory(const std::string& directory_path) {
     fs::path dir_path(directory_path);
@@ -219,20 +214,19 @@ void CodeStats::add_to_terminal_row(tab::Table& table) {
 }
 
 void CodeStats::add_to_terminal_col(tab::Table& parent) {
-    parent.add_row({"item", "value"});
     parent.add_row({"total_lines", std::to_string(this->total_lines)});
     parent.add_row({"code_lines", std::to_string(this->code_lines)});
-    parent.add_row({"blank_lines", std::to_string(this->blank_lines)});
     parent.add_row({"comment_lines", std::to_string(this->comment_lines)});
     parent.add_row({"mixed_lines", std::to_string(this->mixed_lines)});
+    parent.add_row({"blank_lines", std::to_string(this->blank_lines)});
 }
 
-std::string CodeStats::to_csv_row() {
-    return this->to_string(",");
+std::string CodeStats::to_csv_row(bool include_filename) {
+    return this->CodeStats_to_string(",", include_filename);
 }
 
-std::string CodeStats::to_string(const std::string& delimiter = ", ") {
-    return this->file_path + delimiter +
+std::string CodeStats::CodeStats_to_string(const std::string& delimiter = ", ", bool include_filename = true) {
+    return include_filename ? (this->file_path + delimiter) : "" +
            std::to_string(this->total_lines) + delimiter +
            std::to_string(this->code_lines) + delimiter +
            std::to_string(this->comment_lines) + delimiter +

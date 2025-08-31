@@ -1,9 +1,9 @@
 #pragma once
 #include <boost/json.hpp>
+#include <filesystem>
 #include <regex>
 #include <string>
 #include <tabulate/table.hpp>
-#include <filesystem>
 #include <unordered_map>
 #include <unordered_set>
 #include "arg_parse.h"
@@ -31,10 +31,10 @@ struct CodeStats {
     boost::json::object to_json_object();
     void add_to_terminal_row(tab::Table& parent);
     void add_to_terminal_col(tab::Table& parent);
-    std::string to_csv_row();
+    std::string to_csv_row(bool);
 
-    std::string to_string(const std::string& delimiter);
-    CodeStats& operator+=(const CodeStats& other){
+    std::string CodeStats_to_string(const std::string& delimiter, bool include_filename);
+    CodeStats& operator+=(const CodeStats& other) {
         this->blank_lines += other.blank_lines;
         this->code_lines += other.code_lines;
         this->comment_lines += other.comment_lines;

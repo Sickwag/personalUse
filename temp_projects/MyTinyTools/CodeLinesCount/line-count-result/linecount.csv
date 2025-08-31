@@ -26,3 +26,34 @@
 ===============================================================================
 
 
+===============================================================================
+"EXTENSION NAME","linecount"
+"EXTENSION VERSION","0.1.7"
+-------------------------------------------------------------------------------
+
+"count time","2025-08-31 15:10:48"
+"count workspace","d:\Code Files\vscode\temp_projects\MyTinyTools\CodeLinesCount"
+"total files","14"
+"total code lines","557"
+"total comment lines","22"
+"total blank lines","75"
+
+
+"filename","code","comment","blank"
+"CMakeLists.txt","30","0","8"
+"CMakePresets.json","27","0","0"
+"include\arg_parse.h","11","4","4"
+"include\config.h","38","6","7"
+"include\count.h","69","1","10"
+"include\output.h","17","0","2"
+"include\utils.h","58","0","11"
+"src\arg_parse.cpp","28","0","6"
+"src\config.cpp","82","7","10"
+"src\count.cpp","16","0","2"
+"src\main.cpp","19","0","1"
+"src\output.cpp","96","3","10"
+"TODO","5","0","0"
+"utils\utils.cpp","61","1","4"
+===============================================================================
+
+
