@@ -194,3 +194,6 @@ int main(int argc, char** argv)
 [2025-08-31 11:42:36] USER or-k2:
 javascripte 报错cannot found module "archiver-utils"
 ----------------------------------------
+[2025-09-16 09:17:32] USER or-k2:
+windows旧版本中的cmd窗口使用的字体是什么？
+----------------------------------------

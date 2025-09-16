@@ -3,5 +3,5 @@
 **/*.obj
 **/*.vcxproj
 **/out/build/
-**/.vscode
-**/.VSCodeCounter
+**/.vscode/
+**/.VSCodeCounter/

@@ -1,7 +1,40 @@
 #include <bits/stdc++.h>
 #include "dataStruct.cpp"
 using namespace std;
+// 合根植物
+// constexpr int N = 1005*1005;
+// int pre[N];
+// void init(int sum){
+//     for (int i = 0; i <= sum;i++){
+//         pre[i] = i;
+//     }
+// }
+// int find_root(int x){
+//     if(pre[x] == x)
+//         return x;
+//     return pre[x] = find_root(pre[x]);
+// }
 
+// void unite(int x,int y){
+//     int root_x = find_root(x);
+//     int root_y = find_root(y);
+//     if(root_x != root_y)
+//         pre[root_x] = root_y;
+// }
+// int main(){
+//     int m, n, k, x, y;
+//     cin >> m >> n >> k;
+//     init(n * m);
+//     for (int i = 0; i < k;++i){
+//         cin >> x >> y;
+//         unite(x, y);
+//     }
+//     unordered_set<int> st;
+//     for (int i = 1; i <= n * m;i++){
+//         st.insert(find_root(i));
+//     }
+//     cout << st.size();
+// }
 // -----------test module code----------------
 // class MathTools {
 // private:

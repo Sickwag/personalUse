@@ -1,12 +1,11 @@
 #pragma once
 #include <boost/json.hpp>
+#include <filesystem>
 #include <regex>
 #include <string>
 #include <tabulate/table.hpp>
-#include <filesystem>
-#include <unordered_map>
-#include <unordered_set>
 #include "arg_parse.h"
+#include <unordered_set>
 #include "config.h"
 
 namespace tab = tabulate;
@@ -21,6 +20,10 @@ enum class Language {
 };
 
 struct CodeStats {
+   private:
+    std::string to_string(const std::string& delimiter);
+
+   public:
     std::string file_path;
     int total_lines = 0;
     int code_lines = 0;
@@ -29,12 +32,11 @@ struct CodeStats {
     int mixed_lines = 0;
 
     boost::json::object to_json_object();
+    std::string to_csv_row();
     void add_to_terminal_row(tab::Table& parent);
     void add_to_terminal_col(tab::Table& parent);
-    std::string to_csv_row();
 
-    std::string to_string(const std::string& delimiter);
-    CodeStats& operator+=(const CodeStats& other){
+    CodeStats& operator+=(const CodeStats& other) {
         this->blank_lines += other.blank_lines;
         this->code_lines += other.code_lines;
         this->comment_lines += other.comment_lines;
@@ -42,7 +44,6 @@ struct CodeStats {
         this->total_lines += other.total_lines;
         return *this;
     }
-    // void process_mode(Output_type& type);
 };
 
 class Counter {

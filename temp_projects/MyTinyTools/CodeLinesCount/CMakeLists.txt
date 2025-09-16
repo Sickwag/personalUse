@@ -34,5 +34,4 @@ target_link_libraries(CodeLinesCount PRIVATE
     Boost::json
     Boost::filesystem
     Boost::system
-    Boost::regex
 )
